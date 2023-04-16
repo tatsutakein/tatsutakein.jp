@@ -53,7 +53,7 @@
     "eslint-config-custom": "workspace:*",
     "jest": "29.5.0",
     "jest-environment-jsdom": "29.5.0",
-    "postcss": "8.4.21",
+    "postcss": "8.4.22",
     "tailwindcss": "3.3.1",
     "tsconfig": "workspace:*",
     "typescript": "5.0.4"
