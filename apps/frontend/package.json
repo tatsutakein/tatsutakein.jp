@@ -15,7 +15,7 @@
     "codegen:watch": "graphql-codegen --watch"
   },
   "dependencies": {
-    "@apollo/client": "3.7.13",
+    "@apollo/client": "3.7.14",
     "@fortawesome/fontawesome-svg-core": "6.4.0",
     "@fortawesome/free-brands-svg-icons": "6.4.0",
     "@fortawesome/free-regular-svg-icons": "6.4.0",
@@ -39,15 +39,15 @@
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "@babel/core": "7.21.5",
+    "@babel/core": "7.21.8",
     "@graphql-codegen/cli": "3.3.1",
     "@graphql-codegen/client-preset": "3.0.1",
     "@graphql-codegen/introspection": "3.0.1",
     "@types/jest": "29.5.1",
-    "@types/node": "18.16.3",
-    "@types/react": "18.2.0",
+    "@types/node": "18.16.4",
+    "@types/react": "18.2.5",
     "@types/react-copy-to-clipboard": "5.0.4",
-    "@types/react-dom": "18.2.1",
+    "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
     "eslint": "8.39.0",
     "eslint-config-custom": "workspace:*",
