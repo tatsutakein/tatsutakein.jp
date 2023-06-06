@@ -1,18 +1,11 @@
 {
   "name": "frontend",
-  "version": "0.0.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
-    "dev": "yarn codegen && next dev",
-    "prebuild": "yarn codegen",
+    "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "test": "jest",
-    "coverage": "jest --coverage",
-    "lint": "next lint",
-    "lint:fix": "eslint --ignore-path ../../.gitignore --fix './**/*.{js,ts,tsx}'",
-    "codegen": "graphql-codegen --config codegen.ts",
-    "codegen:watch": "graphql-codegen --watch"
+    "start": "next start"
   },
   "dependencies": {
     "@apollo/client": "3.7.15",
@@ -28,6 +21,7 @@
     "date-fns": "2.30.0",
     "date-fns-tz": "2.0.0",
     "graphql": "16.6.0",
+    "graphql-request": "^6.1.0",
     "next": "13.4.4",
     "react": "18.2.0",
     "react-copy-to-clipboard": "5.1.0",
