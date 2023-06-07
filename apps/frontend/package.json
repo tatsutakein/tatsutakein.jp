@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
     "@apollo/client": "3.7.15",
@@ -37,6 +38,7 @@
     "@graphql-codegen/cli": "4.0.1",
     "@graphql-codegen/client-preset": "4.0.0",
     "@graphql-codegen/introspection": "4.0.0",
+    "@graphql-typed-document-node/core": "3.2.0",
     "@types/jest": "29.5.2",
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",
