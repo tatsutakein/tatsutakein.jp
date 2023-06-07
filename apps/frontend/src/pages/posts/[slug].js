@@ -1,4 +1,5 @@
 import { GraphQLClient } from 'graphql-request';
+import { Button } from 'ui';
 
 const hygraph = new GraphQLClient(
   'https://ap-northeast-1.cdn.hygraph.com/content/clcfsbgaq0fxx01ug951f007y/master'
@@ -54,6 +55,7 @@ const PostPage = ({ post }) => (
   <>
     <h1>{post.title}</h1>
     <p>{post.content.html}</p>
+    <Button/>
   </>
 );
 
