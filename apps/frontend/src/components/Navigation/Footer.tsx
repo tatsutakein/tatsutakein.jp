@@ -16,7 +16,7 @@ const NAVIGATIONS = {
       href: 'https://github.com/tatsutakein',
       icon: () => (
         <FontAwesomeIcon
-          icon={ faGithub }
+          icon={faGithub}
           className='text-gray-500'
           size='2x'
         />
@@ -27,7 +27,7 @@ const NAVIGATIONS = {
       href: 'https://twitter.com/tatsutakein',
       icon: () => (
         <FontAwesomeIcon
-          icon={ faTwitter }
+          icon={faTwitter}
           className='text-gray-500'
           size='2x'
         />
@@ -38,7 +38,7 @@ const NAVIGATIONS = {
       href: 'https://www.instagram.com/tatsutakein/',
       icon: () => (
         <FontAwesomeIcon
-          icon={ faInstagram }
+          icon={faInstagram}
           className='text-gray-500'
           size='2x'
         />
@@ -54,34 +54,34 @@ export const Footer = (): JSX.Element => (
         className='-mx-5 -my-2 flex grow flex-wrap justify-center'
         aria-label='Footer'
       >
-        { NAVIGATIONS.main.map((item) => (
+        {NAVIGATIONS.main.map((item) => (
           <div
-            key={ item.name }
+            key={item.name}
             className='px-5 py-2'
           >
             <Link
-              { ...item }
+              {...item}
               className='text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 hover:dark:text-gray-300'
             >
-              { item.name }
+              {item.name}
             </Link>
           </div>
-        )) }
+        ))}
       </nav>
 
       <div className='mt-8 flex justify-center space-x-10'>
-        { NAVIGATIONS.social.map((item) => (
+        {NAVIGATIONS.social.map((item) => (
           <a
-            key={ item.name }
-            href={ item.href }
+            key={item.name}
+            href={item.href}
             target='_blank'
             rel='noreferrer'
             className='text-gray-400 dark:text-gray-400'
           >
             <item.icon />
-            <span className='sr-only'>{ item.icon.name }</span>
+            <span className='sr-only'>{item.icon.name}</span>
           </a>
-        )) }
+        ))}
       </div>
 
       <p className='mt-8 text-center text-base text-gray-400 dark:text-gray-500'>

@@ -1,6 +1,8 @@
-import "@/styles/globals.css";
-import type { AppProps } from "next/app";
-import { ApolloProvider } from "@apollo/client";
+import '@/styles/globals.css';
+// include styles from the ui package
+import 'ui/styles.css';
+import type { AppProps } from 'next/app';
+import { ApolloProvider } from '@apollo/client';
 import { client } from '@/lib/apollo';
 
 function MyApp({ Component, pageProps }: AppProps) {

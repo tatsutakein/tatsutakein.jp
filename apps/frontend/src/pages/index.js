@@ -3,7 +3,7 @@ import { GraphQLClient } from 'graphql-request';
 
 export async function getStaticProps() {
   const hygraph = new GraphQLClient(
-    'https://ap-northeast-1.cdn.hygraph.com/content/clcfsbgaq0fxx01ug951f007y/master'
+    'https://ap-northeast-1.cdn.hygraph.com/content/clcfsbgaq0fxx01ug951f007y/master',
   );
 
   const { posts } = await hygraph.request(
@@ -14,7 +14,7 @@ export async function getStaticProps() {
           title
         }
       }
-    `
+    `,
   );
 
   return {
@@ -26,7 +26,10 @@ export async function getStaticProps() {
 
 export default ({ posts }) =>
   posts.map(({ slug, title }) => (
-    <Link key={slug} href={`/posts/${slug}`}>
+    <Link
+      key={slug}
+      href={`/posts/${slug}`}
+    >
       <p>{title}</p>
     </Link>
   ));

@@ -1,25 +1,22 @@
 {
-  "name": "tatsutake.in",
-  "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "ncu": "turbo run ncu -u",
-    "format": "prettier --write \"**/*.{ts,tsx,json}\""
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "clean": "turbo clean",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "ncu": "npx npm-check-updates --deep"
   },
   "devDependencies": {
+    "eslint": "^8.42.0",
     "eslint-config-custom": "workspace:*",
-    "prettier": "latest",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0",
     "turbo": "latest"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "dependencies": {},
   "packageManager": "pnpm@8.6.1"

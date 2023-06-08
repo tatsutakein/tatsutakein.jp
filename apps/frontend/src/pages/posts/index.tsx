@@ -22,8 +22,9 @@ const getPostsQuery = gql(`
 `);
 
 export const getStaticProps: GetStaticProps<PostListPageProps> = async () => {
-
-  const { data: { posts } } = await client.query({
+  const {
+    data: { posts },
+  } = await client.query({
     query: getPostsQuery,
   });
 
@@ -37,8 +38,11 @@ export const getStaticProps: GetStaticProps<PostListPageProps> = async () => {
 
 const PostListPage: NextPage<PostListPageProps> = ({ posts }) => {
   const postList = posts.map(({ slug, title }) => (
-    <Link key={ slug } href={ `/posts/${ slug }` }>
-      <p>{ title }</p>
+    <Link
+      key={slug}
+      href={`/posts/${slug}`}
+    >
+      <p>{title}</p>
     </Link>
   ));
 
@@ -46,9 +50,9 @@ const PostListPage: NextPage<PostListPageProps> = ({ posts }) => {
     <ContentsLayout
       description=''
       pageType='article'
-      pageUrl={ PagePath.blogIndex(true) }
+      pageUrl={PagePath.blogIndex(true)}
     >
-      { postList }
+      {postList}
     </ContentsLayout>
   );
 };

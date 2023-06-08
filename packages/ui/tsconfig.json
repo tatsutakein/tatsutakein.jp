@@ -7,11 +7,5 @@
     "dist",
     "build",
     "node_modules"
-  ],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
+  ]
 }

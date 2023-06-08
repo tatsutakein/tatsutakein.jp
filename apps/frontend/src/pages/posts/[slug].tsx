@@ -17,11 +17,13 @@ const getPostSlugsQuery = gql(`
 `);
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data: { posts } } = await client.query({
+  const {
+    data: { posts },
+  } = await client.query({
     query: getPostSlugsQuery,
   });
 
-  const paths = posts?.map((post) => `/posts/${ post.slug }`) ?? [];
+  const paths = posts?.map((post) => `/posts/${post.slug}`) ?? [];
 
   return {
     paths,
@@ -50,7 +52,9 @@ export const getStaticProps: GetStaticProps<PostPageProps> = async (context) => 
     slug = slug[0];
   }
 
-  const { data: { post } } = await client.query({
+  const {
+    data: { post },
+  } = await client.query({
     query: getPostQuery,
     variables: {
       slug,
@@ -68,8 +72,8 @@ export const getStaticProps: GetStaticProps<PostPageProps> = async (context) => 
 const PostPage: NextPage<PostPageProps> = ({ post }) => {
   return (
     <>
-      <h1>{ post?.title }</h1>
-      <p>{ post?.content.html }</p>
+      <h1>{post?.title}</h1>
+      <p>{post?.content.html}</p>
       <Button />
     </>
   );
