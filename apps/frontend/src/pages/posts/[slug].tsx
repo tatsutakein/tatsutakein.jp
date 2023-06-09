@@ -5,9 +5,10 @@ import { Button } from 'ui';
 import { PostQuery } from '@/gql/graphql';
 import { ContentsLayout } from '@/components/Layout';
 import { PagePath } from '@/lib/router';
+import { BlogContent } from '@/features/blog/components';
 
 interface PostPageProps {
-  post: PostQuery['post'];
+  post?: PostQuery['post'];
 }
 
 const getPostSlugsQuery = gql(`
@@ -35,12 +36,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const getPostQuery = gql(`
   query Post($slug: String!) {
-    post(where: { slug: $slug }) {
+    post(where: { slug: $slug }, stage: PUBLISHED) {
       id
       excerpt
       publishedAt
       content {
-        html
+        markdown
       }
       title
       tags
@@ -78,11 +79,7 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
       pageType='article'
       pageUrl={PagePath.blogIndex(true)}
     >
-      <>
-        <h1>{post?.title}</h1>
-        <p>{post?.content.html}</p>
-        <Button />
-      </>
+      {post && <BlogContent post={post} />}
     </ContentsLayout>
   );
 };

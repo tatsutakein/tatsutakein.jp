@@ -13,8 +13,8 @@ interface PostListPageProps {
 }
 
 const getPostsQuery = gql(`
-  query BlogBody {
-    posts {
+  query Posts($now: DateTime!) {
+    posts(where: { publishedAt_lte: $now }) {
       slug
       title
     }
@@ -26,6 +26,9 @@ export const getStaticProps: GetStaticProps<PostListPageProps> = async () => {
     data: { posts },
   } = await client.query({
     query: getPostsQuery,
+    variables: {
+      now: new Date(),
+    },
   });
 
   return {
