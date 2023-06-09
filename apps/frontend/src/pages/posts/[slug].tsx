@@ -3,6 +3,8 @@ import { client } from '@/lib/apollo';
 import { gql } from '@/gql';
 import { Button } from 'ui';
 import { PostQuery } from '@/gql/graphql';
+import { ContentsLayout } from '@/components/Layout';
+import { PagePath } from '@/lib/router';
 
 interface PostPageProps {
   post: PostQuery['post'];
@@ -71,11 +73,17 @@ export const getStaticProps: GetStaticProps<PostPageProps> = async (context) => 
 
 const PostPage: NextPage<PostPageProps> = ({ post }) => {
   return (
-    <>
-      <h1>{post?.title}</h1>
-      <p>{post?.content.html}</p>
-      <Button />
-    </>
+    <ContentsLayout
+      description=''
+      pageType='article'
+      pageUrl={PagePath.blogIndex(true)}
+    >
+      <>
+        <h1>{post?.title}</h1>
+        <p>{post?.content.html}</p>
+        <Button />
+      </>
+    </ContentsLayout>
   );
 };
 
