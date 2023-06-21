@@ -17,8 +17,7 @@ const NAVIGATIONS = {
       icon: () => (
         <FontAwesomeIcon
           icon={faGithub}
-          className='text-gray-500'
-          size='2x'
+          className='text-gray-500 h-8'
         />
       ),
     },
@@ -28,8 +27,7 @@ const NAVIGATIONS = {
       icon: () => (
         <FontAwesomeIcon
           icon={faTwitter}
-          className='text-gray-500'
-          size='2x'
+          className='text-gray-500 h-8'
         />
       ),
     },
@@ -39,8 +37,7 @@ const NAVIGATIONS = {
       icon: () => (
         <FontAwesomeIcon
           icon={faInstagram}
-          className='text-gray-500'
-          size='2x'
+          className='text-gray-500 h-8'
         />
       ),
     },

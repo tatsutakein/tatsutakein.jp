@@ -12,6 +12,10 @@ interface BlogContentProps {
 }
 
 export const BlogContent: (props: BlogContentProps) => JSX.Element = ({ post }) => {
+  if (post === undefined || post === null) {
+    return <div></div>;
+  }
+
   return (
     <section>
       {/*{post.description && data.post?.showDescription && (*/}
@@ -27,7 +31,7 @@ export const BlogContent: (props: BlogContentProps) => JSX.Element = ({ post }) 
             <span className='text-gray-400 dark:text-gray-500'>
               <FontAwesomeIcon
                 icon={faCalendar}
-                className='mr-2'
+                className='mr-2 h-4'
                 size='1x'
               />
               <time>{formatDateEn(utcToJstTime(new Date(post.publishedAt)), 'LLL d, yyyy')}</time>

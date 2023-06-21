@@ -1,3 +1,5 @@
+'use client';
+
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
