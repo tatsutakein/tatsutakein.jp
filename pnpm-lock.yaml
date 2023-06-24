@@ -22,7 +22,7 @@ importers:
         version: 0.3.0(prettier@2.8.8)
       turbo:
         specifier: latest
-        version: 1.10.2
+        version: 1.10.6
 
   apps/docs:
     dependencies:
@@ -134,7 +134,7 @@ importers:
         version: 7.45.0(react@18.2.0)
       react-markdown:
         specifier: 8.0.7
-        version: 8.0.7(@types/react@18.2.12)(react@18.2.0)
+        version: 8.0.7(@types/react@18.2.14)(react@18.2.0)
       react-syntax-highlighter:
         specifier: 15.5.0
         version: 15.5.0(react@18.2.0)
@@ -167,8 +167,8 @@ importers:
         specifier: 20.3.1
         version: 20.3.1
       '@types/react':
-        specifier: 18.2.12
-        version: 18.2.12
+        specifier: 18.2.14
+        version: 18.2.14
       '@types/react-copy-to-clipboard':
         specifier: 5.0.4
         version: 5.0.4
@@ -2534,7 +2534,7 @@ packages:
   /@types/react-copy-to-clipboard@5.0.4:
     resolution: {integrity: sha512-otTJsJpofYAeaIeOwV5xBUGpo6exXG2HX7X4nseToCB2VgPEBxGBHCm/FecZ676doNR7HCSTVtmohxfG2b3/yQ==}
     dependencies:
-      '@types/react': 18.2.12
+      '@types/react': 18.2.14
     dev: true
 
   /@types/react-dom@18.2.6:
@@ -2546,11 +2546,19 @@ packages:
   /@types/react-syntax-highlighter@15.5.7:
     resolution: {integrity: sha512-bo5fEO5toQeyCp0zVHBeggclqf5SQ/Z5blfFmjwO5dkMVGPgmiwZsJh9nu/Bo5L7IHTuGWrja6LxJVE2uB5ZrQ==}
     dependencies:
-      '@types/react': 18.2.12
+      '@types/react': 18.2.14
     dev: false
 
   /@types/react@18.2.12:
     resolution: {integrity: sha512-ndmBMLCgn38v3SntMeoJaIrO6tGHYKMEBohCUmw8HoLLQdRMOIGXfeYaBTLe2lsFaSB3MOK1VXscYFnmLtTSmw==}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      '@types/scheduler': 0.16.2
+      csstype: 3.1.1
+    dev: true
+
+  /@types/react@18.2.14:
+    resolution: {integrity: sha512-A0zjq+QN/O0Kpe30hA1GidzyFjatVvrpIvWLxD+xv67Vt91TWWgco9IvrJBkeyHm1trGaFS/FSGqPlhyeZRm0g==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -6718,7 +6726,7 @@ packages:
   /react-is@18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
 
-  /react-markdown@8.0.7(@types/react@18.2.12)(react@18.2.0):
+  /react-markdown@8.0.7(@types/react@18.2.14)(react@18.2.0):
     resolution: {integrity: sha512-bvWbzG4MtOU62XqBx3Xx+zB2raaFFsq4mYiAzfjXJMEz2sixgeAfraA3tvzULF02ZdOMUOKTBFFaZJDDrq+BJQ==}
     peerDependencies:
       '@types/react': '>=16'
@@ -6726,7 +6734,7 @@ packages:
     dependencies:
       '@types/hast': 2.3.4
       '@types/prop-types': 15.7.5
-      '@types/react': 18.2.12
+      '@types/react': 18.2.14
       '@types/unist': 2.0.6
       comma-separated-tokens: 2.0.3
       hast-util-whitespace: 2.0.1
@@ -7543,65 +7551,65 @@ packages:
       typescript: 5.1.3
     dev: false
 
-  /turbo-darwin-64@1.10.2:
-    resolution: {integrity: sha512-sVLpVVANByfMgqf7OYPcZM4KiDnjGu7ITvAzBSa9Iwe14yoWLn8utrNsWCRaQEB6kEqBGLPmvL7AKwkl8M2Gqg==}
+  /turbo-darwin-64@1.10.6:
+    resolution: {integrity: sha512-s2Gc7i9Ud+H9GDcrGJjPIyscJfzDGQ6il4Sl2snfvwngJs4/TaqKuBoX3HNt/7F4NiFRs7ZhlLV1/Yu9zGBRhw==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-darwin-arm64@1.10.2:
-    resolution: {integrity: sha512-TKG91DSoYQjsCft4XBx4lYycVT5n3UQB/nOKgv/WJCSfwshLWulya3yhP8JT5erv9rPF8gwgnx87lrCmT4EAVA==}
+  /turbo-darwin-arm64@1.10.6:
+    resolution: {integrity: sha512-tgl70t5PBLyRcNTdP9N6NjvdvQ5LUk8Z60JGUhBhnc+oCOdA4pltrDJNPyel3tQAXXt1dDpl8pp9vUrbwoVyGg==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-64@1.10.2:
-    resolution: {integrity: sha512-ZIzAkfrzjJFkSM/uEfxU6JjseCsT5PHRu0s0lmYce37ApQbv/HC7tI0cFhuosI30+O8109/mkyZykKE7AQfgqA==}
+  /turbo-linux-64@1.10.6:
+    resolution: {integrity: sha512-h7eyAA3xtAVpamcYJYUwe0xm0LWdbv7/I7QiM09AZ67TTNpyUgqW8giFN3h793BHEQ2Rcnk9FNkpIbjWBbyamg==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-linux-arm64@1.10.2:
-    resolution: {integrity: sha512-G4uZA+RBQ5S1X/oUxO5KoLL2NDMkrrBZF52+00jQv6UEb9lWDgwzqSwoAGjdXxeDCrqMW5rBVwb/IBIF2/yhwA==}
+  /turbo-linux-arm64@1.10.6:
+    resolution: {integrity: sha512-8cZhOeLqu3QZ27yLd6bw4FNaB8y5pLdWeRLJeiWHkIb/cptKnRKJFP+keBJzJi8ovaMqdBpabrxiBRN2lhau5Q==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-64@1.10.2:
-    resolution: {integrity: sha512-ObfQO37kGu1jBzFs/L+hybrCXBwdnimotJwzg7pCoSyGijKITlugrpJoPDKlg0eMr3/1Y6KUeHy26vZaDXrbuQ==}
+  /turbo-windows-64@1.10.6:
+    resolution: {integrity: sha512-qx5jcfCJodN1Mh0KtSVQau7pK8CxDvtif7+joPHI2HbQPAADgdUl0LHfA5tFHh6aWgfvhxbvIXqJd6v7Mqkj9g==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo-windows-arm64@1.10.2:
-    resolution: {integrity: sha512-7S6dx4738R/FIT2cxbsunqgHN5LelXzuzkcaZgdkU33oswRf/6KOfOABzQLdTX7Uos59cBSdwayf6KQJxuOXUg==}
+  /turbo-windows-arm64@1.10.6:
+    resolution: {integrity: sha512-vTQaRG3/s2XTreOBr6J9HKFtjzusvwGQg0GtuW2+9Z7fizdzP8MuhaDbN6FhKHcWC81PQPD61TBIKTVTsYOEZg==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
-  /turbo@1.10.2:
-    resolution: {integrity: sha512-m9sR5XHhuzxUQACf0vI2qCG5OqDYAZiPTaAsTwECnwUF4/cXwEmcYddbLJnO+K9orNvcnjjent5oBNBVQ/o0ow==}
+  /turbo@1.10.6:
+    resolution: {integrity: sha512-0/wbjw4HvmPP1abVWHTdeFRfCA9cn5oxCPP5bDixagLzvDgGWE3xfdlsyGmq779Ekr9vjtDPgC2Y4JlXEhyryw==}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      turbo-darwin-64: 1.10.2
-      turbo-darwin-arm64: 1.10.2
-      turbo-linux-64: 1.10.2
-      turbo-linux-arm64: 1.10.2
-      turbo-windows-64: 1.10.2
-      turbo-windows-arm64: 1.10.2
+      turbo-darwin-64: 1.10.6
+      turbo-darwin-arm64: 1.10.6
+      turbo-linux-64: 1.10.6
+      turbo-linux-arm64: 1.10.6
+      turbo-windows-64: 1.10.6
+      turbo-windows-arm64: 1.10.6
     dev: true
 
   /type-check@0.3.2:
