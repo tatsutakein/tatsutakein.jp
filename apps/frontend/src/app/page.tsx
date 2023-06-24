@@ -1,4 +1,4 @@
-import { GetStaticProps, NextPage } from 'next';
+import { NextPage } from 'next';
 import { ContentsLayout } from '@/components/Layout';
 import { PagePath } from '@/lib/router';
 import clsx from 'clsx';
@@ -6,12 +6,7 @@ import { ProfileImage } from '@/components/Assets';
 
 interface IndexPageProps {}
 
-export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
-  return {
-    props: {},
-  };
-};
-const IndexPage: NextPage<IndexPageProps> = () => {
+const Index: NextPage<IndexPageProps> = () => {
   return (
     <ContentsLayout
       description=''
@@ -26,4 +21,4 @@ const IndexPage: NextPage<IndexPageProps> = () => {
   );
 };
 
-export default IndexPage;
+export default Index;
