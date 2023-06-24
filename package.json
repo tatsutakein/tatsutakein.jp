@@ -9,7 +9,7 @@
     "ncu": "npx npm-check-updates --deep"
   },
   "devDependencies": {
-    "eslint": "^8.42.0",
+    "eslint": "^8.43.0",
     "eslint-config-custom": "workspace:*",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
@@ -19,5 +19,5 @@
     "node": ">=16.0.0"
   },
   "dependencies": {},
-  "packageManager": "pnpm@8.6.2"
+  "packageManager": "pnpm@8.6.3"
 }
