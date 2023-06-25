@@ -4,8 +4,23 @@ import Link from 'next/link';
 
 import { About, Blog, Logo, Tools } from '@/components/Assets';
 import { PagePath } from '@/lib/router';
+import { Works } from '@/components/Assets/Works';
 
 const MENUS = [
+  {
+    a: {
+      name: 'About',
+      href: PagePath.about(),
+    },
+    text: () => {
+      return (
+        <About
+          className='relative top-0.5 w-auto'
+          style={{ height: '16px' }}
+        />
+      );
+    },
+  },
   {
     a: {
       name: 'Blog',
@@ -36,12 +51,12 @@ const MENUS = [
   },
   {
     a: {
-      name: 'About',
-      href: PagePath.about(),
+      name: 'Works',
+      href: PagePath.works(),
     },
     text: () => {
       return (
-        <About
+        <Works
           className='relative top-0.5 w-auto'
           style={{ height: '16px' }}
         />
