@@ -6,9 +6,10 @@ import { PagePath } from '@/lib/router';
 
 const NAVIGATIONS = {
   main: [
+    { name: 'About', href: PagePath.about() },
     { name: 'Blog', href: PagePath.blogIndex() },
     { name: 'Tools', href: PagePath.tools() },
-    { name: 'About', href: PagePath.about() },
+    { name: 'Works', href: PagePath.works() },
   ],
   social: [
     {

@@ -44,3 +44,5 @@ const PostListPage: NextPage = async () => {
 };
 
 export default PostListPage;
+
+export const revalidate = 60;

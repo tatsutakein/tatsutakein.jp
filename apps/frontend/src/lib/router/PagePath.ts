@@ -42,6 +42,14 @@ export const PagePath = {
   },
 
   /**
+   * Works ページ
+   */
+  works(withOrigin?: boolean): string {
+    const path = '/works';
+    return withOrigin ? PagePath.withOrigin(path) : path;
+  },
+
+  /**
    * Aboutページ
    */
   about(withOrigin?: boolean): string {
