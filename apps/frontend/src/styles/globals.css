@@ -70,3 +70,16 @@
 .react-markdown > ul:last-child {
     margin-bottom: 0;
 }
+
+@layer base {
+    a, button {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* スマホタップ時のハイライトを透明にする */
+@layer utilities {
+    .tap-highlight-color-transparent {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
