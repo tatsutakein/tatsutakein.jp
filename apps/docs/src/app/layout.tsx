@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 // include styles from the ui package
-import 'ui/styles.css';
+import '@core/ui/styles.css';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
