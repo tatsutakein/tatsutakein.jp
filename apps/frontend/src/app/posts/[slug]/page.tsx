@@ -3,6 +3,12 @@ import { ContentsLayout } from '@/components/Layout';
 import { PagePath } from '@/lib/router';
 import { BlogContent } from '@/features/blog/components';
 import { getClient } from '@/app/ApolloClient';
+import { NextPage } from 'next';
+
+interface PageProps {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
 
 const getPostSlugsQuery = gql(`
   query PostSlugs {
@@ -27,13 +33,13 @@ const getPostQuery = gql(`
   }
 `);
 
-export default async function PostPage({ params }: { params: { slug: string } }) {
+const PostPage: NextPage<PageProps> = async ({ params: { slug } }) => {
   const {
     data: { post },
   } = await getClient().query({
     query: getPostQuery,
     variables: {
-      slug: params.slug,
+      slug,
     },
   });
 
@@ -46,4 +52,6 @@ export default async function PostPage({ params }: { params: { slug: string } })
       {post && <BlogContent post={post} />}
     </ContentsLayout>
   );
-}
+};
+
+export default PostPage;
