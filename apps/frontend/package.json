@@ -35,7 +35,7 @@
     "react-markdown": "8.0.7",
     "react-syntax-highlighter": "15.5.0",
     "recoil": "0.7.7",
-    "ui": "workspace:*"
+    "@core/ui": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "7.22.5",

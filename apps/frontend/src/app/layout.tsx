@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
 // include styles from the ui package
-import 'ui/styles.css';
+import '@core/ui/styles.css';
 import React from 'react';
 
 interface LayoutProps {
