@@ -81,7 +81,7 @@ export const Header = (): JSX.Element => {
         <span className='cursor-pointer hover:opacity-50 lg:hidden'>
           <FontAwesomeIcon
             icon={faBars}
-            size='xl'
+            className='h-6'
           />
         </span>
 
