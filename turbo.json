@@ -1,7 +1,13 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": [
-    "**/.env.*local"
+    "**/.env",
+    "**/.env.*local",
+    "**/tsconfig.json"
+  ],
+  "globalEnv": [
+    "NODE_ENV",
+    "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID"
   ],
   "pipeline": {
     "build": {
