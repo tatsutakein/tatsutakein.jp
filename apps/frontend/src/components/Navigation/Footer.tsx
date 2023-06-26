@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 
 import { PagePath } from '@/lib/router';
+import { NoteIcon } from '@core/ui';
 
 const NAVIGATIONS = {
   main: [
@@ -40,6 +41,13 @@ const NAVIGATIONS = {
           icon={faInstagram}
           className='text-gray-500 h-8'
         />
+      ),
+    },
+    {
+      name: 'Note',
+      href: 'https://note.com/tatsutakein/',
+      icon: () => (
+        <NoteIcon className='text-gray-500 h-8 w-8 border border-gray-500 rounded-full' />
       ),
     },
   ],
