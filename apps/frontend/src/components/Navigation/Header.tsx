@@ -1,10 +1,9 @@
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
-
 import { About, Blog, Logo, Tools } from '@/components/Assets';
 import { PagePath } from '@/lib/router';
 import { Works } from '@/components/Assets/Works';
+import React from 'react';
+import { MobileHeaderMenu } from '@/components/Navigation/MobileHeaderMenu';
 
 const MENUS = [
   {
@@ -76,14 +75,8 @@ export const Header = (): JSX.Element => {
           <span className='sr-only'>{siteName}</span>
         </Link>
 
-        {/* TODO: 実装する */}
-        {/* ハンバーガーメニュー */}
-        <span className='cursor-pointer hover:opacity-50 lg:hidden'>
-          <FontAwesomeIcon
-            icon={faBars}
-            className='h-6'
-          />
-        </span>
+        {/* モバイル用メニュー */}
+        <MobileHeaderMenu />
 
         {/* PC用メニュー */}
         <div className='hidden gap-x-6 lg:flex'>
