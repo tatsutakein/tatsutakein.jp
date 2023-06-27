@@ -1,9 +1,14 @@
 import Link from 'next/link';
-import { NextPage } from 'next';
+import { Metadata, NextPage } from 'next';
 import { gql } from '@/gql';
 import { ContentsLayout } from '@/components/Layout';
 import { PagePath } from '@/lib/router';
 import { getClient } from '@/app/ApolloClient';
+
+export const metadata: Metadata = {
+  title: 'Posts | tatsutakein.jp',
+  description: 'Ryo Takeuchi のポートフォリオサイトです。',
+};
 
 const getPostsQuery = gql(`
   query Posts($now: DateTime!) {
