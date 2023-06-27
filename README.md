@@ -1,56 +1,38 @@
-# Turborepo Tailwind CSS starter
+<img src="docs/images/splash.svg" alt="tatsutakein.jp">
 
-This is an official starter Turborepo.
+# tatsutakein.jp
 
-## Using this example
+https://tatsutakein.jp
 
-Run the following command:
+## Tech Stacks
 
-```sh
-npx create-turbo@latest -e with-tailwind
+### [Turborepo](https://turbo.build/repo)
+
+### [Next.js](https://nextjs.org/)
+
+### [Tailwind CSS](https://tailwindcss.com/)
+
+## GetStarted
+
+以下の手順を踏んで開発に参加しましょう。
+
+### 1. Bootstrap
+
+以下のコマンドを実行して開発環境を整えます。
+
+```shell
+$ make bs
 ```
 
-## What's inside?
+### 2. `pnpm run dev`
 
-This Turborepo includes the following packages/apps:
+`pnpm run dev`でローカルサーバーを立ち上げます。  
+表示された URL にアクセスすると、サイトが表示されます。
 
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `ui`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) shared by both `web` and `docs`
-  applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Building packages/ui
-
-This example is setup to build `packages/ui` and output the transpiled source and compiled styles to `dist/`. This was
-chosen to make sharing one `tailwind.config.js` as easy as possible, and to ensure only the CSS that is used by the
-current application and its dependencies is generated.
-
-Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to
-update your `tailwind.config.js` to be aware of your package locations, so it can find all usages of the `tailwindcss`
-class names.
-
-For example, in [tailwind.config.js](packages/tailwind-config/tailwind.config.js):
-
-```js
-  content: [
-    // app content
-    `src/**/*.{js,ts,jsx,tsx}`,
-    // include packages if not transpiling
-    "../../packages/**/*.{js,ts,jsx,tsx}",
-  ],
+```shell
+$ pnpm run dev
 ```
 
-### Utilities
+## License
 
-This Turborepo has some additional tools already setup for you:
-
-- [Tailwind CSS](https://tailwindcss.com/) for styles
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+This software is provided under the [MIT License](LICENSE).
