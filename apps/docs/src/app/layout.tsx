@@ -1,8 +1,11 @@
 import '../styles/globals.css';
 // include styles from the ui package
 import '@core/ui/styles.css';
+import React from 'react';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const RootLayout: React.FC<{
+  children: React.ReactNode;
+}> = ({ children }) => {
   return (
     <html
       lang='en'
@@ -11,4 +14,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;
