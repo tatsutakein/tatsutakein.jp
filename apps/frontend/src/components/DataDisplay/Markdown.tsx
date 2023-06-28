@@ -1,8 +1,5 @@
 'use client';
 
-import { faCopy } from '@fortawesome/free-regular-svg-icons';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import { useState } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
@@ -10,6 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import { CodeProps } from 'react-markdown/lib/ast-to-react';
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { CopyIcon, ExternalLinkIcon } from '@radix-ui/react-icons';
 
 interface Props {
   markdown: string;
@@ -36,14 +34,10 @@ export const Markdown = ({ markdown, className }: Props): JSX.Element => {
                 href={href}
                 target='_blank'
                 rel='noreferrer'
-                className='text-cyan-600 hover:opacity-50'
+                className='text-cyan-600 hover:opacity-50 inline-flex items-center'
               >
                 {children}
-                <FontAwesomeIcon
-                  icon={faArrowUpRightFromSquare}
-                  size='sm'
-                  className='ml-2'
-                />
+                <ExternalLinkIcon className='ml-2' />
               </a>
             );
           },
@@ -94,11 +88,7 @@ export const MarkdownCode = ({ inline, className, children, ...props }: CodeProp
       >
         <span className='absolute top-3 right-3 inline-block'>
           {showCopied && <span className='mr-2 opacity-80'>Copied!</span>}
-          <FontAwesomeIcon
-            icon={faCopy}
-            className='cursor-pointer opacity-50 hover:opacity-80'
-            size='lg'
-          />
+          <CopyIcon className='cursor-pointer opacity-50 hover:opacity-80' />
         </span>
       </CopyToClipboard>
 

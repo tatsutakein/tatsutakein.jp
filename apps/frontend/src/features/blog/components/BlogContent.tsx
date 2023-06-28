@@ -1,11 +1,10 @@
-import { faCalendar } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 
 import { Markdown } from '@/components/DataDisplay/Markdown';
 import { BlogSection } from '@/features/blog/components';
 import { PostQuery } from '@/gql/graphql';
 import { formatDateEn, utcToJstTime } from '@/utils/date';
+import { CalendarIcon } from '@radix-ui/react-icons';
 
 interface BlogContentProps {
   post: PostQuery['post'];
@@ -28,12 +27,8 @@ export const BlogContent: (props: BlogContentProps) => JSX.Element = ({ post }) 
         <BlogSection>
           {/* Header */}
           <div className='-mt-2 mb-4 flex justify-between'>
-            <span className='text-gray-400 dark:text-gray-500'>
-              <FontAwesomeIcon
-                icon={faCalendar}
-                className='mr-2 h-4'
-                size='1x'
-              />
+            <span className='text-gray-400 dark:text-gray-500 inline-flex items-center'>
+              <CalendarIcon className='mr-2 h-4' />
               <time>{formatDateEn(utcToJstTime(new Date(post.publishedAt)), 'LLL d, yyyy')}</time>
             </span>
           </div>
