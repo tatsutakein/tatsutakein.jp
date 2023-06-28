@@ -4,6 +4,7 @@ import { PagePath } from '@/lib/router';
 import { BlogContent } from '@/features/blog/components';
 import { getClient } from '@/app/ApolloClient';
 import { Metadata, NextPage } from 'next';
+import { HeroImage } from '@/features/blog/components/HeroImage';
 
 export const metadata: Metadata = {
   title: 'Post | tatsutakein.jp',
@@ -48,11 +49,24 @@ const PostPage: NextPage<PageProps> = async ({ params: { slug } }) => {
     },
   });
 
+  if (!post) {
+    return <div>Empty data</div>;
+  }
+
   return (
     <ContentsLayout
       description=''
       pageType='article'
-      pageUrl={PagePath.blogIndex(true)}
+      pageUrl={PagePath.blogDetail(slug, true)}
+      heroImage={
+        <HeroImage
+          // heroImage={post.heroImage}
+          // heroText={post.heroText}
+          title={post.title}
+          publishedAt={post.publishedAt as string}
+          tags={post.tags}
+        />
+      }
     >
       {post && <BlogContent post={post} />}
     </ContentsLayout>
