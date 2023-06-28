@@ -3,7 +3,12 @@ import { ContentsLayout } from '@/components/Layout';
 import { PagePath } from '@/lib/router';
 import { BlogContent } from '@/features/blog/components';
 import { getClient } from '@/app/ApolloClient';
-import { NextPage } from 'next';
+import { Metadata, NextPage } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Post | tatsutakein.jp',
+  description: 'Ryo Takeuchi のポートフォリオサイトです。',
+};
 
 interface PageProps {
   params: { slug: string };

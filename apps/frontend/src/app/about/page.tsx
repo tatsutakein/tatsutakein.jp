@@ -1,7 +1,12 @@
-import { NextPage } from 'next';
+import { Metadata, NextPage } from 'next';
 import { ContentsLayout } from '@/components/Layout';
 import { PagePath } from '@/lib/router';
 import clsx from 'clsx';
+
+export const metadata: Metadata = {
+  title: 'About | tatsutakein.jp',
+  description: 'Ryo Takeuchi のポートフォリオサイトです。',
+};
 
 interface IndexPageProps {}
 
