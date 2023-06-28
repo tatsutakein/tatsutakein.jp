@@ -1,4 +1,5 @@
 {
+  "name": "tatsutakeinjp",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -10,11 +11,15 @@
     "ncu": "npx npm-check-updates --deep"
   },
   "devDependencies": {
+    "@tatsutakeinjp/eslint-config": "^0.1.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.0.2",
+    "@manypkg/cli": "^0.21.0",
+    "@types/prettier": "^2.7.3",
     "eslint": "^8.43.0",
-    "eslint-config-custom": "workspace:*",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "turbo": "latest"
+    "turbo": "^1.10.6",
+    "typescript": "^5.1.6"
   },
   "engines": {
     "node": ">=16.0.0"

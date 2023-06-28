@@ -2,6 +2,11 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Default",
   "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "composite": false,
     "declaration": true,
     "declarationMap": true,
@@ -16,7 +21,12 @@
     "skipLibCheck": true,
     "strict": true
   },
+  "include": [
+    ".eslintrc.js",
+    "prettier.config.cjs"
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "apps/frontend/src/gql"
   ]
 }
