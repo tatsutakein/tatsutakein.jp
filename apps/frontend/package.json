@@ -15,6 +15,7 @@
   "dependencies": {
     "@apollo/client": "3.8.0-beta.5",
     "@apollo/experimental-nextjs-app-support": "^0.3.1",
+    "@core/ui": "workspace:*",
     "@fortawesome/fontawesome-svg-core": "6.4.0",
     "@fortawesome/free-brands-svg-icons": "6.4.0",
     "@fortawesome/free-regular-svg-icons": "6.4.0",
@@ -25,6 +26,7 @@
     "@radix-ui/react-icons": "^1.3.0",
     "@tailwindcss/line-clamp": "0.4.4",
     "@types/react-syntax-highlighter": "15.5.7",
+    "@vercel/analytics": "^1.0.1",
     "clsx": "1.2.1",
     "date-fns": "2.30.0",
     "date-fns-tz": "2.0.0",
@@ -37,18 +39,17 @@
     "react-hook-form": "7.45.1",
     "react-markdown": "8.0.7",
     "react-syntax-highlighter": "15.5.0",
-    "recoil": "0.7.7",
-    "@core/ui": "workspace:*"
+    "recoil": "0.7.7"
   },
   "devDependencies": {
-    "@tatsutakeinjp/eslint-config": "^0.1.0",
-    "@tatsutakeinjp/tailwind-config": "^0.1.0",
     "@babel/core": "7.22.5",
     "@graphql-codegen/cli": "4.0.1",
     "@graphql-codegen/client-preset": "4.0.1",
     "@graphql-codegen/introspection": "4.0.0",
     "@graphql-typed-document-node/core": "3.2.0",
     "@tailwindcss/line-clamp": "^0.4.4",
+    "@tatsutakeinjp/eslint-config": "^0.1.0",
+    "@tatsutakeinjp/tailwind-config": "^0.1.0",
     "@types/gtag.js": "^0.0.12",
     "@types/jest": "29.5.2",
     "@types/node": "20.3.2",
