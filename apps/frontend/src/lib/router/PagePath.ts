@@ -28,8 +28,8 @@ export const PagePath = {
   /**
    * タグ検索結果ページ
    */
-  tagResult(tag: string, withOrigin?: boolean): string {
-    const path = `/tag/${tag}`;
+  tagResult(tags: string[], withOrigin?: boolean): string {
+    const path = `/tags/${tags.join('/')}`;
     return withOrigin ? PagePath.withOrigin(path) : path;
   },
 

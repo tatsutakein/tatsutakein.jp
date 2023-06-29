@@ -74,7 +74,7 @@ export const HeroImage = ({
             {tags.map((tag) => (
               <Link
                 key={tag}
-                href={PagePath.tagResult(tag)}
+                href={PagePath.tagResult([tag])}
                 className='cursor-pointer hover:opacity-50'
               >
                 # {tag}
