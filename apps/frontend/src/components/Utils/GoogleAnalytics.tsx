@@ -3,14 +3,14 @@
 import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
 import { useEffect } from 'react';
-import { GA_TRACKING_ID, pageView } from '@/lib';
+import { pageView } from '@/lib';
+import { env } from '@/env.mjs';
 
 const GoogleAnalytics: React.FC = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (!GA_TRACKING_ID) return;
     const url = pathname + searchParams.toString();
     pageView(url);
   }, [pathname, searchParams]);
@@ -19,7 +19,7 @@ const GoogleAnalytics: React.FC = () => {
     <>
       <Script
         strategy='lazyOnload'
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
       />
       <Script
         id='gtag-init'
@@ -29,7 +29,7 @@ const GoogleAnalytics: React.FC = () => {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${GA_TRACKING_ID}', {
+          gtag('config', '${env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', {
             page_path: window.location.pathname,
           });
         `}
