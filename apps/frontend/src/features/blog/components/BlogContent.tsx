@@ -29,6 +29,7 @@ export const BlogContent: (props: BlogContentProps) => JSX.Element = ({ post }) 
           <div className='-mt-2 mb-4 flex justify-between'>
             <span className='text-gray-400 dark:text-gray-500 inline-flex items-center'>
               <CalendarIcon className='mr-2 h-4' />
+              {/* eslint-disable-next-line @typescript-eslint/no-unsafe-argument */}
               <time>{formatDateEn(utcToJstTime(new Date(post.publishedAt)), 'LLL d, yyyy')}</time>
             </span>
           </div>

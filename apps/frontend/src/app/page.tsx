@@ -9,9 +9,7 @@ export const metadata: Metadata = {
   description: 'Ryo Takeuchi のポートフォリオサイトです。',
 };
 
-interface IndexPageProps {}
-
-const Index: NextPage<IndexPageProps> = () => {
+const Index: NextPage = () => {
   return (
     <ContentsLayout
       description=''

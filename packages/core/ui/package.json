@@ -11,6 +11,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "clean": "rm -rf .turbo node_modules",
     "build": "tsup",
     "dev": "tsup --watch",
     "check-types": "tsc --noEmit"
@@ -19,13 +20,12 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
+    "@tatsutakeinjp/eslint-config": "^0.1.0",
+    "@tatsutakeinjp/tailwind-config": "^0.1.0",
     "@types/react": "^18.2.12",
     "eslint": "^8.43.0",
-    "eslint-config-custom": "workspace:*",
     "postcss": "^8.4.24",
     "react": "^18.2.0",
-    "tailwind-config": "workspace:*",
-    "tsconfig": "workspace:*",
     "tsup": "^7.0.0",
     "typescript": "^5.1.3"
   }
