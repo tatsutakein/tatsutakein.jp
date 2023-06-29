@@ -1,11 +1,10 @@
 'use client';
 
-import { GA_TRACKING_ID } from '@/lib';
+import { env } from '@/env.mjs';
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageView = (url: string) => {
-  if (!GA_TRACKING_ID) return;
-  window.gtag('config', GA_TRACKING_ID, {
+  window.gtag('config', env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID, {
     page_path: url,
   });
 };
