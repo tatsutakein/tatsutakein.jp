@@ -5,6 +5,7 @@ import { BlogContent } from '@/features/blog/components';
 import { getClient } from '@/app/ApolloClient';
 import { Metadata, NextPage } from 'next';
 import { HeroImage } from '@/features/blog/components/HeroImage';
+import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'Post | tatsutakein.jp',
@@ -64,7 +65,7 @@ const PostPage: NextPage<PageProps> = async ({ params: { slug } }) => {
   });
 
   if (!post) {
-    return <div>Empty data</div>;
+    notFound();
   }
 
   return (
