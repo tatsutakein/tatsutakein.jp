@@ -16,14 +16,27 @@ interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 const getPostSlugsQuery = gql(`
-  query PostSlugs {
-    posts {
+  query PostSlugs($now: DateTime!) {
+    posts(where: { publishedAt_lte: $now }) {
       slug
     }
   }
 `);
+
+// @see https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#generating-static-params
+export async function generateStaticParams(): Promise<PageProps['params'][]> {
+  const { data: { posts } } = await getClient().query({
+    query: getPostSlugsQuery,
+    variables: {
+      now: new Date(),
+    },
+  });
+  return posts.map((post) => ({ slug: post.slug }));
+}
+
+export const revalidate = 60;
 
 const getPostQuery = gql(`
   query Post($slug: String!) {
