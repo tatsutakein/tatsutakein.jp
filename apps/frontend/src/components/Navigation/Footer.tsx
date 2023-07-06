@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 
 import { PagePath } from '@/lib/router';
-import { NoteIcon } from '@core/ui';
+import { NoteIcon } from '@tatsutakeinjp/core-ui';
 
 const NAVIGATIONS = {
   main: [

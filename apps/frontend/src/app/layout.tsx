@@ -1,15 +1,15 @@
 import '@/styles/globals.css';
 // include styles from the ui package
-import '@core/ui/styles.css';
+import '@tatsutakeinjp/core-ui/styles.css';
 import React from 'react';
 import GoogleAnalytics from '@/components/Utils/GoogleAnalytics';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import { env } from '@/env.mjs';
 
-const siteName = env.NEXT_PUBLIC_SITE_NAME as string;
+const siteName = env.NEXT_PUBLIC_SITE_NAME ;
 const description = 'Ryo Takeuchi のポートフォリオサイトです。';
-const url = env.NEXT_PUBLIC_SITE_URL as string;
+const url = env.NEXT_PUBLIC_SITE_URL ;
 
 export const metadata: Metadata = {
   title: {

@@ -1,6 +1,6 @@
 {
-  "name": "@core/ui",
-  "version": "0.0.0",
+  "name": "@tatsutakeinjp/core-ui",
+  "version": "0.1.0",
   "sideEffects": [
     "**/*.css"
   ],
