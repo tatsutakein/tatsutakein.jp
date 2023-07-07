@@ -6,7 +6,12 @@
   ],
   "globalEnv": [
     "NODE_ENV",
-    "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID"
+    "CI",
+    "SKIP_ENV_VALIDATION",
+    "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID",
+    "NEXT_CHECKOUT_URL",
+    "NEXT_PUBLIC_SITE_NAME",
+    "NEXT_PUBLIC_SITE_URL"
   ],
   "pipeline": {
     "build": {
