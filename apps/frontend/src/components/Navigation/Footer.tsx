@@ -11,6 +11,7 @@ const NAVIGATIONS = {
     { name: 'Blog', href: PagePath.blogIndex() },
     { name: 'Tools', href: PagePath.tools() },
     { name: 'Works', href: PagePath.works() },
+    { name: 'Policy', href: PagePath.policy() },
   ],
   social: [
     {

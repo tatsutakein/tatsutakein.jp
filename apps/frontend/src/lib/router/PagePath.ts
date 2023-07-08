@@ -58,6 +58,14 @@ export const PagePath = {
   },
 
   /**
+   * PrivacyPolicy ページ
+   */
+  policy(withOrigin?: boolean): string {
+    const path = '/policy';
+    return withOrigin ? PagePath.withOrigin(path) : path;
+  },
+
+  /**
    * 404ページ
    */
   notfound(withOrigin?: boolean): string {
