@@ -12,6 +12,7 @@ const description = 'Ryo Takeuchi のポートフォリオサイトです。';
 const url = env.NEXT_PUBLIC_SITE_URL;
 
 export const metadata: Metadata = {
+  metadataBase: new URL(env.NEXT_PUBLIC_SITE_URL),
   title: {
     default: siteName,
     /** `next-seo`の`titleTemplate`に相当する機能 */
