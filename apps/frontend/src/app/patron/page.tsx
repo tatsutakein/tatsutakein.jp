@@ -49,7 +49,7 @@ const AmazonWishListLinks: React.FC = () => (
       </Link>
     </li>
     <li className='mx-auto'>
-      <Link href='https://www.amazon.jp/hz/wishlist/ls/8ESLAB30Z5QX?ref_=wl_share'
+      <Link href='https://www.amazon.jp/hz/wishlist/ls/1JJS0MF76KYRK?ref_=wl_share'
             rel='noreferrer'
             className={clsx('flex justify-start items-center hover:opacity-50 text-violet-400')}
             target='_blank'>
