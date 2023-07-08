@@ -1,11 +1,11 @@
 'use client';
 
-import React from 'react';
+import { PagePath } from '@/lib/router';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { PagePath } from '@/lib/router';
+import React from 'react';
 
 export const MobileHeaderMenu = (): JSX.Element => {
   return (

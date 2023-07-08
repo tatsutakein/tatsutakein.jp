@@ -1,5 +1,5 @@
 import { Footer, Header } from '@/components/Navigation';
-import { HeadProps, Head } from '@/components/Utils';
+import { Head, HeadProps } from '@/components/Utils';
 
 export const CONTENTS_MAX_WIDTH = '1192px';
 
@@ -8,7 +8,11 @@ interface Props extends HeadProps {
   children: React.ReactNode;
 }
 
-export const ContentsLayout = ({ heroImage, children, ...headProps }: Props): JSX.Element => {
+export const ContentsLayout = ({
+  heroImage,
+  children,
+  ...headProps
+}: Props): JSX.Element => {
   return (
     <>
       <Head {...headProps} />

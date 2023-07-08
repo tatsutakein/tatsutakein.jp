@@ -1,8 +1,12 @@
+import { filterElement, findElement } from '@/utils/element';
 import { Menu, Transition } from '@headlessui/react';
 import clsx from 'clsx';
-import React, { Fragment, MouseEvent, MouseEventHandler, ReactNode } from 'react';
-
-import { filterElement, findElement } from '@/utils/element';
+import React, {
+  Fragment,
+  MouseEvent,
+  MouseEventHandler,
+  ReactNode,
+} from 'react';
 
 interface Props {
   children: ReactNode | ReactNode[];
@@ -12,7 +16,11 @@ interface Props {
   divide?: boolean;
 }
 
-export const DropdownMenu = ({ as = 'div', divide = true, ...props }: Props): JSX.Element => {
+export const DropdownMenu = ({
+  as = 'div',
+  divide = true,
+  ...props
+}: Props): JSX.Element => {
   const childElements = React.Children.toArray(props.children);
   const ButtonElement = findElement(childElements, DropdownMenu.Button);
   const ItemElements = filterElement(childElements, DropdownMenu.MenuItem);
@@ -58,7 +66,10 @@ interface DropdownMenuButtonProps {
 }
 
 // eslint-disable-next-line react/display-name
-DropdownMenu.Button = ({ as = 'button', ...props }: DropdownMenuButtonProps): JSX.Element => {
+DropdownMenu.Button = ({
+  as = 'button',
+  ...props
+}: DropdownMenuButtonProps): JSX.Element => {
   return (
     <Menu.Button
       as={as}
@@ -84,7 +95,10 @@ interface DropdownMenuItemProps {
 }
 
 // eslint-disable-next-line react/display-name
-DropdownMenu.MenuItem = ({ as = 'div', ...props }: DropdownMenuItemProps): JSX.Element => {
+DropdownMenu.MenuItem = ({
+  as = 'div',
+  ...props
+}: DropdownMenuItemProps): JSX.Element => {
   const handleClick = (event: MouseEvent<HTMLDivElement>) => {
     if (props.onClick && !props.disabled) {
       props.onClick(event);

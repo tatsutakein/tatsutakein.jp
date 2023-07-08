@@ -1,6 +1,5 @@
-import { default as NextHead } from 'next/head';
-
 import { PagePath } from '@/lib/router';
+import { default as NextHead } from 'next/head';
 
 export interface HeadProps {
   title?: string;

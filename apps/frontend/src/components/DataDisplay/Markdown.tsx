@@ -1,5 +1,6 @@
 'use client';
 
+import { CopyIcon, ExternalLinkIcon } from '@radix-ui/react-icons';
 import clsx from 'clsx';
 import { useState } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
@@ -7,7 +8,6 @@ import ReactMarkdown from 'react-markdown';
 import { CodeProps } from 'react-markdown/lib/ast-to-react';
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { CopyIcon, ExternalLinkIcon } from '@radix-ui/react-icons';
 
 interface Props {
   markdown: string;
@@ -52,7 +52,12 @@ export const Markdown = ({ markdown, className }: Props): JSX.Element => {
 /**
  * MarkdownCode
  */
-export const MarkdownCode = ({ inline, className, children, ...props }: CodeProps): JSX.Element => {
+export const MarkdownCode = ({
+  inline,
+  className,
+  children,
+  ...props
+}: CodeProps): JSX.Element => {
   const codeText = children.toString().replace(/ {2}\n/g, '\n');
   const matchLang = /language-(\w+)/.exec(className || '');
   const fileName = (className || '').replace(/language-(\w+):?/, '');
@@ -94,7 +99,9 @@ export const MarkdownCode = ({ inline, className, children, ...props }: CodeProp
 
       {fileName && (
         <div className='mb-4'>
-          <span className='inline-block underline underline-offset-8 opacity-50'>{fileName}</span>
+          <span className='inline-block underline underline-offset-8 opacity-50'>
+            {fileName}
+          </span>
         </div>
       )}
 

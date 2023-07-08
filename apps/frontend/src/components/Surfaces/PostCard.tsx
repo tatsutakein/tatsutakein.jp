@@ -1,11 +1,9 @@
-import clsx from 'clsx';
-import Link from 'next/link';
-
 import { formatDateEn, utcToJstTime } from '@/utils/date';
 import { countText, hasJa } from '@/utils/text';
-import React from 'react';
+import clsx from 'clsx';
 import Image from 'next/image';
-
+import Link from 'next/link';
+import React from 'react';
 
 interface Props {
   href: string;
@@ -43,7 +41,9 @@ export const PostCard: React.FC<Props> = ({
           <span
             className={clsx(
               'text-center indent-1 font-semibold tracking-widest text-white opacity-90',
-              hasJa(heroText) && countText(heroText) > 6 ? 'text-2xl' : 'text-3xl',
+              hasJa(heroText) && countText(heroText) > 6
+                ? 'text-2xl'
+                : 'text-3xl',
             )}
             style={{ textShadow: '1px 1px 4px rgb(0 0 0 / 25%)' }}
           >

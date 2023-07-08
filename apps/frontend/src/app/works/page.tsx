@@ -1,7 +1,7 @@
-import { Metadata, NextPage } from 'next';
 import { ContentsLayout } from '@/components/Layout';
 import { PagePath } from '@/lib/router';
 import clsx from 'clsx';
+import { Metadata, NextPage } from 'next';
 
 export const metadata: Metadata = {
   title: 'Works | tatsutakein.jp',

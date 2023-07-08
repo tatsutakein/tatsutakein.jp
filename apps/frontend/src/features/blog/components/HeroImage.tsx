@@ -1,11 +1,10 @@
-import clsx from 'clsx';
-import Link from 'next/link';
-
 import { CONTENTS_MAX_WIDTH } from '@/components/Layout';
 import { PagePath } from '@/lib/router';
 import { formatDateEn, utcToJstTime } from '@/utils/date';
 import { CalendarIcon } from '@radix-ui/react-icons';
+import clsx from 'clsx';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Props {
   heroImage?: string;
@@ -54,7 +53,10 @@ export const HeroImage = ({
 
       <div
         className='absolute inset-x-0 bottom-0 pb-4 pt-16 text-white md:pb-5 lg:pb-6'
-        style={{ background: 'linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.2))' }}
+        style={{
+          background:
+            'linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.2))',
+        }}
       >
         <div
           className='m-auto px-4 md:px-8'
@@ -75,7 +77,12 @@ export const HeroImage = ({
           </div>
 
           {/* Tags */}
-          <div className={clsx('flex flex-wrap gap-4 text-sm', tags.length && 'mt-3')}>
+          <div
+            className={clsx(
+              'flex flex-wrap gap-4 text-sm',
+              tags.length && 'mt-3',
+            )}
+          >
             {tags.map((tag) => (
               <Link
                 key={tag}

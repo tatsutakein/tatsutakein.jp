@@ -1,9 +1,9 @@
-import { Metadata, NextPage } from 'next';
-import { gql } from '@/gql';
-import { ContentsLayout } from '@/components/Layout';
-import { PagePath } from '@/lib/router';
 import { getClient } from '@/app/ApolloClient';
+import { ContentsLayout } from '@/components/Layout';
 import { PostCard } from '@/components/Surfaces';
+import { gql } from '@/gql';
+import { PagePath } from '@/lib/router';
+import { Metadata, NextPage } from 'next';
 
 export const metadata: Metadata = {
   title: 'Posts | tatsutakein.jp',
@@ -37,22 +37,19 @@ const PostListPage: NextPage = async () => {
   });
   const posts = data?.posts ?? [];
 
-  const postList = posts.map(({
-    slug,
-    title,
-    excerpt,
-    publishedAt,
-    coverImage,
-  }) => (
-    <PostCard
-      key={slug}
-      href={`/posts/${slug}`}
-      title={title}
-      description={excerpt}
-      publishedAt={publishedAt}
-      heroImage={coverImage?.url ?? '/images/hero-default.png'}
-      heroText={null} />
-  ));
+  const postList = posts.map(
+    ({ slug, title, excerpt, publishedAt, coverImage }) => (
+      <PostCard
+        key={slug}
+        href={`/posts/${slug}`}
+        title={title}
+        description={excerpt}
+        publishedAt={publishedAt}
+        heroImage={coverImage?.url ?? '/images/hero-default.png'}
+        heroText={null}
+      />
+    ),
+  );
 
   return (
     <ContentsLayout

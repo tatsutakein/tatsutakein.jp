@@ -1,12 +1,15 @@
-import { CSSProperties } from 'react';
 import Image from 'next/image';
+import { CSSProperties } from 'react';
 
 interface Props {
   className?: string;
   style?: CSSProperties;
 }
 
-export const ProfileImage: (props: Props) => JSX.Element = ({ className, style }) => {
+export const ProfileImage: (props: Props) => JSX.Element = ({
+  className,
+  style,
+}) => {
   return (
     <Image
       src='/profile_256.webp'

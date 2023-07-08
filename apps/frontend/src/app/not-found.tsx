@@ -1,5 +1,5 @@
-import { PagePath } from '@/lib/router';
 import { ContentsLayout } from '@/components/Layout';
+import { PagePath } from '@/lib/router';
 import Link from 'next/link';
 
 const NotFound: React.FC = () => {
@@ -13,7 +13,9 @@ const NotFound: React.FC = () => {
       <div className='min-h-full px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8'>
         <div className='mx-auto max-w-max'>
           <main className='sm:flex'>
-            <p className='text-4xl font-bold tracking-tight text-violet-500 sm:text-5xl'>404</p>
+            <p className='text-4xl font-bold tracking-tight text-violet-500 sm:text-5xl'>
+              404
+            </p>
 
             <div className='sm:ml-6'>
               <div className='sm:border-l sm:border-gray-200 sm:pl-6'>
