@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { formatDateEn, utcToJstTime } from '@/utils/date';
 import { countText, hasJa } from '@/utils/text';
 import React from 'react';
+import Image from 'next/image';
 
 
 interface Props {
@@ -31,10 +32,12 @@ export const PostCard: React.FC<Props> = ({
       >
         {/* ヒーロー画像 */}
         <div className='relative flex h-40 shrink-0 items-center justify-center overflow-hidden'>
-          <img
+          <Image
             className='absolute inset-0 m-auto object-cover'
             src={heroImage}
             alt='#'
+            fill
+            loading='lazy'
           />
 
           <span
