@@ -38,6 +38,9 @@ export const metadata: Metadata = {
   },
 };
 
+// @see https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic
+export const dynamic = 'force-dynamic';
+
 interface LayoutProps {
   children: React.ReactNode;
 }
