@@ -58,6 +58,14 @@ export const PagePath = {
   },
 
   /**
+   * Patron ページ
+   */
+  patron(withOrigin?: boolean): string {
+    const path = '/patron';
+    return withOrigin ? PagePath.withOrigin(path) : path;
+  },
+
+  /**
    * PrivacyPolicy ページ
    */
   policy(withOrigin?: boolean): string {
