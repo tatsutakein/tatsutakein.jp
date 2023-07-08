@@ -12,7 +12,7 @@ const NAVIGATIONS = {
   main: [
     { name: 'About', href: PagePath.about() },
     { name: 'Blog', href: PagePath.blogIndex() },
-    { name: 'Tools', href: PagePath.tools() },
+    { name: 'Products', href: PagePath.products() },
     { name: 'Works', href: PagePath.works() },
     { name: 'Patron', href: PagePath.patron() },
     { name: 'Policy', href: PagePath.policy() },

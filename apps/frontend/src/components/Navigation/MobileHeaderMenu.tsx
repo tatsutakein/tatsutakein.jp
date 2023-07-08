@@ -46,9 +46,9 @@ export const MobileHeaderMenu = (): JSX.Element => {
             asChild
             className='group text-lg leading-none my-1 rounded-md flex items-center h-8 relative pl-8 select-none outline-none data-[highlighted]:bg-violet-700 data-[highlighted]:text-violet-50'
           >
-            <Link href={PagePath.tools()}>
-              Tools
-              <span className='sr-only'>Tools</span>
+            <Link href={PagePath.products()}>
+              Products
+              <span className='sr-only'>Products</span>
             </Link>
           </DropdownMenu.Item>
           <DropdownMenu.Item
