@@ -5,6 +5,7 @@ import { CONTENTS_MAX_WIDTH } from '@/components/Layout';
 import { PagePath } from '@/lib/router';
 import { formatDateEn, utcToJstTime } from '@/utils/date';
 import { CalendarIcon } from '@radix-ui/react-icons';
+import Image from 'next/image';
 
 interface Props {
   heroImage?: string;
@@ -27,17 +28,21 @@ export const HeroImage = ({
     <div className='relative h-52 overflow-hidden md:h-72 lg:h-80'>
       {/* Image */}
       {heroImage && (
-        <img
+        <Image
           className='absolute inset-0 m-auto w-full object-cover'
           src={heroImage}
           alt='#'
+          fill
+          loading='lazy'
         />
       )}
       {!heroImage && (
-        <img
+        <Image
           className='absolute inset-0 m-auto w-full object-cover'
           src={`/images/hero-default.png`}
           alt='#'
+          fill
+          loading='lazy'
         />
       )}
 
