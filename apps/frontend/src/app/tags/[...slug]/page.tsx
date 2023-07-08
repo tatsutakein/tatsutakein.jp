@@ -5,7 +5,7 @@ import { Metadata, NextPage } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Tags | tatsutakein.jp',
+  title: 'Tags',
   description: 'Ryo Takeuchi のポートフォリオサイトです。',
 };
 

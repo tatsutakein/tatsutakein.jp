@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import { Metadata, NextPage } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Products | tatsutakein.jp',
+  title: 'Products',
   description: 'Ryo Takeuchi が制作したプロダクトを紹介します。',
 };
 

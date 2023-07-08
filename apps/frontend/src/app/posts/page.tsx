@@ -6,7 +6,7 @@ import { PagePath } from '@/lib/router';
 import { Metadata, NextPage } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Posts | tatsutakein.jp',
+  title: 'Posts',
   description: 'Ryo Takeuchi のポートフォリオサイトです。',
 };
 

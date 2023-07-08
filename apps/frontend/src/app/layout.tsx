@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: {
     default: siteName,
     /** `next-seo`の`titleTemplate`に相当する機能 */
-    template: `%s - ${siteName}`,
+    template: `%s | ${siteName}`,
   },
   description,
   openGraph: {

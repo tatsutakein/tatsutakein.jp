@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { Metadata, NextPage } from 'next';
 
 export const metadata: Metadata = {
-  title: 'プライバシーポリシー | tatsutakein.jp',
+  title: 'プライバシーポリシー',
   description: 'Ryo Takeuchi のポートフォリオサイトです。',
 };
 

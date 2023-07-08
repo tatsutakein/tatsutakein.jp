@@ -7,7 +7,7 @@ import { Metadata, NextPage } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Patron | tatsutakein.jp',
+  title: 'Patron',
   description: 'ご支援に関して',
 };
 

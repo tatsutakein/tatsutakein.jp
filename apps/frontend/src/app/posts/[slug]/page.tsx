@@ -8,7 +8,7 @@ import { Metadata, NextPage } from 'next';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Post | tatsutakein.jp',
+  title: 'Post',
   description: 'Ryo Takeuchi のポートフォリオサイトです。',
 };
 

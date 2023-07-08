@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { Metadata, NextPage } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About | tatsutakein.jp',
+  title: 'About',
   description: 'Ryo Takeuchi のポートフォリオサイトです。',
 };
 
