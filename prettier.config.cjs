@@ -14,9 +14,7 @@ const config = {
   // pluginSearchDirs: false,
   plugins: [
     '@ianvs/prettier-plugin-sort-imports',
-    'prettier-plugin-tailwindcss',
   ],
-  tailwindConfig: './packages/config/tailwind',
   importOrder: [],
   importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
   importOrderTypeScriptVersion: '5.0.4',

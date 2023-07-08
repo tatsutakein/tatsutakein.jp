@@ -10,7 +10,7 @@ const config = {
   },
   settings: {
     next: {
-      rootDir: ['apps/docs', 'apps/frontend'],
+      rootDir: ['apps/frontend'],
     },
   },
 };
