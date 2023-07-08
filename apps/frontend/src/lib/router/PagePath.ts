@@ -34,10 +34,10 @@ export const PagePath = {
   },
 
   /**
-   * Toolsページ
+   * Products ページ
    */
-  tools(withOrigin?: boolean): string {
-    const path = '/tools';
+  products(withOrigin?: boolean): string {
+    const path = '/products';
     return withOrigin ? PagePath.withOrigin(path) : path;
   },
 

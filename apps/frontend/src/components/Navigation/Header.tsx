@@ -1,4 +1,4 @@
-import { About, Blog, Logo, Tools } from '@/components/Assets';
+import { About, Blog, Logo, Products } from '@/components/Assets';
 import { Works } from '@/components/Assets/Works';
 import { MobileHeaderMenu } from '@/components/Navigation/MobileHeaderMenu';
 import { PagePath } from '@/lib/router';
@@ -36,12 +36,12 @@ const MENUS = [
   },
   {
     a: {
-      name: 'Tools',
-      href: PagePath.tools(),
+      name: 'Products',
+      href: PagePath.products(),
     },
     text: () => {
       return (
-        <Tools
+        <Products
           className='relative top-0.5 w-auto'
           style={{ height: '16px' }}
         />
