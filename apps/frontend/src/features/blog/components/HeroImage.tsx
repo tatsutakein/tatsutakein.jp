@@ -29,7 +29,7 @@ export const HeroImage = ({
       {heroImage && (
         <img
           className='absolute inset-0 m-auto w-full object-cover'
-          src={`/images/${heroImage}.png`}
+          src={heroImage}
           alt='#'
         />
       )}
