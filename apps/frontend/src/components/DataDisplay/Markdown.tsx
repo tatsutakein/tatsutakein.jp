@@ -34,7 +34,7 @@ export const Markdown = ({ markdown, className }: Props): JSX.Element => {
                 href={href}
                 target='_blank'
                 rel='noreferrer'
-                className='text-cyan-600 hover:opacity-50 inline-flex items-center'
+                className='text-violet-500 hover:opacity-50 inline-flex items-center'
               >
                 {children}
                 <ExternalLinkIcon className='ml-2' />
