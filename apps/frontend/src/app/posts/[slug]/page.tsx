@@ -43,12 +43,15 @@ const getPostQuery = gql(`
   query Post($slug: String!) {
     post(where: { slug: $slug }, stage: PUBLISHED) {
       id
+      title
       excerpt
       publishedAt
+      coverImage {
+        url
+      }
       content {
         markdown
       }
-      title
       tags
     }
   }
@@ -75,10 +78,10 @@ const PostPage: NextPage<PageProps> = async ({ params: { slug } }) => {
       pageUrl={PagePath.blogDetail(slug, true)}
       heroImage={
         <HeroImage
-          // heroImage={post.heroImage}
-          // heroText={post.heroText}
+          heroImage={post.coverImage?.url ?? '/images/hero-default.png'}
+          heroText={null}
           title={post.title}
-          publishedAt={post.publishedAt as string}
+          publishedAt={post.publishedAt}
           tags={post.tags}
         />
       }

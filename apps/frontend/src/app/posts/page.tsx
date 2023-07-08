@@ -1,9 +1,9 @@
-import Link from 'next/link';
 import { Metadata, NextPage } from 'next';
 import { gql } from '@/gql';
 import { ContentsLayout } from '@/components/Layout';
 import { PagePath } from '@/lib/router';
 import { getClient } from '@/app/ApolloClient';
+import { PostCard } from '@/components/Surfaces';
 
 export const metadata: Metadata = {
   title: 'Posts | tatsutakein.jp',
@@ -12,9 +12,18 @@ export const metadata: Metadata = {
 
 const getPostsQuery = gql(`
   query Posts($now: DateTime!) {
-    posts(where: { publishedAt_lte: $now }) {
+    posts(
+      where: {publishedAt_lte: $now}
+      stage: PUBLISHED
+      orderBy: publishedAt_DESC
+    ) {
       slug
       title
+      excerpt
+      publishedAt
+      coverImage {
+        url
+      }
     }
   }
 `);
@@ -28,13 +37,21 @@ const PostListPage: NextPage = async () => {
   });
   const posts = data?.posts ?? [];
 
-  const postList = posts.map(({ slug, title }) => (
-    <Link
+  const postList = posts.map(({
+    slug,
+    title,
+    excerpt,
+    publishedAt,
+    coverImage,
+  }) => (
+    <PostCard
       key={slug}
       href={`/posts/${slug}`}
-    >
-      <p>{title}</p>
-    </Link>
+      title={title}
+      description={excerpt}
+      publishedAt={publishedAt}
+      heroImage={coverImage?.url ?? '/images/hero-default.png'}
+      heroText={null} />
   ));
 
   return (
@@ -43,7 +60,9 @@ const PostListPage: NextPage = async () => {
       pageType='article'
       pageUrl={PagePath.blogIndex(true)}
     >
-      {postList}
+      <div className='grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,_1fr))]'>
+        {postList}
+      </div>
     </ContentsLayout>
   );
 };
