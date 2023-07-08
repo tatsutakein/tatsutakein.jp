@@ -1,9 +1,12 @@
-import { faGithub, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
-
 import { PagePath } from '@/lib/router';
+import {
+  faGithub,
+  faInstagram,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NoteIcon } from '@tatsutakeinjp/core-ui';
+import Link from 'next/link';
 
 const NAVIGATIONS = {
   main: [

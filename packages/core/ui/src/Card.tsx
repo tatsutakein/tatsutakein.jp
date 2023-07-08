@@ -1,6 +1,14 @@
 import * as React from 'react';
 
-export const Card = ({ title, cta, href }: { title: string; cta: string; href: string }) => {
+export const Card = ({
+  title,
+  cta,
+  href,
+}: {
+  title: string;
+  cta: string;
+  href: string;
+}) => {
   return (
     <a
       target='_blank'
@@ -10,7 +18,9 @@ export const Card = ({ title, cta, href }: { title: string; cta: string; href: s
     >
       <div className='ui-p-4 ui-bg-zinc-900 ui-h-full'>
         <p className='ui-inline-block ui-text-xl ui-text-white'>{title}</p>
-        <div className='ui-text-xs ui-mt-4 group-hover:ui-underline'>{cta} →</div>
+        <div className='ui-text-xs ui-mt-4 group-hover:ui-underline'>
+          {cta} →
+        </div>
       </div>
     </a>
   );

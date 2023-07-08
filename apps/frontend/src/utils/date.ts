@@ -16,7 +16,11 @@ export {
 
 type Locale = 'ja' | 'en';
 
-export const format = (date: Date, fmt = 'yyyy/M/d HH:mm', locale: Locale = 'ja'): string => {
+export const format = (
+  date: Date,
+  fmt = 'yyyy/M/d HH:mm',
+  locale: Locale = 'ja',
+): string => {
   return _format(date, fmt, { locale: locale === 'ja' ? ja : enUS });
 };
 

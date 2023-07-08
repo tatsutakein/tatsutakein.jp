@@ -1,7 +1,7 @@
-import { Metadata, NextPage } from 'next';
 import { ContentsLayout } from '@/components/Layout';
 import { PagePath } from '@/lib/router';
 import clsx from 'clsx';
+import { Metadata, NextPage } from 'next';
 
 export const metadata: Metadata = {
   title: 'プライバシーポリシー | tatsutakein.jp',
@@ -27,17 +27,21 @@ const Policy: NextPage = () => {
       </p>
 
       <h2 className={clsx('text-2xl mt-8')}>個人情報の収集について</h2>
-      <p className={clsx('mt-4')}>提供する当Webサイトの運営に必要な範囲で個人情報を収集致します。</p>
+      <p className={clsx('mt-4')}>
+        提供する当Webサイトの運営に必要な範囲で個人情報を収集致します。
+      </p>
       <p className={clsx('mt-4')}>
         当Webサイトでは、サイトの利用状況やユーザー属性情報（年齢、性別、興味や関心など）を把握するためにGoogle
         Analyticsを利用しております。
         <br />
-        Google Analyticsではクッキー（cookie）を使用し個人を特定する情報を含まずにログを収集します。
+        Google
+        Analyticsではクッキー（cookie）を使用し個人を特定する情報を含まずにログを収集します。
         <br />
         なお、Google
         Analyticsの利用により収集されるログはGoogle社のプライバシーポリシーに基づいて管理されます。
         <br />
-        Google Analyticsについて、およびGoogle社のプライバシーポリシーについてはGoogle
+        Google
+        Analyticsについて、およびGoogle社のプライバシーポリシーについてはGoogle
         Analytics概要をご覧ください。
       </p>
 
@@ -61,8 +65,18 @@ const Policy: NextPage = () => {
       </p>
 
       <h2 className={clsx('text-2xl mt-8')}>免責</h2>
-      <p className={clsx('mt-4')}>以下の場合は、第三者による個人情報の取得に関し、当Webサイトは何らの責任を負いません。</p>
-      <ul className={clsx('mt-4', 'ml-2', 'list-inside', 'list-disc', 'space-y-2')}>
+      <p className={clsx('mt-4')}>
+        以下の場合は、第三者による個人情報の取得に関し、当Webサイトは何らの責任を負いません。
+      </p>
+      <ul
+        className={clsx(
+          'mt-4',
+          'ml-2',
+          'list-inside',
+          'list-disc',
+          'space-y-2',
+        )}
+      >
         <li>
           ユーザー自らが当Webサイト上の機能または別の手段を用いて第三者に個人情報を明らかにする場合
         </li>

@@ -3,7 +3,9 @@
  */
 export const hasJa = (text: string | undefined | null): boolean => {
   return text
-    ? !!text.match(/^(?=.*[\u3041-\u3096]).*$|^(?=.*[\u30A1-\u30FA]).*$|^(?=.*[\u4E00-\u9FFF]).*$/g)
+    ? !!text.match(
+        /^(?=.*[\u3041-\u3096]).*$|^(?=.*[\u30A1-\u30FA]).*$|^(?=.*[\u4E00-\u9FFF]).*$/g,
+      )
     : false;
 };
 

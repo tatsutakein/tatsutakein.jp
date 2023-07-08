@@ -1,8 +1,8 @@
-import { NextPage } from 'next';
+import { ProfileImage } from '@/components/Assets';
 import { ContentsLayout } from '@/components/Layout';
 import { PagePath } from '@/lib/router';
 import clsx from 'clsx';
-import { ProfileImage } from '@/components/Assets';
+import { NextPage } from 'next';
 
 const Index: NextPage = () => {
   return (

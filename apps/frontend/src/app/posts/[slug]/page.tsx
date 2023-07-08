@@ -1,10 +1,10 @@
-import { gql } from '@/gql';
-import { ContentsLayout } from '@/components/Layout';
-import { PagePath } from '@/lib/router';
-import { BlogContent } from '@/features/blog/components';
 import { getClient } from '@/app/ApolloClient';
-import { Metadata, NextPage } from 'next';
+import { ContentsLayout } from '@/components/Layout';
+import { BlogContent } from '@/features/blog/components';
 import { HeroImage } from '@/features/blog/components/HeroImage';
+import { gql } from '@/gql';
+import { PagePath } from '@/lib/router';
+import { Metadata, NextPage } from 'next';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
@@ -17,7 +17,6 @@ interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-
 const getPostSlugsQuery = gql(`
   query PostSlugs($now: DateTime!) {
     posts(where: { publishedAt_lte: $now }) {
@@ -28,7 +27,9 @@ const getPostSlugsQuery = gql(`
 
 // @see https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#generating-static-params
 export async function generateStaticParams(): Promise<PageProps['params'][]> {
-  const { data: { posts } } = await getClient().query({
+  const {
+    data: { posts },
+  } = await getClient().query({
     query: getPostSlugsQuery,
     variables: {
       now: new Date(),

@@ -1,7 +1,7 @@
-import { Metadata, NextPage } from 'next';
 import { ContentsLayout } from '@/components/Layout';
 import { PagePath } from '@/lib/router';
 import clsx from 'clsx';
+import { Metadata, NextPage } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -26,7 +26,9 @@ const Tags: NextPage<PageProps> = ({ params: { slug } }) => {
       <h1 className={clsx('text-4xl')}>Tags</h1>
 
       {/* Tags */}
-      <div className={clsx('flex flex-wrap gap-4 text-sm', tags.length && 'mt-3')}>
+      <div
+        className={clsx('flex flex-wrap gap-4 text-sm', tags.length && 'mt-3')}
+      >
         {tags.map((tag) => (
           <Link
             key={tag}

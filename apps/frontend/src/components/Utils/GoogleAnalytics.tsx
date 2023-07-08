@@ -1,10 +1,10 @@
 'use client';
 
+import { env } from '@/env.mjs';
+import { pageView } from '@/lib';
 import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
 import { useEffect } from 'react';
-import { pageView } from '@/lib';
-import { env } from '@/env.mjs';
 
 const GoogleAnalytics: React.FC = () => {
   const pathname = usePathname();
