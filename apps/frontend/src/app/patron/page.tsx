@@ -19,10 +19,10 @@ const Patron: NextPage = () => {
       pageUrl={PagePath.patron(true)}
     >
       <h1 className={clsx('text-3xl before:line-clamp-1')}>ご支援に関して</h1>
-      <p className='mt-8'>ご支援に関する内容とリンクをまとめます。</p>
+      <p className='mt-6'>ご支援に関する内容とリンクをまとめます。</p>
 
-      <h2 className={clsx('text-2xl mt-16')}>支援先</h2>
-      <ul className={clsx('list-disc list-outside ml-8 mt-8 space-y-2')}>
+      <h2 className={clsx('text-2xl mt-12')}>支援先</h2>
+      <ul className={clsx('list-disc list-outside ml-6 mt-4 space-y-2')}>
         <li>
           Amazon
           <AmazonWishListLinks />
