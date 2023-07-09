@@ -47,9 +47,7 @@ const Products: NextPage = () => {
       pageUrl={PagePath.products(true)}
     >
       <h1 className={clsx('text-3xl')}>Products</h1>
-      <div className='mt-8 grid gap-4 grid-cols-[repeat(auto-fit,minmax(400px,_1fr))]'>
-        {productList}
-      </div>
+      <div className='mt-8 grid gap-4 grid-cols-1'>{productList}</div>
     </ContentsLayout>
   );
 };

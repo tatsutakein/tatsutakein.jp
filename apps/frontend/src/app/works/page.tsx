@@ -60,7 +60,7 @@ const Works: NextPage = () => {
       pageUrl={PagePath.works(true)}
     >
       <h1 className={clsx('text-3xl')}>Works</h1>
-      <div className='mt-8 grid gap-4 grid-cols-[repeat(auto-fit,minmax(400px,_1fr))]'>
+      <div className='mt-8 grid gap-4 grid-cols-1 lg:grid-cols-2'>
         {workList}
       </div>
     </ContentsLayout>
