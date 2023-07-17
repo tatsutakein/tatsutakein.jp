@@ -39,11 +39,11 @@ importers:
   apps/frontend:
     dependencies:
       '@apollo/client':
-        specifier: 3.8.0-rc.0
-        version: 3.8.0-rc.0(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 3.8.0-rc.1
+        version: 3.8.0-rc.1(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0)
       '@apollo/experimental-nextjs-app-support':
         specifier: ^0.3.1
-        version: 0.3.1(@apollo/client@3.8.0-rc.0)(next@13.4.10)(react@18.2.0)
+        version: 0.3.1(@apollo/client@3.8.0-rc.1)(next@13.4.10)(react@18.2.0)
       '@fortawesome/fontawesome-svg-core':
         specifier: 6.4.0
         version: 6.4.0
@@ -111,8 +111,8 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       react-hook-form:
-        specifier: 7.45.1
-        version: 7.45.1(react@18.2.0)
+        specifier: 7.45.2
+        version: 7.45.2(react@18.2.0)
       react-markdown:
         specifier: 8.0.7
         version: 8.0.7(@types/react@18.2.15)(react@18.2.0)
@@ -267,8 +267,8 @@ packages:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.18
 
-  /@apollo/client@3.8.0-rc.0(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-vyhXul1GxTw7hUoPl3eE48SneAKddhsYDYlrZ4046mJQtPJHGA1oqRAmuCKA9Gbx+clYetk+fDtd5ujBH8Nqnw==}
+  /@apollo/client@3.8.0-rc.1(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-YqJeoLRqRSX5Rzad6D4NYwRNIlY3cmSVao6kF8WJZ0rb2POf1etFcQ5ocuKlcXtUw+WZlNEGeootV2wqdXwJaw==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
       graphql-ws: ^5.5.5
@@ -303,14 +303,14 @@ packages:
       zen-observable-ts: 1.2.5
     dev: false
 
-  /@apollo/experimental-nextjs-app-support@0.3.1(@apollo/client@3.8.0-rc.0)(next@13.4.10)(react@18.2.0):
+  /@apollo/experimental-nextjs-app-support@0.3.1(@apollo/client@3.8.0-rc.1)(next@13.4.10)(react@18.2.0):
     resolution: {integrity: sha512-LvFSNWd8hs7AqAgARc5Kv7NftIIFX8X2MW/BKohnuLJAZce8+2GrTGl7QlNrmyF5pac2rSPQzaWMcYpBM+/1Mw==}
     peerDependencies:
       '@apollo/client': '>=3.8.0-beta.4'
       next: ^13.4.1
       react: ^18
     dependencies:
-      '@apollo/client': 3.8.0-rc.0(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0)
+      '@apollo/client': 3.8.0-rc.1(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0)
       next: 13.4.10(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       superjson: 1.12.3
@@ -7802,8 +7802,8 @@ packages:
       scheduler: 0.23.0
     dev: false
 
-  /react-hook-form@7.45.1(react@18.2.0):
-    resolution: {integrity: sha512-6dWoFJwycbuFfw/iKMcl+RdAOAOHDiF11KWYhNDRN/OkUt+Di5qsZHwA0OwsVnu9y135gkHpTw9DJA+WzCeR9w==}
+  /react-hook-form@7.45.2(react@18.2.0):
+    resolution: {integrity: sha512-9s45OdTaKN+4NSTbXVqeDITd/nwIg++nxJGL8+OD5uf1DxvhsXQ641kaYHk5K28cpIOTYm71O/fYk7rFaygb3A==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
