@@ -42,8 +42,8 @@ importers:
         specifier: 3.8.0-rc.1
         version: 3.8.0-rc.1(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0)
       '@apollo/experimental-nextjs-app-support':
-        specifier: ^0.3.1
-        version: 0.3.1(@apollo/client@3.8.0-rc.1)(next@13.4.10)(react@18.2.0)
+        specifier: ^0.4.0
+        version: 0.4.0(@apollo/client@3.8.0-rc.1)(next@13.4.10)(react@18.2.0)
       '@fortawesome/fontawesome-svg-core':
         specifier: 6.4.0
         version: 6.4.0
@@ -303,10 +303,10 @@ packages:
       zen-observable-ts: 1.2.5
     dev: false
 
-  /@apollo/experimental-nextjs-app-support@0.3.1(@apollo/client@3.8.0-rc.1)(next@13.4.10)(react@18.2.0):
-    resolution: {integrity: sha512-LvFSNWd8hs7AqAgARc5Kv7NftIIFX8X2MW/BKohnuLJAZce8+2GrTGl7QlNrmyF5pac2rSPQzaWMcYpBM+/1Mw==}
+  /@apollo/experimental-nextjs-app-support@0.4.0(@apollo/client@3.8.0-rc.1)(next@13.4.10)(react@18.2.0):
+    resolution: {integrity: sha512-RKPEqSDtIASyTuvN7DyHoBi3TvKJBpjQV+lcecU1XOhL1SGmA2hERooXDx75IbIxMW4Fkk2bFVO8+QoFoYWa8w==}
     peerDependencies:
-      '@apollo/client': '>=3.8.0-beta.4'
+      '@apollo/client': '>=3.8.0-rc || ^3.8.0'
       next: ^13.4.1
       react: ^18
     dependencies:
