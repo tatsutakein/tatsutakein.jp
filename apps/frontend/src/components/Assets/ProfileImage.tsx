@@ -12,7 +12,7 @@ export const ProfileImage: (props: Props) => JSX.Element = ({
 }) => {
   return (
     <Image
-      src='/profile_256.webp'
+      src='/images/profile-zoom.webp'
       width={256}
       height={256}
       alt=''
