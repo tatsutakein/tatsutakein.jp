@@ -13,7 +13,7 @@
     "codegen:watch": "graphql-codegen --config codegen.ts --watch"
   },
   "dependencies": {
-    "@apollo/client": "3.8.0-rc.2",
+    "@apollo/client": "3.8.0",
     "@apollo/experimental-nextjs-app-support": "^0.4.0",
     "@fortawesome/fontawesome-svg-core": "6.4.2",
     "@fortawesome/free-brands-svg-icons": "6.4.2",
@@ -33,7 +33,7 @@
     "date-fns-tz": "2.0.0",
     "graphql": "16.7.1",
     "graphql-request": "^6.1.0",
-    "next": "13.4.12",
+    "next": "13.4.13",
     "react": "18.2.0",
     "react-copy-to-clipboard": "5.1.0",
     "react-dom": "18.2.0",
@@ -44,7 +44,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@babel/core": "7.22.9",
+    "@babel/core": "7.22.10",
     "@graphql-codegen/cli": "5.0.0",
     "@graphql-codegen/client-preset": "4.1.0",
     "@graphql-codegen/introspection": "4.0.0",
