@@ -39,11 +39,11 @@ importers:
   apps/frontend:
     dependencies:
       '@apollo/client':
-        specifier: 3.8.0
-        version: 3.8.0(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 3.8.1
+        version: 3.8.1(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0)
       '@apollo/experimental-nextjs-app-support':
         specifier: ^0.4.0
-        version: 0.4.0(@apollo/client@3.8.0)(next@13.4.13)(react@18.2.0)
+        version: 0.4.0(@apollo/client@3.8.1)(next@13.4.13)(react@18.2.0)
       '@fortawesome/fontawesome-svg-core':
         specifier: 6.4.2
         version: 6.4.2
@@ -267,8 +267,8 @@ packages:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.18
 
-  /@apollo/client@3.8.0(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-y/NadA2AKVtV18rO+Hi++6a6f4IqhUNvRPny7wAWx39ldzy8I4f6pWOYRSiJmL6hNFciVdT/YZqaoxnF2NRIuQ==}
+  /@apollo/client@3.8.1(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-JGGj/9bdoLEqzatRikDeN8etseY5qeFAY0vSAx/Pd0ePNsaflKzHx6V2NZ0NsGkInq+9IXXX3RLVDf0EotizMA==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
       graphql-ws: ^5.5.5
@@ -303,14 +303,14 @@ packages:
       zen-observable-ts: 1.2.5
     dev: false
 
-  /@apollo/experimental-nextjs-app-support@0.4.0(@apollo/client@3.8.0)(next@13.4.13)(react@18.2.0):
+  /@apollo/experimental-nextjs-app-support@0.4.0(@apollo/client@3.8.1)(next@13.4.13)(react@18.2.0):
     resolution: {integrity: sha512-RKPEqSDtIASyTuvN7DyHoBi3TvKJBpjQV+lcecU1XOhL1SGmA2hERooXDx75IbIxMW4Fkk2bFVO8+QoFoYWa8w==}
     peerDependencies:
       '@apollo/client': '>=3.8.0-rc || ^3.8.0'
       next: ^13.4.1
       react: ^18
     dependencies:
-      '@apollo/client': 3.8.0(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0)
+      '@apollo/client': 3.8.1(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0)
       next: 13.4.13(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       superjson: 1.12.3
