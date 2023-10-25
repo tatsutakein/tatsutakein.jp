@@ -11,19 +11,18 @@
     "ncu": "npx npm-check-updates --deep"
   },
   "devDependencies": {
-    "@tatsutakeinjp/eslint-config": "^0.1.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.0.2",
     "@manypkg/cli": "^0.21.0",
+    "@tatsutakeinjp/eslint-config": "^0.1.0",
     "@types/prettier": "^2.7.3",
     "eslint": "^8.43.0",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.5.0",
-    "turbo": "^1.10.6",
+    "turbo": "^1.10.16",
     "typescript": "^5.1.6"
   },
   "engines": {
     "node": ">=16.0.0"
   },
-  "dependencies": {},
   "packageManager": "pnpm@8.9.2"
 }
