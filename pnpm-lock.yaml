@@ -78,8 +78,8 @@ importers:
         specifier: ^0.1.0
         version: link:../../packages/core/ui
       '@types/react-syntax-highlighter':
-        specifier: 15.5.9
-        version: 15.5.9
+        specifier: 15.5.10
+        version: 15.5.10
       '@vercel/analytics':
         specifier: ^1.1.1
         version: 1.1.1
@@ -148,8 +148,8 @@ importers:
         specifier: ^0.1.0
         version: link:../../packages/config/tailwind
       '@types/gtag.js':
-        specifier: ^0.0.17
-        version: 0.0.17
+        specifier: ^0.0.18
+        version: 0.0.18
       '@types/jest':
         specifier: 29.5.7
         version: 29.5.7
@@ -160,8 +160,8 @@ importers:
         specifier: 18.2.36
         version: 18.2.36
       '@types/react-copy-to-clipboard':
-        specifier: 5.0.6
-        version: 5.0.6
+        specifier: 5.0.7
+        version: 5.0.7
       '@types/react-dom':
         specifier: 18.2.14
         version: 18.2.14
@@ -3122,8 +3122,8 @@ packages:
       '@types/node': 20.8.10
     dev: true
 
-  /@types/gtag.js@0.0.17:
-    resolution: {integrity: sha512-OsSO6Yyuygr3DeeTovOY0ppLiAVHoXg4CSanO9/vzDQCV+e8pkZNE+HR2dVxGJfUbtRe2IqzC97PYuHSNUepJw==}
+  /@types/gtag.js@0.0.18:
+    resolution: {integrity: sha512-GJxnIvuXuVhKaHfsOdzGipoOoXq72y3mdcncc9h6i6E7nlz89zBEj2wrLM7bqO5Xk9Lm2B94MwdQsSwRlaPSWw==}
     dev: true
 
   /@types/hast@2.3.4:
@@ -3214,8 +3214,8 @@ packages:
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
 
-  /@types/react-copy-to-clipboard@5.0.6:
-    resolution: {integrity: sha512-x347Gy+ZG2dCMiWEHRwiIJ4uMlTmxW7yheRMSQbNf0mFkmXhnYE5nvRdt6SbnT6Z2dp7KPIr3CSvBgSiTIr9zw==}
+  /@types/react-copy-to-clipboard@5.0.7:
+    resolution: {integrity: sha512-Gft19D+as4M+9Whq1oglhmK49vqPhcLzk8WfvfLvaYMIPYanyfLy0+CwFucMJfdKoSFyySPmkkWn8/E6voQXjQ==}
     dependencies:
       '@types/react': 18.2.36
     dev: true
@@ -3225,8 +3225,8 @@ packages:
     dependencies:
       '@types/react': 18.2.36
 
-  /@types/react-syntax-highlighter@15.5.9:
-    resolution: {integrity: sha512-ven8zRSVMNkqt8ySJ2eEW5ugbfl/V/Z9S1c9UNhGqwkwVZNV5akk10rYDALxgwS25cLmN+/Q5UxlGj9CJmZ6Ew==}
+  /@types/react-syntax-highlighter@15.5.10:
+    resolution: {integrity: sha512-Vf8nNkGHnjwK37b2wDs92zJSAWS2Mb57NcYHgajCNssHeTNEixvjINnXJkKdY0V0/eLrYkPP1xDKvNmYIr4HIg==}
     dependencies:
       '@types/react': 18.2.36
     dev: false
