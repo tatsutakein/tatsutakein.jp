@@ -33,7 +33,7 @@
     "date-fns-tz": "2.0.0",
     "graphql": "16.8.1",
     "graphql-request": "^6.1.0",
-    "next": "14.0.1",
+    "next": "14.0.2",
     "react": "18.2.0",
     "react-copy-to-clipboard": "5.1.0",
     "react-dom": "18.2.0",
@@ -44,7 +44,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@babel/core": "7.23.2",
+    "@babel/core": "7.23.3",
     "@graphql-codegen/cli": "5.0.0",
     "@graphql-codegen/client-preset": "4.1.0",
     "@graphql-codegen/introspection": "4.0.0",
