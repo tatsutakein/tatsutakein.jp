@@ -73,7 +73,7 @@ importers:
         version: 0.7.1(typescript@5.2.2)(zod@3.22.4)
       '@tailwindcss/line-clamp':
         specifier: 0.4.4
-        version: 0.4.4(tailwindcss@3.3.4)
+        version: 0.4.4(tailwindcss@3.3.5)
       '@tatsutakeinjp/core-ui':
         specifier: ^0.1.0
         version: link:../../packages/core/ui
@@ -178,8 +178,8 @@ importers:
         specifier: 8.4.31
         version: 8.4.31
       tailwindcss:
-        specifier: ^3.3.4
-        version: 3.3.4
+        specifier: ^3.3.5
+        version: 3.3.5
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
@@ -224,8 +224,8 @@ importers:
         specifier: ^8.4.31
         version: 8.4.31
       tailwindcss:
-        specifier: ^3.3.4
-        version: 3.3.4
+        specifier: ^3.3.5
+        version: 3.3.5
 
   packages/core/ui:
     devDependencies:
@@ -3194,12 +3194,12 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@tailwindcss/line-clamp@0.4.4(tailwindcss@3.3.4):
+  /@tailwindcss/line-clamp@0.4.4(tailwindcss@3.3.5):
     resolution: {integrity: sha512-5U6SY5z8N42VtrCrKlsTAA35gy2VSyYtHWCsg1H87NU1SXnEfekTVlrga9fzUDrrHcGi2Lb5KenUWb4lRQT5/g==}
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.3.4
+      tailwindcss: 3.3.5
     dev: false
 
   /@tootallnate/once@2.0.0:
@@ -5650,7 +5650,7 @@ packages:
       '@graphql-tools/utils': 10.0.1(graphql@16.8.1)
       cosmiconfig: 8.2.0
       graphql: 16.8.1
-      jiti: 1.18.2
+      jiti: 1.20.0
       minimatch: 4.2.3
       string-env-interpolation: 1.0.1
       tslib: 2.5.3
@@ -8373,14 +8373,6 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /resolve@1.22.2:
-    resolution: {integrity: sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==}
-    hasBin: true
-    dependencies:
-      is-core-module: 2.13.1
-      path-parse: 1.0.7
-      supports-preserve-symlinks-flag: 1.0.0
-
   /resolve@1.22.8:
     resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
     hasBin: true
@@ -8876,8 +8868,8 @@ packages:
       tslib: 2.5.3
     dev: false
 
-  /tailwindcss@3.3.4:
-    resolution: {integrity: sha512-JXZNOkggUAc9T5E7nCrimoXHcSf9h3NWFe5sh36CGD/3M5TRLuQeFnQoDsit2uVTqgoOZHLx5rTykLUu16vsMQ==}
+  /tailwindcss@3.3.5:
+    resolution: {integrity: sha512-5SEZU4J7pxZgSkv7FP1zY8i2TIAOooNZ1e/OGtxIEv6GltpoiXUqWvLy89+a10qYTB1N5Ifkuw9lqQkN9sscvA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -8901,7 +8893,7 @@ packages:
       postcss-load-config: 4.0.1(postcss@8.4.31)
       postcss-nested: 6.0.1(postcss@8.4.31)
       postcss-selector-parser: 6.0.11
-      resolve: 1.22.2
+      resolve: 1.22.8
       sucrase: 3.32.0
     transitivePeerDependencies:
       - ts-node
