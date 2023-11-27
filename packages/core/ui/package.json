@@ -23,7 +23,7 @@
     "@tatsutakeinjp/eslint-config": "^0.1.0",
     "@tatsutakeinjp/tailwind-config": "^0.1.0",
     "@types/react": "^18.2.31",
-    "eslint": "^8.52.0",
+    "eslint": "^8.54.0",
     "postcss": "^8.4.31",
     "react": "^18.2.0",
     "tsup": "^8.0.0",
