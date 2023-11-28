@@ -2,6 +2,11 @@
   "name": "tatsutakeinjp",
   "private": true,
   "license": "MIT",
+  "workspaces": [
+    "apps/frontend",
+    "packages/config/*",
+    "packages/core/*"
+  ],
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
@@ -24,5 +29,5 @@
   "engines": {
     "node": ">=16.0.0"
   },
-  "packageManager": "pnpm@8.10.5"
+  "packageManager": "bun@1.0.14"
 }

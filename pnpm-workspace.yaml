@@ -1,5 +1,0 @@
-packages:
-  - apps/docs
-  - apps/frontend
-  - packages/config/*
-  - packages/core/*
