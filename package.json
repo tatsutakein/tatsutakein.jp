@@ -2,6 +2,11 @@
   "name": "tatsutakeinjp",
   "private": true,
   "license": "MIT",
+  "workspaces": [
+    "apps/frontend",
+    "packages/config/*",
+    "packages/core/*"
+  ],
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
@@ -13,7 +18,6 @@
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@manypkg/cli": "^0.21.0",
-    "@tatsutakeinjp/eslint-config": "^0.1.0",
     "@types/prettier": "^3.0.0",
     "eslint": "^8.52.0",
     "prettier": "^3.1.0",
@@ -24,5 +28,5 @@
   "engines": {
     "node": ">=16.0.0"
   },
-  "packageManager": "pnpm@8.10.5"
+  "packageManager": "bun@1.0.14"
 }

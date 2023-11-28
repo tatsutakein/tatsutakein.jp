@@ -24,13 +24,13 @@ https://tatsutakein.jp
 $ make bs
 ```
 
-### 2. `pnpm run dev`
+### 2. `bun run dev`
 
-`pnpm run dev`でローカルサーバーを立ち上げます。  
+`bun run dev`でローカルサーバーを立ち上げます。  
 表示された URL にアクセスすると、サイトが表示されます。
 
 ```shell
-$ pnpm run dev
+$ bun run dev
 ```
 
 ## License

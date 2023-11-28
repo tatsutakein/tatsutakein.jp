@@ -18,6 +18,10 @@
       "dependsOn": [
         "^build"
       ],
+      "dev": {
+        "cache": false,
+        "persistent": true
+      },
       "outputs": [
         "dist/**",
         ".next/**",
