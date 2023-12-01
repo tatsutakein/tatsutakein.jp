@@ -1,0 +1,66 @@
+name: "Development"
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # 手動実行か否か
+  IS_DISPATCH: ${{ contains(fromJSON('["workflow_dispatch"]'), github.event_name) }}
+
+jobs:
+  filter:
+    runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.needs.outputs.deploy }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            deploy:
+              - 'apps/**/*'
+              - 'packages/**/*'
+              - 'package.json'
+      - name: Output Needs
+        id: needs
+        run: |
+          echo "deploy=${{ env.IS_DISPATCH == 'true' || steps.changes.outputs.deploy == 'true' }}" >> $GITHUB_OUTPUT
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: filter
+    if: needs.filter.outputs.deploy == 'true'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install deps (with cache)
+        run: bun install
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        id: vercel
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
+          vercel-version: "32.6.0"
+
+      - name: Lighthouse
+        uses: foo-software/lighthouse-check-action@v10.0.0
+        with:
+          gitHubAccessToken: ${{ secrets.GITHUB_TOKEN }}
+          urls: ${{ steps.vercel.outputs.preview-url }}

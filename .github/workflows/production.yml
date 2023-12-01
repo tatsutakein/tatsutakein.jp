@@ -1,0 +1,39 @@
+name: "Production"
+
+on:
+  release:
+    types: [ published ]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install deps (with cache)
+        run: bun install
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-args: '--prod'
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
+          vercel-version: "32.6.0"
+
+      - name: Lighthouse
+        uses: foo-software/lighthouse-check-action@v10.0.0
+        with:
+          gitHubAccessToken: ${{ secrets.GITHUB_TOKEN }}
+          urls: ${{ steps.vercel.outputs.preview-url }}
