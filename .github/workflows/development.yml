@@ -16,6 +16,9 @@ env:
 
 jobs:
   filter:
+    permissions:
+      contents: read
+
     runs-on: ubuntu-latest
     outputs:
       deploy: ${{ steps.needs.outputs.deploy }}
@@ -36,6 +39,10 @@ jobs:
           echo "deploy=${{ env.IS_DISPATCH == 'true' || steps.changes.outputs.deploy == 'true' }}" >> $GITHUB_OUTPUT
 
   deploy:
+    permissions:
+      contents: read
+      deployments: write
+
     runs-on: ubuntu-latest
     needs: filter
     if: needs.filter.outputs.deploy == 'true'

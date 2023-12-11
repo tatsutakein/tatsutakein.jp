@@ -11,6 +11,10 @@ concurrency:
 
 jobs:
   deploy:
+    permissions:
+      contents: read
+      deployments: write
+
     runs-on: ubuntu-latest
 
     steps:
