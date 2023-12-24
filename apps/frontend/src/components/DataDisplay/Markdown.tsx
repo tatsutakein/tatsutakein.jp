@@ -25,6 +25,9 @@ export const Markdown = ({ markdown, className }: Props): JSX.Element => {
       <ReactMarkdown
         components={{
           code: MarkdownCode,
+          h1: ({ children }) => <h1 className='mt-16'>{children}</h1>,
+          h2: ({ children }) => <h2 className='mt-12'>{children}</h2>,
+          h3: ({ children }) => <h3 className='mt-8'>{children}</h3>,
           p: ({ children }) => {
             return <p className='my-4'>{children}</p>;
           },
