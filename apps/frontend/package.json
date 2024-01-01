@@ -28,7 +28,7 @@
     "@tatsutakeinjp/core-ui": "workspace:*",
     "@types/react-syntax-highlighter": "15.5.11",
     "@vercel/analytics": "^1.1.1",
-    "clsx": "2.0.0",
+    "clsx": "2.1.0",
     "date-fns": "3.0.6",
     "date-fns-tz": "2.0.0",
     "graphql": "16.8.1",
