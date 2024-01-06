@@ -6,8 +6,40 @@ updates:
     directory: "/"
     schedule:
       interval: daily
+    reviewers:
+      - 'tatsutakein'
+      - 'tatsutakein-bot[bot]'
+    labels:
+      - 'dependencies'
+      - 'ignore-for-release'
+    groups:
+      next:
+        patterns:
+          - "next"
+      eslint:
+        patterns:
+          - "eslint"
+          - "eslint-*"
+      typescript-eslint:
+        patterns:
+          - "@typescript-eslint/*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+      turbo:
+        patterns:
+          - "turbo"
+          - "@turbo/*"
 
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: weekly
+    reviewers:
+      - 'tatsutakein'
+      - 'tatsutakein-bot[bot]'
+    labels:
+      - 'dependencies'
