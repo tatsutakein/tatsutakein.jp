@@ -1,0 +1,58 @@
+name: Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  changed:
+    runs-on: ubuntu-22.04
+    outputs:
+      frontend: ${{ steps.needs.outputs.frontend }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+
+      - name: Paths Changes Filter
+        uses: dorny/paths-filter@v2.11.1
+        id: changes
+        with:
+          filters: |
+            frontend:
+              - 'apps/frontend/**/*'
+              - 'packages/config/**/*'
+              - 'packages/core/**/*'
+              - 'package.json'
+              - '.tool-versions'
+      - name: Output Needs
+        id: needs
+        run: |
+          echo "frontend=${{ steps.changes.outputs.frontend == 'true' }}" >> $GITHUB_OUTPUT
+
+  frontend:
+    runs-on: ubuntu-22.04
+    needs: changed
+    if: needs.changed.outputs.frontend == 'true'
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+
+      - name: mise action
+        uses: jdx/mise-action@v2.0.1
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1.1.1
+
+      - name: Clean install using bun
+        shell: bash
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        run: bun run build --filter=frontend
