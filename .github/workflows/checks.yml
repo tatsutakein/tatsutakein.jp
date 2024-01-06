@@ -50,6 +50,16 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1.1.1
 
+      - name: Create dot env file
+        shell: bash
+        run: |
+          touch .env.local
+          echo "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=DUMMY" >> .env.local
+          echo "NEXT_PUBLIC_STRIPE_CHECKOUT_URL=https://donate.stripe.com" >> .env.local
+          echo "NEXT_PUBLIC_GRAPHQL_ENDPOINT=tatsutakein.jp" >> .env.local
+          echo "NEXT_PUBLIC_SITE_NAME=https://tatsutakein.jp" >> .env.local
+        working-directory: ./apps/frontend
+
       - name: Clean install using bun
         shell: bash
         run: bun install --frozen-lockfile
