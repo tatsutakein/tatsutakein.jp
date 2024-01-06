@@ -6,9 +6,6 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-    reviewers:
-      - 'tatsutakein'
-      - 'tatsutakein-bot[bot]'
     labels:
       - 'dependencies'
       - 'ignore-for-release'
@@ -38,8 +35,5 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
-    reviewers:
-      - 'tatsutakein'
-      - 'tatsutakein-bot[bot]'
     labels:
       - 'dependencies'
