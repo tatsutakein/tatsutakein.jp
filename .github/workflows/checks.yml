@@ -62,7 +62,7 @@ jobs:
 
       - name: Clean install using bun
         shell: bash
-        run: bun install --frozen-lockfile
+        run: bun install
 
       - name: Build
         run: bun run build --filter=frontend
