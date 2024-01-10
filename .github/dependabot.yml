@@ -8,7 +8,6 @@ updates:
       interval: daily
     labels:
       - 'dependencies'
-      - 'ignore-for-release'
     groups:
       next:
         patterns:
@@ -37,3 +36,4 @@ updates:
       interval: weekly
     labels:
       - 'dependencies'
+      - 'ignore-for-release'
