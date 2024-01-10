@@ -54,10 +54,10 @@ jobs:
         shell: bash
         run: |
           touch .env.local
-          echo "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=DUMMY" >> .env.local
-          echo "NEXT_PUBLIC_STRIPE_CHECKOUT_URL=https://donate.stripe.com" >> .env.local
-          echo "NEXT_PUBLIC_GRAPHQL_ENDPOINT=tatsutakein.jp" >> .env.local
-          echo "NEXT_PUBLIC_SITE_NAME=https://tatsutakein.jp" >> .env.local
+          echo "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=\"DUMMY\"" >> .env.local
+          echo "NEXT_PUBLIC_STRIPE_CHECKOUT_URL=\"https://donate.stripe.com\"" >> .env.local
+          echo "NEXT_PUBLIC_SITE_NAME=\"tatsutakein.jp\"" >> .env.local
+          echo "NEXT_PUBLIC_SITE_URL=\"https://tatsutakein.jp\"" >> .env.local
         working-directory: ./apps/frontend
 
       - name: Clean install using bun
