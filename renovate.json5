@@ -1,0 +1,72 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":automergeMinor",
+    ":prHourlyLimitNone",
+    ":timezone(Asia/Tokyo)",
+  ],
+  "dependencyDashboard": false,
+  "labels": [
+    "dependencies"
+  ],
+  "rangeStrategy": "pin",
+  "packageRules": [
+    {
+      "matchManagers": [
+        "github-actions",
+      ],
+      "labels": [
+        "ignore for release",
+      ]
+    },
+    {
+      "groupName": "next",
+      "matchPackagePrefixes": [
+        "next",
+      ],
+    },
+    {
+      "groupName": "storybook",
+      "matchPackageNames": [
+        "storybook",
+      ],
+      "matchPackagePrefixes": [
+        "@storybook/",
+      ],
+    },
+    {
+      "groupName": "eslint",
+      "matchPackageNames": [
+        "eslint",
+      ],
+      "matchPackagePrefixes": [
+        "eslint-",
+      ],
+    },
+    {
+      "groupName": "typescript-eslint",
+      "matchPackagePrefixes": [
+        "@typescript-eslint/",
+      ],
+    },
+    {
+      "groupName": "react",
+      "matchPackageNames": [
+        "react",
+        "react-dom",
+        "@types/react",
+        "@types/react-dom",
+      ],
+    },
+    {
+      "groupName": "turbo",
+      "matchPackageNames": [
+        "turbo",
+      ],
+      "matchPackagePrefixes": [
+        "@turbo/",
+      ],
+    }
+  ]
+}
