@@ -51,7 +51,7 @@
     "@graphql-typed-document-node/core": "3.2.0",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tatsutakeinjp/tailwind-config": "workspace:*",
-    "@types/gtag.js": "^0.0.18",
+    "@types/gtag.js": "^0.0.19",
     "@types/jest": "29.5.11",
     "@types/node": "20.11.1",
     "@types/react": "18.2.48",
