@@ -1,0 +1,31 @@
+name: 'Check Frontend'
+
+on:
+  workflow_call:
+
+jobs:
+  check-frontend:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+    steps:
+      # https://github.com/marketplace/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      # https://github.com/marketplace/actions/mise-action
+      - name: mise action
+        uses: jdx/mise-action@3bc85396a273ed82bba5e53a15174bbf9dba095c # v2.0.2
+
+      - name: Create dot env file
+        shell: bash
+        run: |
+          cp .env.sample .env.local
+
+      - name: Clean install using bun
+        shell: bash
+        run: bun install
+
+      - name: Build
+        shell: bash
+        run: bun run build
