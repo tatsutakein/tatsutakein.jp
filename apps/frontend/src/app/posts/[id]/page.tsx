@@ -18,7 +18,7 @@ export async function generateStaticParams(): Promise<PageProps["params"][]> {
   const data = await queryClient.fetchQuery({
     queryKey: ["post-ids"],
     queryFn: async () =>
-      request(
+      await request(
         "https://tatsutakeinjp.hasura.app/v1/graphql",
         getPostIdsQuery,
         // variables are type-checked too!
@@ -26,29 +26,65 @@ export async function generateStaticParams(): Promise<PageProps["params"][]> {
       ),
   });
   const posts = data?.posts ?? [];
-  return posts.map((post) => ({ id: post.id }));
+  return posts.map((post) => ({ id: String(post.id) }));
 }
 
 // @see https://nextjs.org/docs/app/building-your-application/data-fetching/revalidating
-export const revalidate = 60;
+// 60 * 60 * 24 * 0.5 days
+export const revalidate = 43200;
+
+export default async function PostPage({ params: { id } }: PageProps): Promise<JSX.Element> {
+  try {
+    const { posts_by_pk: post } = await queryClient.fetchQuery({
+      queryKey: ["post"],
+      queryFn: async () => {
+        try {
+          return await request(
+            "https://tatsutakeinjp.hasura.app/v1/graphql",
+            getPostQuery,
+            // variables are type-checked too!
+            { id: id },
+          );
+        } catch (error) {
+          return {
+            posts_by_pk: null,
+          };
+        }
+      },
+    });
+
+    if (!post) {
+      notFound();
+    }
+
+    return <PostContent post={post} />;
+  } catch (e) {
+    notFound();
+  }
+}
 
 // @see https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function
 export async function generateMetadata({ params: { id } }: PageProps): Promise<Metadata> {
   const { posts_by_pk: post } = await queryClient.fetchQuery({
     queryKey: ["post-metadata"],
-    queryFn: async () =>
-      request(
-        "https://tatsutakeinjp.hasura.app/v1/graphql",
-        getPostMetadataQuery,
-        // variables are type-checked too!
-        { id: id },
-      ),
+    queryFn: async () => {
+      try {
+        return await request(
+          "https://tatsutakeinjp.hasura.app/v1/graphql",
+          getPostMetadataQuery,
+          // variables are type-checked too!
+          { id: id },
+        );
+      } catch (e) {
+        return {
+          posts_by_pk: null,
+        };
+      }
+    },
   });
 
   if (!post) {
-    return {
-      title: "Post",
-    };
+    return {};
   }
 
   const url = `${env.SITE_NAME}${PagePath.postDetail(id)}`;
@@ -74,23 +110,4 @@ export async function generateMetadata({ params: { id } }: PageProps): Promise<M
       canonical: url,
     },
   };
-}
-
-export default async function PostPage({ params: { id } }: PageProps): Promise<JSX.Element> {
-  const { posts_by_pk: post } = await queryClient.fetchQuery({
-    queryKey: ["post"],
-    queryFn: async () =>
-      request(
-        "https://tatsutakeinjp.hasura.app/v1/graphql",
-        getPostQuery,
-        // variables are type-checked too!
-        { id: id },
-      ),
-  });
-
-  if (!post) {
-    notFound();
-  }
-
-  return <>{post && <PostContent post={post} />}</>;
 }
