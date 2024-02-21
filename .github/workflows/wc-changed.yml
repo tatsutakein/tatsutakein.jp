@@ -5,6 +5,8 @@ on:
     outputs:
       actions:
         value: ${{ jobs.changes.outputs.actions }}
+      codeql:
+        value: ${{ jobs.changes.outputs.codeql }}
       frontend:
         value: ${{ jobs.changes.outputs.frontend }}
 
@@ -16,6 +18,7 @@ jobs:
       pull-requests: read
     outputs:
       actions: ${{ steps.changes.outputs.actions }}
+      codeql: ${{ steps.changes.outputs.codeql }}
       frontend: ${{ steps.changes.outputs.frontend }}
     steps:
       # https://github.com/marketplace/actions/checkout
@@ -30,6 +33,12 @@ jobs:
           filters: |
             actions:
               - '.github/workflows/*.yml'
+            codeql:
+              - 'apps/frontend/**/*'
+              - 'packages/**/**/*'
+              - 'tooling/**/**/*'
+              - 'package.json'
+              - '.tool-versions'
             frontend:
               - 'apps/frontend/**/*'
               - 'packages/**/**/*'
