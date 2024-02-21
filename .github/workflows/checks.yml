@@ -25,6 +25,8 @@ jobs:
 
   codeql:
     uses: ./.github/workflows/wc-codeql.yml
+    needs: changed
+    if: needs.changed.outputs.codeql == 'true'
 
   status-check:
     runs-on: ubuntu-22.04
