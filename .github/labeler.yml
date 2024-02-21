@@ -14,16 +14,16 @@ labels:
       - "tools/.+"
 
   - label: "@type/docs"
-    title: '^docs:(?:\(.+\))?\!?:'
+    title: '^docs(?:\(.+\))?\!?:'
     files:
       - "docs/.+"
       - "**/README.md$"
 
   - label: "@type/feature"
-    title: '^feat:(?:\(.+\))?\!?:'
+    title: '^feat(?:\(.+\))?\!?:'
 
   - label: "@type/fix"
-    title: '^fix:(?:\(.+\))?\!?:'
+    title: '^fix(?:\(.+\))?\!?:'
 
   - label: "@type/improve"
     title: '^(style|refactor|perf)(?:\(.+\))?\!?:'
