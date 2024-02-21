@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::selection {
+    @apply bg-black text-white;
+  }
+
+  html,
+  body {
+    /*@apply bg-violet-50;*/
+    @apply bg-[#FBF9FF];
+    /*color: rgb(var(--foreground-rgb));*/
+  }
+
+  html {
+    @apply scroll-smooth antialiased;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply font-sans text-base text-gray-500;
+  }
+
+  #__next {
+    /*@apply min-h-dynamic-screen;*/
+  }
+
+  article {
+    @apply flex flex-col;
+  }
+
+  p {
+    @apply mb-6 leading-relaxed;
+  }
+
+  a,
+  button {
+    @apply cursor-pointer outline-none;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  button:focus {
+    @apply outline-none;
+  }
+
+  button:disabled,
+  button[disabled] {
+    @apply cursor-not-allowed bg-gray-100;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply scroll-mt-16 font-semibold slashed-zero tracking-tighter lg:scroll-mt-8;
+  }
+
+  h1 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h2 {
+    @apply text-lg md:text-xl;
+  }
+
+  h3 {
+    @apply md:text-lg;
+  }
+
+  h2 + h3 {
+    @apply !mt-0;
+  }
+
+  ol > li::marker {
+    @apply font-semibold;
+  }
+
+  ul > li {
+    @apply pl-2;
+  }
+
+  ul > li::marker {
+    @apply text-gray-400;
+  }
+
+  li div {
+    @apply inline;
+  }
+
+  li p,
+  li div,
+  li h1,
+  li h2 {
+    @apply my-0;
+  }
+
+  hr {
+    @apply my-6 border-gray-200;
+  }
+
+  pre {
+    @apply overflow-x-auto break-normal rounded-b-lg border-x border-b border-gray-500 p-3 text-left text-xs leading-relaxed;
+  }
+
+  code {
+    @apply whitespace-pre-wrap;
+  }
+
+  code .sh__line::before {
+    counter-increment: sh-line-number 1;
+    content: counter(sh-line-number);
+    margin-right: 24px;
+    text-align: right;
+    color: #a4a4a4;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    @apply bg-indigo-700 text-white;
+  }
+
+  html,
+  body {
+    @apply bg-zinc-800;
+  }
+
+  body {
+    @apply text-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,38 +1,76 @@
-<img src="docs/images/splash.svg" alt="tatsutakein.jp">
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![dependabot](https://img.shields.io/badge/maintaied_with-dependabot-blue?logo=dependabot)](https://docs.github.com/en/code-security/dependabot)
+[![renovate](https://img.shields.io/badge/maintaied%20with-renovate-blue?logo=renovatebot)](https://app.renovatebot.com/dashboard)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/tatsutakein/project-boilerplate)
 
 # tatsutakein.jp
 
+<img src="docs/images/splash.svg" alt="tatsutakein.jp">
+
+## Features
+
 https://tatsutakein.jp
 
-## Tech Stacks
+TBD
 
-### [Turborepo](https://turbo.build/repo)
+### Screenshots
 
-### [Next.js](https://nextjs.org/)
+TBD
 
-### [Tailwind CSS](https://tailwindcss.com/)
+## Get Started
 
-## GetStarted
-
-以下の手順を踏んで開発に参加しましょう。
-
-### 1. Bootstrap
-
-以下のコマンドを実行して開発環境を整えます。
+After git clone, run the following command
 
 ```shell
 $ make bs
 ```
 
-### 2. `bun run dev`
+What is being processed by bootstrap is shown below.
 
-`bun run dev`でローカルサーバーを立ち上げます。  
-表示された URL にアクセスすると、サイトが表示されます。
+- Configuring git commit message templates
+- Installation of various tools by mise
+- Installation of dependencies by bun
+- Installation of husky by bun
+
+### Add template
+
+You can generate code from a template using plop by executing the following command.
 
 ```shell
-$ bun run dev
+$ bun plop
 ```
+
+## Development Environment
+
+TBD
+
+## Architecture
+
+- [Turborepo](https://turbo.build/repo)
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## Build
+
+TBD
+
+## Testing
+
+TBD
+
+## Performance
+
+TBD
+
+## Contributors
+
+Thanks to our wonderful contributors!
+
+<a href="https://github.com/tatsutakein/tatsutakein.jp/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=tatsutakein/tatsutakein.jp" alt="Contributors" />
+</a>
 
 ## License
 
-This software is provided under the [MIT License](LICENSE).
+tatsutakein.jp is distributed under the terms of the MIT License. See the [license](LICENSE) for more
+information.

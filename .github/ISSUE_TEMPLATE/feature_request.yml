@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        この度は機能要望にご協力いただき、ありがとうございました。
+        この度は機能要望にご協力いただき、ありがとうございます。
 
   - type: checkboxes
     attributes:
@@ -23,7 +23,7 @@ body:
       description: 機能要望は問題に関連するものですか？説明してください。
       placeholder: いつも悔しい思いをするのは
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: solution

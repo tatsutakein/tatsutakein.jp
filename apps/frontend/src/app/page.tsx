@@ -1,22 +1,11 @@
-import { ProfileImage } from '@/components/Assets';
-import { ContentsLayout } from '@/components/Layout';
-import { PagePath } from '@/lib/router';
-import clsx from 'clsx';
-import { NextPage } from 'next';
+import type { JSX } from "react";
+import Image from "next/image";
 
-const Index: NextPage = () => {
+export default function HomePage(): JSX.Element {
   return (
-    <ContentsLayout
-      description=''
-      pageType='blog'
-      pageUrl={PagePath.root(true)}
-    >
-      <div className={clsx('my-16 flex flex-col justify-center gap-16')}>
-        <ProfileImage className={clsx('mx-auto rounded-full')} />
-        <h1 className='mx-auto text-4xl'>Ryo Takeuchi</h1>
-      </div>
-    </ContentsLayout>
+    <main className="flex flex-col items-center justify-center gap-16 p-24">
+      <Image src="/images/profile-zoom.webp" width={256} height={256} alt="" className={"mx-auto rounded-full"} />
+      <h1 className="mx-auto text-4xl">Ryo Takeuchi</h1>
+    </main>
   );
-};
-
-export default Index;
+}
