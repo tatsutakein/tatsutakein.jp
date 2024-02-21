@@ -11,85 +11,27 @@ concurrency:
 
 jobs:
   changed:
-    runs-on: ubuntu-22.04
-    permissions:
-      contents: read
-      pull-requests: read
-    outputs:
-      actions: ${{ steps.changes.outputs.actions }}
-      frontend: ${{ steps.changes.outputs.frontend }}
-    steps:
-      # https://github.com/marketplace/actions/checkout
-      - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-
-      # https://github.com/marketplace/actions/paths-changes-filter
-      - name: Paths Changes Filter
-        uses: dorny/paths-filter@ebc4d7e9ebcb0b1eb21480bb8f43113e996ac77a # v3.0.1
-        id: changes
-        with:
-          filters: |
-            actions:
-              - '.github/workflows/*.yml'
-            frontend:
-              - 'apps/frontend/**/*'
-              - 'packages/**/**/*'
-              - 'tooling/**/**/*'
-              - 'package.json'
-              - '.tool-versions'
+    uses: ./.github/workflows/wc-changed.yml
 
   check-actions:
-    runs-on: ubuntu-22.04
+    uses: ./.github/workflows/wc-check-actions.yml
     needs: changed
     if: needs.changed.outputs.actions == 'true'
-    timeout-minutes: 10
-
-    steps:
-      # https://github.com/marketplace/actions/checkout
-      - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-
-      # https://github.com/marketplace/actions/actionlint-with-reviewdog
-      - uses: reviewdog/action-actionlint@6a38513dd4d2e818798c5c73d0870adbb82de4a4 # v1.41.0
-        with:
-          fail_on_error: true
-          filter_mode: nofilter
-          level: error
-          reporter: github-pr-review
 
   check-frontend:
-    runs-on: ubuntu-22.04
+    uses: ./.github/workflows/wc-check-frontend.yml
     needs: changed
     if: needs.changed.outputs.frontend == 'true'
-    permissions:
-      contents: read
-    steps:
-      # https://github.com/marketplace/actions/checkout
-      - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
-      # https://github.com/marketplace/actions/mise-action
-      - name: mise action
-        uses: jdx/mise-action@3bc85396a273ed82bba5e53a15174bbf9dba095c # v2.0.2
-
-      - name: Create dot env file
-        shell: bash
-        run: |
-          cp .env.sample .env.local
-
-      - name: Clean install using bun
-        shell: bash
-        run: bun install
-
-      - name: Build
-        shell: bash
-        run: bun run build
+  codeql:
+    uses: ./.github/workflows/wc-codeql.yml
 
   status-check:
     runs-on: ubuntu-22.04
     needs:
       - check-actions
       - check-frontend
+      - codeql
     permissions: { }
     if: failure()
     steps:

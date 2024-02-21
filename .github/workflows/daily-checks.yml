@@ -1,0 +1,27 @@
+name: 'Daily Checks'
+
+on:
+  schedule:
+    # 毎日午前 8 時に実行
+    - cron: '0 23 * * *'
+
+concurrency:
+  group: daily-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-frontend:
+    uses: ./.github/workflows/wc-check-frontend.yml
+
+  codeql:
+    uses: ./.github/workflows/wc-codeql.yml
+
+  daily-status-check:
+    runs-on: ubuntu-22.04
+    needs:
+      - check-frontend
+      - codeql
+    permissions: { }
+    if: failure()
+    steps:
+      - run: exit 1
