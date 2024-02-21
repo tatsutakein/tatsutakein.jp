@@ -1,63 +1,73 @@
-import '@/styles/globals.css';
-// include styles from the ui package
-import '@tatsutakeinjp/core-ui/styles.css';
-import GoogleAnalytics from '@/components/Utils/GoogleAnalytics';
-import { env } from '@/env.mjs';
-import { Analytics } from '@vercel/analytics/react';
-import { Metadata } from 'next';
-import React from 'react';
+import type { Metadata, Viewport } from "next";
+import { env } from "@/env";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 
-const siteName = env.NEXT_PUBLIC_SITE_NAME;
-const description = 'Ryo Takeuchi のポートフォリオサイトです。';
-const url = env.NEXT_PUBLIC_SITE_URL;
+import { cn } from "@tatsutakeinjp/ui";
+import { ThemeProvider } from "@tatsutakeinjp/ui/theme";
+import { Toaster } from "@tatsutakeinjp/ui/toast";
+
+import "@/app/globals.css";
+
+import type { JSX, ReactNode } from "react";
+import { Footer, Header } from "@/app/_components/navigation";
+
+const siteName = env.SITE_NAME;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(env.NEXT_PUBLIC_SITE_URL),
+  metadataBase: new URL(env.VERCEL_ENV === "production" ? env.SITE_URL : "http://localhost:3000"),
   title: {
+    template: `%s — ${siteName}`,
     default: siteName,
-    /** `next-seo`の`titleTemplate`に相当する機能 */
-    template: `%s | ${siteName}`,
   },
-  description,
+  description: "Simple monorepo with shared backend for web & mobile apps",
   openGraph: {
-    title: siteName,
-    description,
-    url,
-    siteName,
-    locale: 'ja_JP',
-    type: 'website',
+    title: {
+      template: `%s — ${siteName}`,
+      default: siteName,
+    },
+    description: "Simple monorepo with shared backend for web & mobile apps",
+    type: "website",
+    url: "/",
+    siteName: siteName,
+    locale: "ja_JP",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: siteName,
-    description,
-    creator: '@tatsutakein',
-  },
-  alternates: {
-    canonical: url,
+    site: "@tatsutakein",
+    creator: "@tatsutakein",
   },
 };
 
-// @see https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic
-export const dynamic = 'force-dynamic';
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+};
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-const RootLayout: React.FC<LayoutProps> = ({ children }) => {
-  // noinspection HtmlRequiredTitleElement
+export default function RootLayout(props: { children: ReactNode }): JSX.Element {
   return (
-    <html lang='ja'>
-      <head>
-        <GoogleAnalytics />
-      </head>
-      <body className='tracking-wide text-gray-700 dark:bg-zinc-800 dark:text-white'>
-        {children}
-        <Analytics />
+    <html lang="ja" suppressHydrationWarning>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans text-foreground antialiased",
+          GeistSans.variable,
+          GeistMono.variable,
+        )}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
+          <div className="bg-gray-50 dark:bg-zinc-900">{props.children}</div>
+          <Footer />
+
+          {/*<div className="absolute bottom-4 right-4">*/}
+          {/*  <ThemeToggle />*/}
+          {/*</div>*/}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}

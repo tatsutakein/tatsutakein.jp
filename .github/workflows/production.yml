@@ -15,20 +15,23 @@ jobs:
       contents: read
       deployments: write
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # https://github.com/marketplace/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+      # https://github.com/marketplace/actions/mise-action
+      - name: mise action
+        uses: jdx/mise-action@3bc85396a273ed82bba5e53a15174bbf9dba095c # v2.0.2
 
-      - name: Install deps (with cache)
+      - name: Install deps
         run: bun install
 
+      # https://github.com/marketplace/actions/vercel-action
       - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v25
+        uses: amondnet/vercel-action@225d234cfe5340ca1f9a6cd158338126b5b6845f # v25.1.1
         id: vercel
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}

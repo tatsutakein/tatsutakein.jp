@@ -1,17 +1,31 @@
-// Importing env files here to validate on build
-import './src/env.mjs';
+import {fileURLToPath} from "url";
+import _jiti from "jiti";
 
-/** @type {import('next').NextConfig} */
+const jiti = _jiti(fileURLToPath(import.meta.url));
+
+// Import env files to validate at build time. Use jiti so we can load .ts files in here.
+jiti("./src/env");
+jiti("@tatsutakeinjp/auth/env");
+
+/** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
+
   /** Enables hot reloading for local packages without a build step */
-  transpilePackages: ['@tatsutakeinjp/core-ui'],
+  transpilePackages: [
+    "@tatsutakeinjp/api",
+    "@tatsutakeinjp/auth",
+    "@tatsutakeinjp/db",
+    "@tatsutakeinjp/ui",
+    "@tatsutakeinjp/validators",
+  ],
+
   /** We already do linting and typechecking as separate tasks in CI */
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   images: {
     domains: [
-      'media.graphassets.com',
+      'dk0taoori0pbd.cloudfront.net',
     ],
   },
 };

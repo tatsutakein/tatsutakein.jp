@@ -1,4 +1,4 @@
-name: Checks
+name: 'Checks'
 
 on:
   pull_request:
@@ -12,57 +12,85 @@ concurrency:
 jobs:
   changed:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+      pull-requests: read
     outputs:
-      frontend: ${{ steps.needs.outputs.frontend }}
+      actions: ${{ steps.changes.outputs.actions }}
+      frontend: ${{ steps.changes.outputs.frontend }}
     steps:
+      # https://github.com/marketplace/actions/checkout
       - name: Checkout
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
+      # https://github.com/marketplace/actions/paths-changes-filter
       - name: Paths Changes Filter
-        uses: dorny/paths-filter@v3
+        uses: dorny/paths-filter@ebc4d7e9ebcb0b1eb21480bb8f43113e996ac77a # v3.0.1
         id: changes
         with:
           filters: |
+            actions:
+              - '.github/workflows/*.yml'
             frontend:
               - 'apps/frontend/**/*'
-              - 'packages/config/**/*'
-              - 'packages/core/**/*'
+              - 'packages/**/**/*'
+              - 'tooling/**/**/*'
               - 'package.json'
               - '.tool-versions'
-      - name: Output Needs
-        id: needs
-        run: |
-          echo "frontend=${{ steps.changes.outputs.frontend == 'true' }}" >> $GITHUB_OUTPUT
 
-  frontend:
+  check-actions:
+    runs-on: ubuntu-22.04
+    needs: changed
+    if: needs.changed.outputs.actions == 'true'
+    timeout-minutes: 10
+
+    steps:
+      # https://github.com/marketplace/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      # https://github.com/marketplace/actions/actionlint-with-reviewdog
+      - uses: reviewdog/action-actionlint@6a38513dd4d2e818798c5c73d0870adbb82de4a4 # v1.41.0
+        with:
+          fail_on_error: true
+          filter_mode: nofilter
+          level: error
+          reporter: github-pr-review
+
+  check-frontend:
     runs-on: ubuntu-22.04
     needs: changed
     if: needs.changed.outputs.frontend == 'true'
     permissions:
       contents: read
     steps:
+      # https://github.com/marketplace/actions/checkout
       - name: Checkout
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
+      # https://github.com/marketplace/actions/mise-action
       - name: mise action
-        uses: jdx/mise-action@v2.0.2
-
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1.1.1
+        uses: jdx/mise-action@3bc85396a273ed82bba5e53a15174bbf9dba095c # v2.0.2
 
       - name: Create dot env file
         shell: bash
         run: |
-          touch .env.local
-          echo "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=\"DUMMY\"" >> .env.local
-          echo "NEXT_PUBLIC_STRIPE_CHECKOUT_URL=\"https://donate.stripe.com\"" >> .env.local
-          echo "NEXT_PUBLIC_SITE_NAME=\"tatsutakein.jp\"" >> .env.local
-          echo "NEXT_PUBLIC_SITE_URL=\"https://tatsutakein.jp\"" >> .env.local
-        working-directory: ./apps/frontend
+          cp .env.sample .env.local
 
       - name: Clean install using bun
         shell: bash
         run: bun install
 
       - name: Build
-        run: bun run build --filter=frontend
+        shell: bash
+        run: bun run build
+
+  status-check:
+    runs-on: ubuntu-22.04
+    needs:
+      - check-actions
+      - check-frontend
+    permissions: { }
+    if: failure()
+    steps:
+      - run: exit 1

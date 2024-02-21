@@ -17,6 +17,7 @@
         "github-actions",
       ],
       "labels": [
+        "dependencies",
         "ignore for release",
       ]
     },

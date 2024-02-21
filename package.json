@@ -1,31 +1,40 @@
 {
   "name": "tatsutakeinjp",
   "private": true,
-  "license": "MIT",
-  "workspaces": [
-    "apps/frontend",
-    "packages/config/*",
-    "packages/core/*"
-  ],
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "clean": "turbo clean",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "ncu": "npx npm-check-updates --deep"
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    "db:push": "bun -F db push",
+    "db:studio": "bun -F db studio",
+    "dev": "turbo dev --parallel",
+    "format": "turbo format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
+    "format:fix": "turbo format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:ws": "bun x sherif@latest",
+    "postinstall": "bun lint:ws",
+    "start": "turbo start",
+    "typecheck": "turbo typecheck"
   },
   "devDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
-    "@manypkg/cli": "^0.21.0",
-    "@types/prettier": "^3.0.0",
-    "eslint": "^8.52.0",
-    "prettier": "^3.1.0",
-    "prettier-plugin-tailwindcss": "^0.5.6",
-    "turbo": "1.11.3",
-    "typescript": "^5.2.2"
+    "@commitlint/cli": "18.6.1",
+    "@commitlint/config-conventional": "18.6.2",
+    "@tatsutakeinjp/prettier-config": "workspace:*",
+    "@turbo/gen": "1.12.4",
+    "husky": "9.0.11",
+    "prettier": "3.2.5",
+    "turbo": "1.12.4",
+    "typescript": "5.3.3"
   },
+  "prettier": "@tatsutakeinjp/prettier-config",
+  "packageManager": "bun@1.0.28",
   "engines": {
-    "node": ">=20.0.0"
-  }
+    "node": ">=20.11.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ]
 }

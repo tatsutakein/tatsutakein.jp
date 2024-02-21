@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        この度はバグレポートにご協力いただき、ありがとうございました。
+        この度はバグレポートにご協力いただき、ありがとうございます。
 
   - type: checkboxes
     attributes:
