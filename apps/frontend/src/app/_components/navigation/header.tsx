@@ -3,7 +3,7 @@ import Link from "next/link";
 import { MobileHeaderMenu } from "@/app/_components/navigation/mobile-header-menu";
 import { PagePath } from "@/lib/router";
 
-import { About, Blog, Logo, Products, Works } from "@tatsutakeinjp/ui/assets";
+import { About, Logo, Posts, Products, Works } from "@tatsutakeinjp/ui/assets";
 
 const MENUS = [
   {
@@ -17,11 +17,11 @@ const MENUS = [
   },
   {
     a: {
-      name: "Blog",
-      href: PagePath.blogIndex(),
+      name: "Posts",
+      href: PagePath.postsIndex(),
     },
     text: () => {
-      return <Blog className="relative top-0.5 w-auto" style={{ height: "18px" }} />;
+      return <Posts className="relative top-0.5 w-auto" style={{ height: "16px" }} />;
     },
   },
   {

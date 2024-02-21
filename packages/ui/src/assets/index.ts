@@ -1,5 +1,5 @@
 export * from "./about";
-export * from "./blog";
+export * from "./posts";
 export * from "./contact";
 export * from "./github";
 export * from "./instagram";
