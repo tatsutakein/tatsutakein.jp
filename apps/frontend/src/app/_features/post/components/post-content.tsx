@@ -6,11 +6,11 @@ import { CalendarIcon } from "@radix-ui/react-icons";
 
 import { MarkdownRenderer } from "@tatsutakeinjp/ui/markdown";
 
-interface BlogContentProps {
+interface PostContentProps {
   post: PostQuery["posts_by_pk"];
 }
 
-export const PostContent: (props: BlogContentProps) => JSX.Element = ({ post }) => {
+export const PostContent: (props: PostContentProps) => JSX.Element = ({ post }) => {
   if (post === undefined || post === null) {
     return <div></div>;
   }

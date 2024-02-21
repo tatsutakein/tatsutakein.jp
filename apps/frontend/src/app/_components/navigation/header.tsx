@@ -17,8 +17,8 @@ const MENUS = [
   },
   {
     a: {
-      name: "Blog",
-      href: PagePath.blogIndex(),
+      name: "Posts",
+      href: PagePath.postsIndex(),
     },
     text: () => {
       return <Blog className="relative top-0.5 w-auto" style={{ height: "18px" }} />;

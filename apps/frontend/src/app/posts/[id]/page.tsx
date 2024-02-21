@@ -51,7 +51,7 @@ export async function generateMetadata({ params: { id } }: PageProps): Promise<M
     };
   }
 
-  const url = `${env.SITE_NAME}${PagePath.blogDetail(id)}`;
+  const url = `${env.SITE_NAME}${PagePath.postDetail(id)}`;
 
   return {
     title: post.title,

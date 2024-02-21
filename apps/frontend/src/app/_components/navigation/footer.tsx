@@ -7,7 +7,7 @@ import { GitHubIcon, InstagramIcon, NoteIcon, TwitterIcon } from "@tatsutakeinjp
 const NAVIGATIONS = {
   main: [
     { name: "About", href: PagePath.about() },
-    { name: "Blog", href: PagePath.blogIndex() },
+    { name: "Posts", href: PagePath.postsIndex() },
     { name: "Products", href: PagePath.products() },
     { name: "Works", href: PagePath.works() },
     { name: "Patron", href: PagePath.patron() },
