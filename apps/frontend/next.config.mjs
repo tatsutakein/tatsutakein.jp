@@ -1,4 +1,4 @@
-import {fileURLToPath} from "url";
+import { fileURLToPath } from "url";
 import _jiti from "jiti";
 
 const jiti = _jiti(fileURLToPath(import.meta.url));
@@ -17,17 +17,21 @@ const config = {
     "@tatsutakeinjp/auth",
     "@tatsutakeinjp/db",
     "@tatsutakeinjp/ui",
-    "@tatsutakeinjp/validators",
+    "@tatsutakeinjp/validators"
   ],
 
   /** We already do linting and typechecking as separate tasks in CI */
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   images: {
-    domains: [
-      'dk0taoori0pbd.cloudfront.net',
-    ],
-  },
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "dk0taoori0pbd.cloudfront.net",
+        port: ""
+      }
+    ]
+  }
 };
 
 export default config;
