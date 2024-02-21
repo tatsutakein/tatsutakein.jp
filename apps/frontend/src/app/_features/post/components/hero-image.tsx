@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { PagePath } from "@/lib/router";
 import { formatDateEn, utcToJstTime } from "@/utils/date";
@@ -20,14 +19,13 @@ export const HeroImage = ({ heroImage, heroText, title, publishedAt, tags }: Pro
     <div className="relative h-52 overflow-hidden md:h-72 lg:h-80">
       {/* Image */}
       {heroImage && (
-        <Image className="absolute inset-0 m-auto w-full object-cover" src={heroImage} alt="#" fill loading="lazy" />
+        <img className="absolute inset-0 m-auto w-full object-cover" src={heroImage} alt="#" loading="lazy" />
       )}
       {!heroImage && (
-        <Image
+        <img
           className="absolute inset-0 m-auto w-full object-cover"
           src={`/images/hero-default.png`}
           alt="#"
-          fill
           loading="lazy"
         />
       )}
