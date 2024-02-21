@@ -1,20 +1,23 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![renovate](https://img.shields.io/badge/maintaied%20with-renovate-blue?logo=renovatebot)](https://app.renovatebot.com/dashboard)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/tatsutakein/project-boilerplate)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/tatsutakein/tatsutakein.jp)
 
 # tatsutakein.jp
 
 <img src="docs/images/splash.svg" alt="tatsutakein.jp">
 
+My personal website is a testing ground, so to speak, and is seemingly over-specified in its configuration. It serves as
+an app-like-web platform for my writings, self-introduction, showcasing my bookmarks, and more.
+
 ## Features
 
-https://tatsutakein.jp
-
-TBD
+On my personal website you can browse articles and check out the products I have developed.
 
 ### Screenshots
 
-TBD
+|                              Home                              |                             Posts                              |                          Post Content                          |
+|:--------------------------------------------------------------:|:--------------------------------------------------------------:|:--------------------------------------------------------------:|
+| <img src="docs/images/screenshot-01.webp" alt="screenshot-01"> | <img src="docs/images/screenshot-02.webp" alt="screenshot-02"> | <img src="docs/images/screenshot-03.webp" alt="screenshot-03"> |
 
 ## Get Started
 
@@ -68,6 +71,10 @@ Thanks to our wonderful contributors!
 <a href="https://github.com/tatsutakein/tatsutakein.jp/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=tatsutakein/tatsutakein.jp" alt="Contributors" />
 </a>
+
+## Repo Activity
+
+![Repobeats](https://repobeats.axiom.co/api/embed/a15206ee2ef59b4c5afb970c762460781429f687.svg "Repobeats analytics image")
 
 ## License
 
