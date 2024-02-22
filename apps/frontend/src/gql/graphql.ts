@@ -16,12 +16,12 @@ export type Scalars = {
   Int: { input: number; output: number };
   Float: { input: number; output: number };
   smallint: { input: any; output: any };
-  timestamptz: { input: any; output: any };
-  uuid: { input: any; output: any };
+  timestamptz: { input: Date; output: Date };
+  uuid: { input: string; output: string };
 };
 
 /** Boolean expression to compare columns of type "Int". All fields are combined with logical 'AND'. */
-export type Int_Comparison_Exp = {
+export type IntComparisonExp = {
   _eq?: InputMaybe<Scalars["Int"]["input"]>;
   _gt?: InputMaybe<Scalars["Int"]["input"]>;
   _gte?: InputMaybe<Scalars["Int"]["input"]>;
@@ -34,7 +34,7 @@ export type Int_Comparison_Exp = {
 };
 
 /** Boolean expression to compare columns of type "String". All fields are combined with logical 'AND'. */
-export type String_Comparison_Exp = {
+export type StringComparisonExp = {
   _eq?: InputMaybe<Scalars["String"]["input"]>;
   _gt?: InputMaybe<Scalars["String"]["input"]>;
   _gte?: InputMaybe<Scalars["String"]["input"]>;
@@ -93,76 +93,76 @@ export type Assets = {
 
 /** アセット */
 export type AssetsPostsArgs = {
-  distinct_on?: InputMaybe<Array<Posts_Select_Column>>;
+  distinct_on?: InputMaybe<Array<PostsSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Posts_Order_By>>;
-  where?: InputMaybe<Posts_Bool_Exp>;
+  order_by?: InputMaybe<Array<PostsOrderBy>>;
+  where?: InputMaybe<PostsBoolExp>;
 };
 
 /** Boolean expression to filter rows from the table "assets". All fields are combined with a logical 'AND'. */
-export type Assets_Bool_Exp = {
-  _and?: InputMaybe<Array<Assets_Bool_Exp>>;
-  _not?: InputMaybe<Assets_Bool_Exp>;
-  _or?: InputMaybe<Array<Assets_Bool_Exp>>;
-  created_at?: InputMaybe<Timestamptz_Comparison_Exp>;
-  file_name?: InputMaybe<String_Comparison_Exp>;
-  height?: InputMaybe<Smallint_Comparison_Exp>;
-  id?: InputMaybe<Uuid_Comparison_Exp>;
-  mime_type?: InputMaybe<String_Comparison_Exp>;
-  posts?: InputMaybe<Posts_Bool_Exp>;
-  size?: InputMaybe<Int_Comparison_Exp>;
-  updated_at?: InputMaybe<Timestamptz_Comparison_Exp>;
-  url?: InputMaybe<String_Comparison_Exp>;
-  width?: InputMaybe<Smallint_Comparison_Exp>;
+export type AssetsBoolExp = {
+  _and?: InputMaybe<Array<AssetsBoolExp>>;
+  _not?: InputMaybe<AssetsBoolExp>;
+  _or?: InputMaybe<Array<AssetsBoolExp>>;
+  created_at?: InputMaybe<TimestamptzComparisonExp>;
+  file_name?: InputMaybe<StringComparisonExp>;
+  height?: InputMaybe<SmallintComparisonExp>;
+  id?: InputMaybe<UuidComparisonExp>;
+  mime_type?: InputMaybe<StringComparisonExp>;
+  posts?: InputMaybe<PostsBoolExp>;
+  size?: InputMaybe<IntComparisonExp>;
+  updated_at?: InputMaybe<TimestamptzComparisonExp>;
+  url?: InputMaybe<StringComparisonExp>;
+  width?: InputMaybe<SmallintComparisonExp>;
 };
 
 /** Ordering options when selecting data from "assets". */
-export type Assets_Order_By = {
-  created_at?: InputMaybe<Order_By>;
-  file_name?: InputMaybe<Order_By>;
-  height?: InputMaybe<Order_By>;
-  id?: InputMaybe<Order_By>;
-  mime_type?: InputMaybe<Order_By>;
-  posts_aggregate?: InputMaybe<Posts_Aggregate_Order_By>;
-  size?: InputMaybe<Order_By>;
-  updated_at?: InputMaybe<Order_By>;
-  url?: InputMaybe<Order_By>;
-  width?: InputMaybe<Order_By>;
+export type AssetsOrderBy = {
+  created_at?: InputMaybe<OrderBy>;
+  file_name?: InputMaybe<OrderBy>;
+  height?: InputMaybe<OrderBy>;
+  id?: InputMaybe<OrderBy>;
+  mime_type?: InputMaybe<OrderBy>;
+  posts_aggregate?: InputMaybe<PostsAggregateOrderBy>;
+  size?: InputMaybe<OrderBy>;
+  updated_at?: InputMaybe<OrderBy>;
+  url?: InputMaybe<OrderBy>;
+  width?: InputMaybe<OrderBy>;
 };
 
 /** select columns of table "assets" */
-export enum Assets_Select_Column {
+export enum AssetsSelectColumn {
   /** column name */
-  CreatedAt = "created_at",
+  CREATED_AT = "created_at",
   /** column name */
-  FileName = "file_name",
+  FILE_NAME = "file_name",
   /** column name */
-  Height = "height",
+  HEIGHT = "height",
   /** column name */
-  Id = "id",
+  ID = "id",
   /** column name */
-  MimeType = "mime_type",
+  MIME_TYPE = "mime_type",
   /** column name */
-  Size = "size",
+  SIZE = "size",
   /** column name */
-  UpdatedAt = "updated_at",
+  UPDATED_AT = "updated_at",
   /** column name */
-  Url = "url",
+  URL = "url",
   /** column name */
-  Width = "width",
+  WIDTH = "width",
 }
 
 /** Streaming cursor of the table "assets" */
-export type Assets_Stream_Cursor_Input = {
+export type AssetsStreamCursorInput = {
   /** Stream column input with initial value */
-  initial_value: Assets_Stream_Cursor_Value_Input;
+  initial_value: AssetsStreamCursorValueInput;
   /** cursor ordering */
-  ordering?: InputMaybe<Cursor_Ordering>;
+  ordering?: InputMaybe<CursorOrdering>;
 };
 
 /** Initial value of the column from where the streaming should start */
-export type Assets_Stream_Cursor_Value_Input = {
+export type AssetsStreamCursorValueInput = {
   /** 作成日時 */
   created_at?: InputMaybe<Scalars["timestamptz"]["input"]>;
   /** 説明文 */
@@ -184,31 +184,31 @@ export type Assets_Stream_Cursor_Value_Input = {
 };
 
 /** ordering argument of a cursor */
-export enum Cursor_Ordering {
+export enum CursorOrdering {
   /** ascending ordering of the cursor */
-  Asc = "ASC",
+  ASC = "ASC",
   /** descending ordering of the cursor */
-  Desc = "DESC",
+  DESC = "DESC",
 }
 
 /** column ordering options */
-export enum Order_By {
+export enum OrderBy {
   /** in ascending order, nulls last */
-  Asc = "asc",
+  ASC = "asc",
   /** in ascending order, nulls first */
-  AscNullsFirst = "asc_nulls_first",
+  ASC_NULLS_FIRST = "asc_nulls_first",
   /** in ascending order, nulls last */
-  AscNullsLast = "asc_nulls_last",
+  ASC_NULLS_LAST = "asc_nulls_last",
   /** in descending order, nulls first */
-  Desc = "desc",
+  DESC = "desc",
   /** in descending order, nulls first */
-  DescNullsFirst = "desc_nulls_first",
+  DESC_NULLS_FIRST = "desc_nulls_first",
   /** in descending order, nulls last */
-  DescNullsLast = "desc_nulls_last",
+  DESC_NULLS_LAST = "desc_nulls_last",
 }
 
 /** ポストとタグの関連付け */
-export type Post_Tags = {
+export type PostTags = {
   __typename?: "post_tags";
   /** An object relationship */
   post: Posts;
@@ -221,65 +221,65 @@ export type Post_Tags = {
 };
 
 /** order by aggregate values of table "post_tags" */
-export type Post_Tags_Aggregate_Order_By = {
-  count?: InputMaybe<Order_By>;
-  max?: InputMaybe<Post_Tags_Max_Order_By>;
-  min?: InputMaybe<Post_Tags_Min_Order_By>;
+export type PostTagsAggregateOrderBy = {
+  count?: InputMaybe<OrderBy>;
+  max?: InputMaybe<PostTagsMaxOrderBy>;
+  min?: InputMaybe<PostTagsMinOrderBy>;
 };
 
 /** Boolean expression to filter rows from the table "post_tags". All fields are combined with a logical 'AND'. */
-export type Post_Tags_Bool_Exp = {
-  _and?: InputMaybe<Array<Post_Tags_Bool_Exp>>;
-  _not?: InputMaybe<Post_Tags_Bool_Exp>;
-  _or?: InputMaybe<Array<Post_Tags_Bool_Exp>>;
-  post?: InputMaybe<Posts_Bool_Exp>;
-  post_id?: InputMaybe<Uuid_Comparison_Exp>;
-  tag?: InputMaybe<Tags_Bool_Exp>;
-  tag_id?: InputMaybe<Uuid_Comparison_Exp>;
+export type PostTagsBoolExp = {
+  _and?: InputMaybe<Array<PostTagsBoolExp>>;
+  _not?: InputMaybe<PostTagsBoolExp>;
+  _or?: InputMaybe<Array<PostTagsBoolExp>>;
+  post?: InputMaybe<PostsBoolExp>;
+  post_id?: InputMaybe<UuidComparisonExp>;
+  tag?: InputMaybe<TagsBoolExp>;
+  tag_id?: InputMaybe<UuidComparisonExp>;
 };
 
 /** order by max() on columns of table "post_tags" */
-export type Post_Tags_Max_Order_By = {
+export type PostTagsMaxOrderBy = {
   /** ポストID */
-  post_id?: InputMaybe<Order_By>;
+  post_id?: InputMaybe<OrderBy>;
   /** タグID */
-  tag_id?: InputMaybe<Order_By>;
+  tag_id?: InputMaybe<OrderBy>;
 };
 
 /** order by min() on columns of table "post_tags" */
-export type Post_Tags_Min_Order_By = {
+export type PostTagsMinOrderBy = {
   /** ポストID */
-  post_id?: InputMaybe<Order_By>;
+  post_id?: InputMaybe<OrderBy>;
   /** タグID */
-  tag_id?: InputMaybe<Order_By>;
+  tag_id?: InputMaybe<OrderBy>;
 };
 
 /** Ordering options when selecting data from "post_tags". */
-export type Post_Tags_Order_By = {
-  post?: InputMaybe<Posts_Order_By>;
-  post_id?: InputMaybe<Order_By>;
-  tag?: InputMaybe<Tags_Order_By>;
-  tag_id?: InputMaybe<Order_By>;
+export type PostTagsOrderBy = {
+  post?: InputMaybe<PostsOrderBy>;
+  post_id?: InputMaybe<OrderBy>;
+  tag?: InputMaybe<TagsOrderBy>;
+  tag_id?: InputMaybe<OrderBy>;
 };
 
 /** select columns of table "post_tags" */
-export enum Post_Tags_Select_Column {
+export enum PostTagsSelectColumn {
   /** column name */
-  PostId = "post_id",
+  POST_ID = "post_id",
   /** column name */
-  TagId = "tag_id",
+  TAG_ID = "tag_id",
 }
 
 /** Streaming cursor of the table "post_tags" */
-export type Post_Tags_Stream_Cursor_Input = {
+export type PostTagsStreamCursorInput = {
   /** Stream column input with initial value */
-  initial_value: Post_Tags_Stream_Cursor_Value_Input;
+  initial_value: PostTagsStreamCursorValueInput;
   /** cursor ordering */
-  ordering?: InputMaybe<Cursor_Ordering>;
+  ordering?: InputMaybe<CursorOrdering>;
 };
 
 /** Initial value of the column from where the streaming should start */
-export type Post_Tags_Stream_Cursor_Value_Input = {
+export type PostTagsStreamCursorValueInput = {
   /** ポストID */
   post_id?: InputMaybe<Scalars["uuid"]["input"]>;
   /** タグID */
@@ -304,7 +304,7 @@ export type Posts = {
   /** ポスト ID */
   id: Scalars["uuid"]["output"];
   /** An array relationship */
-  post_tags: Array<Post_Tags>;
+  post_tags: Array<PostTags>;
   /** 公開日時 */
   published_at?: Maybe<Scalars["timestamptz"]["output"]>;
   /** An object relationship */
@@ -320,148 +320,148 @@ export type Posts = {
 };
 
 /** ポスト */
-export type PostsPost_TagsArgs = {
-  distinct_on?: InputMaybe<Array<Post_Tags_Select_Column>>;
+export type PostsPostTagsArgs = {
+  distinct_on?: InputMaybe<Array<PostTagsSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Post_Tags_Order_By>>;
-  where?: InputMaybe<Post_Tags_Bool_Exp>;
+  order_by?: InputMaybe<Array<PostTagsOrderBy>>;
+  where?: InputMaybe<PostTagsBoolExp>;
 };
 
 /** order by aggregate values of table "posts" */
-export type Posts_Aggregate_Order_By = {
-  count?: InputMaybe<Order_By>;
-  max?: InputMaybe<Posts_Max_Order_By>;
-  min?: InputMaybe<Posts_Min_Order_By>;
+export type PostsAggregateOrderBy = {
+  count?: InputMaybe<OrderBy>;
+  max?: InputMaybe<PostsMaxOrderBy>;
+  min?: InputMaybe<PostsMinOrderBy>;
 };
 
 /** Boolean expression to filter rows from the table "posts". All fields are combined with a logical 'AND'. */
-export type Posts_Bool_Exp = {
-  _and?: InputMaybe<Array<Posts_Bool_Exp>>;
-  _not?: InputMaybe<Posts_Bool_Exp>;
-  _or?: InputMaybe<Array<Posts_Bool_Exp>>;
-  content?: InputMaybe<String_Comparison_Exp>;
-  coverImage?: InputMaybe<Assets_Bool_Exp>;
-  cover_image_id?: InputMaybe<Uuid_Comparison_Exp>;
-  created_at?: InputMaybe<Timestamptz_Comparison_Exp>;
-  deleted_at?: InputMaybe<Timestamptz_Comparison_Exp>;
-  excerpt?: InputMaybe<String_Comparison_Exp>;
-  id?: InputMaybe<Uuid_Comparison_Exp>;
-  post_tags?: InputMaybe<Post_Tags_Bool_Exp>;
-  published_at?: InputMaybe<Timestamptz_Comparison_Exp>;
-  seo?: InputMaybe<Seos_Bool_Exp>;
-  seo_id?: InputMaybe<Uuid_Comparison_Exp>;
-  slug?: InputMaybe<String_Comparison_Exp>;
-  title?: InputMaybe<String_Comparison_Exp>;
-  updated_at?: InputMaybe<Timestamptz_Comparison_Exp>;
+export type PostsBoolExp = {
+  _and?: InputMaybe<Array<PostsBoolExp>>;
+  _not?: InputMaybe<PostsBoolExp>;
+  _or?: InputMaybe<Array<PostsBoolExp>>;
+  content?: InputMaybe<StringComparisonExp>;
+  coverImage?: InputMaybe<AssetsBoolExp>;
+  cover_image_id?: InputMaybe<UuidComparisonExp>;
+  created_at?: InputMaybe<TimestamptzComparisonExp>;
+  deleted_at?: InputMaybe<TimestamptzComparisonExp>;
+  excerpt?: InputMaybe<StringComparisonExp>;
+  id?: InputMaybe<UuidComparisonExp>;
+  post_tags?: InputMaybe<PostTagsBoolExp>;
+  published_at?: InputMaybe<TimestamptzComparisonExp>;
+  seo?: InputMaybe<SeosBoolExp>;
+  seo_id?: InputMaybe<UuidComparisonExp>;
+  slug?: InputMaybe<StringComparisonExp>;
+  title?: InputMaybe<StringComparisonExp>;
+  updated_at?: InputMaybe<TimestamptzComparisonExp>;
 };
 
 /** order by max() on columns of table "posts" */
-export type Posts_Max_Order_By = {
+export type PostsMaxOrderBy = {
   /** 内容 */
-  content?: InputMaybe<Order_By>;
+  content?: InputMaybe<OrderBy>;
   /** カバー画像 */
-  cover_image_id?: InputMaybe<Order_By>;
+  cover_image_id?: InputMaybe<OrderBy>;
   /** 作成日時 */
-  created_at?: InputMaybe<Order_By>;
+  created_at?: InputMaybe<OrderBy>;
   /** 削除日時 */
-  deleted_at?: InputMaybe<Order_By>;
+  deleted_at?: InputMaybe<OrderBy>;
   /** 抜粋 */
-  excerpt?: InputMaybe<Order_By>;
+  excerpt?: InputMaybe<OrderBy>;
   /** ポスト ID */
-  id?: InputMaybe<Order_By>;
+  id?: InputMaybe<OrderBy>;
   /** 公開日時 */
-  published_at?: InputMaybe<Order_By>;
+  published_at?: InputMaybe<OrderBy>;
   /** SEO */
-  seo_id?: InputMaybe<Order_By>;
+  seo_id?: InputMaybe<OrderBy>;
   /** ラベル文字列 */
-  slug?: InputMaybe<Order_By>;
+  slug?: InputMaybe<OrderBy>;
   /** タイトル */
-  title?: InputMaybe<Order_By>;
+  title?: InputMaybe<OrderBy>;
   /** 更新日時 */
-  updated_at?: InputMaybe<Order_By>;
+  updated_at?: InputMaybe<OrderBy>;
 };
 
 /** order by min() on columns of table "posts" */
-export type Posts_Min_Order_By = {
+export type PostsMinOrderBy = {
   /** 内容 */
-  content?: InputMaybe<Order_By>;
+  content?: InputMaybe<OrderBy>;
   /** カバー画像 */
-  cover_image_id?: InputMaybe<Order_By>;
+  cover_image_id?: InputMaybe<OrderBy>;
   /** 作成日時 */
-  created_at?: InputMaybe<Order_By>;
+  created_at?: InputMaybe<OrderBy>;
   /** 削除日時 */
-  deleted_at?: InputMaybe<Order_By>;
+  deleted_at?: InputMaybe<OrderBy>;
   /** 抜粋 */
-  excerpt?: InputMaybe<Order_By>;
+  excerpt?: InputMaybe<OrderBy>;
   /** ポスト ID */
-  id?: InputMaybe<Order_By>;
+  id?: InputMaybe<OrderBy>;
   /** 公開日時 */
-  published_at?: InputMaybe<Order_By>;
+  published_at?: InputMaybe<OrderBy>;
   /** SEO */
-  seo_id?: InputMaybe<Order_By>;
+  seo_id?: InputMaybe<OrderBy>;
   /** ラベル文字列 */
-  slug?: InputMaybe<Order_By>;
+  slug?: InputMaybe<OrderBy>;
   /** タイトル */
-  title?: InputMaybe<Order_By>;
+  title?: InputMaybe<OrderBy>;
   /** 更新日時 */
-  updated_at?: InputMaybe<Order_By>;
+  updated_at?: InputMaybe<OrderBy>;
 };
 
 /** Ordering options when selecting data from "posts". */
-export type Posts_Order_By = {
-  content?: InputMaybe<Order_By>;
-  coverImage?: InputMaybe<Assets_Order_By>;
-  cover_image_id?: InputMaybe<Order_By>;
-  created_at?: InputMaybe<Order_By>;
-  deleted_at?: InputMaybe<Order_By>;
-  excerpt?: InputMaybe<Order_By>;
-  id?: InputMaybe<Order_By>;
-  post_tags_aggregate?: InputMaybe<Post_Tags_Aggregate_Order_By>;
-  published_at?: InputMaybe<Order_By>;
-  seo?: InputMaybe<Seos_Order_By>;
-  seo_id?: InputMaybe<Order_By>;
-  slug?: InputMaybe<Order_By>;
-  title?: InputMaybe<Order_By>;
-  updated_at?: InputMaybe<Order_By>;
+export type PostsOrderBy = {
+  content?: InputMaybe<OrderBy>;
+  coverImage?: InputMaybe<AssetsOrderBy>;
+  cover_image_id?: InputMaybe<OrderBy>;
+  created_at?: InputMaybe<OrderBy>;
+  deleted_at?: InputMaybe<OrderBy>;
+  excerpt?: InputMaybe<OrderBy>;
+  id?: InputMaybe<OrderBy>;
+  post_tags_aggregate?: InputMaybe<PostTagsAggregateOrderBy>;
+  published_at?: InputMaybe<OrderBy>;
+  seo?: InputMaybe<SeosOrderBy>;
+  seo_id?: InputMaybe<OrderBy>;
+  slug?: InputMaybe<OrderBy>;
+  title?: InputMaybe<OrderBy>;
+  updated_at?: InputMaybe<OrderBy>;
 };
 
 /** select columns of table "posts" */
-export enum Posts_Select_Column {
+export enum PostsSelectColumn {
   /** column name */
-  Content = "content",
+  CONTENT = "content",
   /** column name */
-  CoverImageId = "cover_image_id",
+  COVER_IMAGE_ID = "cover_image_id",
   /** column name */
-  CreatedAt = "created_at",
+  CREATED_AT = "created_at",
   /** column name */
-  DeletedAt = "deleted_at",
+  DELETED_AT = "deleted_at",
   /** column name */
-  Excerpt = "excerpt",
+  EXCERPT = "excerpt",
   /** column name */
-  Id = "id",
+  ID = "id",
   /** column name */
-  PublishedAt = "published_at",
+  PUBLISHED_AT = "published_at",
   /** column name */
-  SeoId = "seo_id",
+  SEO_ID = "seo_id",
   /** column name */
-  Slug = "slug",
+  SLUG = "slug",
   /** column name */
-  Title = "title",
+  TITLE = "title",
   /** column name */
-  UpdatedAt = "updated_at",
+  UPDATED_AT = "updated_at",
 }
 
 /** Streaming cursor of the table "posts" */
-export type Posts_Stream_Cursor_Input = {
+export type PostsStreamCursorInput = {
   /** Stream column input with initial value */
-  initial_value: Posts_Stream_Cursor_Value_Input;
+  initial_value: PostsStreamCursorValueInput;
   /** cursor ordering */
-  ordering?: InputMaybe<Cursor_Ordering>;
+  ordering?: InputMaybe<CursorOrdering>;
 };
 
 /** Initial value of the column from where the streaming should start */
-export type Posts_Stream_Cursor_Value_Input = {
+export type PostsStreamCursorValueInput = {
   /** 内容 */
   content?: InputMaybe<Scalars["String"]["input"]>;
   /** カバー画像 */
@@ -486,16 +486,16 @@ export type Posts_Stream_Cursor_Value_Input = {
   updated_at?: InputMaybe<Scalars["timestamptz"]["input"]>;
 };
 
-export type Query_Root = {
+export type QueryRoot = {
   __typename?: "query_root";
   /** fetch data from the table: "assets" */
   assets: Array<Assets>;
   /** fetch data from the table: "assets" using primary key columns */
   assets_by_pk?: Maybe<Assets>;
   /** An array relationship */
-  post_tags: Array<Post_Tags>;
+  post_tags: Array<PostTags>;
   /** fetch data from the table: "post_tags" using primary key columns */
-  post_tags_by_pk?: Maybe<Post_Tags>;
+  post_tags_by_pk?: Maybe<PostTags>;
   /** An array relationship */
   posts: Array<Posts>;
   /** fetch data from the table: "posts" using primary key columns */
@@ -510,64 +510,64 @@ export type Query_Root = {
   tags_by_pk?: Maybe<Tags>;
 };
 
-export type Query_RootAssetsArgs = {
-  distinct_on?: InputMaybe<Array<Assets_Select_Column>>;
+export type QueryRootAssetsArgs = {
+  distinct_on?: InputMaybe<Array<AssetsSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Assets_Order_By>>;
-  where?: InputMaybe<Assets_Bool_Exp>;
+  order_by?: InputMaybe<Array<AssetsOrderBy>>;
+  where?: InputMaybe<AssetsBoolExp>;
 };
 
-export type Query_RootAssets_By_PkArgs = {
+export type QueryRootAssetsByPkArgs = {
   id: Scalars["uuid"]["input"];
 };
 
-export type Query_RootPost_TagsArgs = {
-  distinct_on?: InputMaybe<Array<Post_Tags_Select_Column>>;
+export type QueryRootPostTagsArgs = {
+  distinct_on?: InputMaybe<Array<PostTagsSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Post_Tags_Order_By>>;
-  where?: InputMaybe<Post_Tags_Bool_Exp>;
+  order_by?: InputMaybe<Array<PostTagsOrderBy>>;
+  where?: InputMaybe<PostTagsBoolExp>;
 };
 
-export type Query_RootPost_Tags_By_PkArgs = {
+export type QueryRootPostTagsByPkArgs = {
   post_id: Scalars["uuid"]["input"];
   tag_id: Scalars["uuid"]["input"];
 };
 
-export type Query_RootPostsArgs = {
-  distinct_on?: InputMaybe<Array<Posts_Select_Column>>;
+export type QueryRootPostsArgs = {
+  distinct_on?: InputMaybe<Array<PostsSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Posts_Order_By>>;
-  where?: InputMaybe<Posts_Bool_Exp>;
+  order_by?: InputMaybe<Array<PostsOrderBy>>;
+  where?: InputMaybe<PostsBoolExp>;
 };
 
-export type Query_RootPosts_By_PkArgs = {
+export type QueryRootPostsByPkArgs = {
   id: Scalars["uuid"]["input"];
 };
 
-export type Query_RootSeosArgs = {
-  distinct_on?: InputMaybe<Array<Seos_Select_Column>>;
+export type QueryRootSeosArgs = {
+  distinct_on?: InputMaybe<Array<SeosSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Seos_Order_By>>;
-  where?: InputMaybe<Seos_Bool_Exp>;
+  order_by?: InputMaybe<Array<SeosOrderBy>>;
+  where?: InputMaybe<SeosBoolExp>;
 };
 
-export type Query_RootSeos_By_PkArgs = {
+export type QueryRootSeosByPkArgs = {
   id: Scalars["uuid"]["input"];
 };
 
-export type Query_RootTagsArgs = {
-  distinct_on?: InputMaybe<Array<Tags_Select_Column>>;
+export type QueryRootTagsArgs = {
+  distinct_on?: InputMaybe<Array<TagsSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Tags_Order_By>>;
-  where?: InputMaybe<Tags_Bool_Exp>;
+  order_by?: InputMaybe<Array<TagsOrderBy>>;
+  where?: InputMaybe<TagsBoolExp>;
 };
 
-export type Query_RootTags_By_PkArgs = {
+export type QueryRootTagsByPkArgs = {
   id: Scalars["uuid"]["input"];
 };
 
@@ -594,68 +594,68 @@ export type Seos = {
 
 /** SEO */
 export type SeosPostsArgs = {
-  distinct_on?: InputMaybe<Array<Posts_Select_Column>>;
+  distinct_on?: InputMaybe<Array<PostsSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Posts_Order_By>>;
-  where?: InputMaybe<Posts_Bool_Exp>;
+  order_by?: InputMaybe<Array<PostsOrderBy>>;
+  where?: InputMaybe<PostsBoolExp>;
 };
 
 /** Boolean expression to filter rows from the table "seos". All fields are combined with a logical 'AND'. */
-export type Seos_Bool_Exp = {
-  _and?: InputMaybe<Array<Seos_Bool_Exp>>;
-  _not?: InputMaybe<Seos_Bool_Exp>;
-  _or?: InputMaybe<Array<Seos_Bool_Exp>>;
-  created_at?: InputMaybe<Timestamptz_Comparison_Exp>;
-  deleted_at?: InputMaybe<Timestamptz_Comparison_Exp>;
-  description?: InputMaybe<String_Comparison_Exp>;
-  id?: InputMaybe<Uuid_Comparison_Exp>;
-  og_image_url?: InputMaybe<String_Comparison_Exp>;
-  posts?: InputMaybe<Posts_Bool_Exp>;
-  title?: InputMaybe<String_Comparison_Exp>;
-  updated_at?: InputMaybe<Timestamptz_Comparison_Exp>;
+export type SeosBoolExp = {
+  _and?: InputMaybe<Array<SeosBoolExp>>;
+  _not?: InputMaybe<SeosBoolExp>;
+  _or?: InputMaybe<Array<SeosBoolExp>>;
+  created_at?: InputMaybe<TimestamptzComparisonExp>;
+  deleted_at?: InputMaybe<TimestamptzComparisonExp>;
+  description?: InputMaybe<StringComparisonExp>;
+  id?: InputMaybe<UuidComparisonExp>;
+  og_image_url?: InputMaybe<StringComparisonExp>;
+  posts?: InputMaybe<PostsBoolExp>;
+  title?: InputMaybe<StringComparisonExp>;
+  updated_at?: InputMaybe<TimestamptzComparisonExp>;
 };
 
 /** Ordering options when selecting data from "seos". */
-export type Seos_Order_By = {
-  created_at?: InputMaybe<Order_By>;
-  deleted_at?: InputMaybe<Order_By>;
-  description?: InputMaybe<Order_By>;
-  id?: InputMaybe<Order_By>;
-  og_image_url?: InputMaybe<Order_By>;
-  posts_aggregate?: InputMaybe<Posts_Aggregate_Order_By>;
-  title?: InputMaybe<Order_By>;
-  updated_at?: InputMaybe<Order_By>;
+export type SeosOrderBy = {
+  created_at?: InputMaybe<OrderBy>;
+  deleted_at?: InputMaybe<OrderBy>;
+  description?: InputMaybe<OrderBy>;
+  id?: InputMaybe<OrderBy>;
+  og_image_url?: InputMaybe<OrderBy>;
+  posts_aggregate?: InputMaybe<PostsAggregateOrderBy>;
+  title?: InputMaybe<OrderBy>;
+  updated_at?: InputMaybe<OrderBy>;
 };
 
 /** select columns of table "seos" */
-export enum Seos_Select_Column {
+export enum SeosSelectColumn {
   /** column name */
-  CreatedAt = "created_at",
+  CREATED_AT = "created_at",
   /** column name */
-  DeletedAt = "deleted_at",
+  DELETED_AT = "deleted_at",
   /** column name */
-  Description = "description",
+  DESCRIPTION = "description",
   /** column name */
-  Id = "id",
+  ID = "id",
   /** column name */
-  OgImageUrl = "og_image_url",
+  OG_IMAGE_URL = "og_image_url",
   /** column name */
-  Title = "title",
+  TITLE = "title",
   /** column name */
-  UpdatedAt = "updated_at",
+  UPDATED_AT = "updated_at",
 }
 
 /** Streaming cursor of the table "seos" */
-export type Seos_Stream_Cursor_Input = {
+export type SeosStreamCursorInput = {
   /** Stream column input with initial value */
-  initial_value: Seos_Stream_Cursor_Value_Input;
+  initial_value: SeosStreamCursorValueInput;
   /** cursor ordering */
-  ordering?: InputMaybe<Cursor_Ordering>;
+  ordering?: InputMaybe<CursorOrdering>;
 };
 
 /** Initial value of the column from where the streaming should start */
-export type Seos_Stream_Cursor_Value_Input = {
+export type SeosStreamCursorValueInput = {
   /** 作成日時 */
   created_at?: InputMaybe<Scalars["timestamptz"]["input"]>;
   /** 削除日時 */
@@ -673,7 +673,7 @@ export type Seos_Stream_Cursor_Value_Input = {
 };
 
 /** Boolean expression to compare columns of type "smallint". All fields are combined with logical 'AND'. */
-export type Smallint_Comparison_Exp = {
+export type SmallintComparisonExp = {
   _eq?: InputMaybe<Scalars["smallint"]["input"]>;
   _gt?: InputMaybe<Scalars["smallint"]["input"]>;
   _gte?: InputMaybe<Scalars["smallint"]["input"]>;
@@ -685,7 +685,7 @@ export type Smallint_Comparison_Exp = {
   _nin?: InputMaybe<Array<Scalars["smallint"]["input"]>>;
 };
 
-export type Subscription_Root = {
+export type SubscriptionRoot = {
   __typename?: "subscription_root";
   /** fetch data from the table: "assets" */
   assets: Array<Assets>;
@@ -694,11 +694,11 @@ export type Subscription_Root = {
   /** fetch data from the table in a streaming manner: "assets" */
   assets_stream: Array<Assets>;
   /** An array relationship */
-  post_tags: Array<Post_Tags>;
+  post_tags: Array<PostTags>;
   /** fetch data from the table: "post_tags" using primary key columns */
-  post_tags_by_pk?: Maybe<Post_Tags>;
+  post_tags_by_pk?: Maybe<PostTags>;
   /** fetch data from the table in a streaming manner: "post_tags" */
-  post_tags_stream: Array<Post_Tags>;
+  post_tags_stream: Array<PostTags>;
   /** An array relationship */
   posts: Array<Posts>;
   /** fetch data from the table: "posts" using primary key columns */
@@ -719,95 +719,95 @@ export type Subscription_Root = {
   tags_stream: Array<Tags>;
 };
 
-export type Subscription_RootAssetsArgs = {
-  distinct_on?: InputMaybe<Array<Assets_Select_Column>>;
+export type SubscriptionRootAssetsArgs = {
+  distinct_on?: InputMaybe<Array<AssetsSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Assets_Order_By>>;
-  where?: InputMaybe<Assets_Bool_Exp>;
+  order_by?: InputMaybe<Array<AssetsOrderBy>>;
+  where?: InputMaybe<AssetsBoolExp>;
 };
 
-export type Subscription_RootAssets_By_PkArgs = {
+export type SubscriptionRootAssetsByPkArgs = {
   id: Scalars["uuid"]["input"];
 };
 
-export type Subscription_RootAssets_StreamArgs = {
+export type SubscriptionRootAssetsStreamArgs = {
   batch_size: Scalars["Int"]["input"];
-  cursor: Array<InputMaybe<Assets_Stream_Cursor_Input>>;
-  where?: InputMaybe<Assets_Bool_Exp>;
+  cursor: Array<InputMaybe<AssetsStreamCursorInput>>;
+  where?: InputMaybe<AssetsBoolExp>;
 };
 
-export type Subscription_RootPost_TagsArgs = {
-  distinct_on?: InputMaybe<Array<Post_Tags_Select_Column>>;
+export type SubscriptionRootPostTagsArgs = {
+  distinct_on?: InputMaybe<Array<PostTagsSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Post_Tags_Order_By>>;
-  where?: InputMaybe<Post_Tags_Bool_Exp>;
+  order_by?: InputMaybe<Array<PostTagsOrderBy>>;
+  where?: InputMaybe<PostTagsBoolExp>;
 };
 
-export type Subscription_RootPost_Tags_By_PkArgs = {
+export type SubscriptionRootPostTagsByPkArgs = {
   post_id: Scalars["uuid"]["input"];
   tag_id: Scalars["uuid"]["input"];
 };
 
-export type Subscription_RootPost_Tags_StreamArgs = {
+export type SubscriptionRootPostTagsStreamArgs = {
   batch_size: Scalars["Int"]["input"];
-  cursor: Array<InputMaybe<Post_Tags_Stream_Cursor_Input>>;
-  where?: InputMaybe<Post_Tags_Bool_Exp>;
+  cursor: Array<InputMaybe<PostTagsStreamCursorInput>>;
+  where?: InputMaybe<PostTagsBoolExp>;
 };
 
-export type Subscription_RootPostsArgs = {
-  distinct_on?: InputMaybe<Array<Posts_Select_Column>>;
+export type SubscriptionRootPostsArgs = {
+  distinct_on?: InputMaybe<Array<PostsSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Posts_Order_By>>;
-  where?: InputMaybe<Posts_Bool_Exp>;
+  order_by?: InputMaybe<Array<PostsOrderBy>>;
+  where?: InputMaybe<PostsBoolExp>;
 };
 
-export type Subscription_RootPosts_By_PkArgs = {
+export type SubscriptionRootPostsByPkArgs = {
   id: Scalars["uuid"]["input"];
 };
 
-export type Subscription_RootPosts_StreamArgs = {
+export type SubscriptionRootPostsStreamArgs = {
   batch_size: Scalars["Int"]["input"];
-  cursor: Array<InputMaybe<Posts_Stream_Cursor_Input>>;
-  where?: InputMaybe<Posts_Bool_Exp>;
+  cursor: Array<InputMaybe<PostsStreamCursorInput>>;
+  where?: InputMaybe<PostsBoolExp>;
 };
 
-export type Subscription_RootSeosArgs = {
-  distinct_on?: InputMaybe<Array<Seos_Select_Column>>;
+export type SubscriptionRootSeosArgs = {
+  distinct_on?: InputMaybe<Array<SeosSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Seos_Order_By>>;
-  where?: InputMaybe<Seos_Bool_Exp>;
+  order_by?: InputMaybe<Array<SeosOrderBy>>;
+  where?: InputMaybe<SeosBoolExp>;
 };
 
-export type Subscription_RootSeos_By_PkArgs = {
+export type SubscriptionRootSeosByPkArgs = {
   id: Scalars["uuid"]["input"];
 };
 
-export type Subscription_RootSeos_StreamArgs = {
+export type SubscriptionRootSeosStreamArgs = {
   batch_size: Scalars["Int"]["input"];
-  cursor: Array<InputMaybe<Seos_Stream_Cursor_Input>>;
-  where?: InputMaybe<Seos_Bool_Exp>;
+  cursor: Array<InputMaybe<SeosStreamCursorInput>>;
+  where?: InputMaybe<SeosBoolExp>;
 };
 
-export type Subscription_RootTagsArgs = {
-  distinct_on?: InputMaybe<Array<Tags_Select_Column>>;
+export type SubscriptionRootTagsArgs = {
+  distinct_on?: InputMaybe<Array<TagsSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Tags_Order_By>>;
-  where?: InputMaybe<Tags_Bool_Exp>;
+  order_by?: InputMaybe<Array<TagsOrderBy>>;
+  where?: InputMaybe<TagsBoolExp>;
 };
 
-export type Subscription_RootTags_By_PkArgs = {
+export type SubscriptionRootTagsByPkArgs = {
   id: Scalars["uuid"]["input"];
 };
 
-export type Subscription_RootTags_StreamArgs = {
+export type SubscriptionRootTagsStreamArgs = {
   batch_size: Scalars["Int"]["input"];
-  cursor: Array<InputMaybe<Tags_Stream_Cursor_Input>>;
-  where?: InputMaybe<Tags_Bool_Exp>;
+  cursor: Array<InputMaybe<TagsStreamCursorInput>>;
+  where?: InputMaybe<TagsBoolExp>;
 };
 
 /** タグ */
@@ -820,7 +820,7 @@ export type Tags = {
   /** タグID */
   id: Scalars["uuid"]["output"];
   /** An array relationship */
-  post_tags: Array<Post_Tags>;
+  post_tags: Array<PostTags>;
   /** タグ */
   tag: Scalars["String"]["output"];
   /** 更新日時 */
@@ -828,61 +828,61 @@ export type Tags = {
 };
 
 /** タグ */
-export type TagsPost_TagsArgs = {
-  distinct_on?: InputMaybe<Array<Post_Tags_Select_Column>>;
+export type TagsPostTagsArgs = {
+  distinct_on?: InputMaybe<Array<PostTagsSelectColumn>>;
   limit?: InputMaybe<Scalars["Int"]["input"]>;
   offset?: InputMaybe<Scalars["Int"]["input"]>;
-  order_by?: InputMaybe<Array<Post_Tags_Order_By>>;
-  where?: InputMaybe<Post_Tags_Bool_Exp>;
+  order_by?: InputMaybe<Array<PostTagsOrderBy>>;
+  where?: InputMaybe<PostTagsBoolExp>;
 };
 
 /** Boolean expression to filter rows from the table "tags". All fields are combined with a logical 'AND'. */
-export type Tags_Bool_Exp = {
-  _and?: InputMaybe<Array<Tags_Bool_Exp>>;
-  _not?: InputMaybe<Tags_Bool_Exp>;
-  _or?: InputMaybe<Array<Tags_Bool_Exp>>;
-  created_at?: InputMaybe<Timestamptz_Comparison_Exp>;
-  description?: InputMaybe<String_Comparison_Exp>;
-  id?: InputMaybe<Uuid_Comparison_Exp>;
-  post_tags?: InputMaybe<Post_Tags_Bool_Exp>;
-  tag?: InputMaybe<String_Comparison_Exp>;
-  updated_at?: InputMaybe<Timestamptz_Comparison_Exp>;
+export type TagsBoolExp = {
+  _and?: InputMaybe<Array<TagsBoolExp>>;
+  _not?: InputMaybe<TagsBoolExp>;
+  _or?: InputMaybe<Array<TagsBoolExp>>;
+  created_at?: InputMaybe<TimestamptzComparisonExp>;
+  description?: InputMaybe<StringComparisonExp>;
+  id?: InputMaybe<UuidComparisonExp>;
+  post_tags?: InputMaybe<PostTagsBoolExp>;
+  tag?: InputMaybe<StringComparisonExp>;
+  updated_at?: InputMaybe<TimestamptzComparisonExp>;
 };
 
 /** Ordering options when selecting data from "tags". */
-export type Tags_Order_By = {
-  created_at?: InputMaybe<Order_By>;
-  description?: InputMaybe<Order_By>;
-  id?: InputMaybe<Order_By>;
-  post_tags_aggregate?: InputMaybe<Post_Tags_Aggregate_Order_By>;
-  tag?: InputMaybe<Order_By>;
-  updated_at?: InputMaybe<Order_By>;
+export type TagsOrderBy = {
+  created_at?: InputMaybe<OrderBy>;
+  description?: InputMaybe<OrderBy>;
+  id?: InputMaybe<OrderBy>;
+  post_tags_aggregate?: InputMaybe<PostTagsAggregateOrderBy>;
+  tag?: InputMaybe<OrderBy>;
+  updated_at?: InputMaybe<OrderBy>;
 };
 
 /** select columns of table "tags" */
-export enum Tags_Select_Column {
+export enum TagsSelectColumn {
   /** column name */
-  CreatedAt = "created_at",
+  CREATED_AT = "created_at",
   /** column name */
-  Description = "description",
+  DESCRIPTION = "description",
   /** column name */
-  Id = "id",
+  ID = "id",
   /** column name */
-  Tag = "tag",
+  TAG = "tag",
   /** column name */
-  UpdatedAt = "updated_at",
+  UPDATED_AT = "updated_at",
 }
 
 /** Streaming cursor of the table "tags" */
-export type Tags_Stream_Cursor_Input = {
+export type TagsStreamCursorInput = {
   /** Stream column input with initial value */
-  initial_value: Tags_Stream_Cursor_Value_Input;
+  initial_value: TagsStreamCursorValueInput;
   /** cursor ordering */
-  ordering?: InputMaybe<Cursor_Ordering>;
+  ordering?: InputMaybe<CursorOrdering>;
 };
 
 /** Initial value of the column from where the streaming should start */
-export type Tags_Stream_Cursor_Value_Input = {
+export type TagsStreamCursorValueInput = {
   /** 作成日時 */
   created_at?: InputMaybe<Scalars["timestamptz"]["input"]>;
   /** 説明文 */
@@ -896,7 +896,7 @@ export type Tags_Stream_Cursor_Value_Input = {
 };
 
 /** Boolean expression to compare columns of type "timestamptz". All fields are combined with logical 'AND'. */
-export type Timestamptz_Comparison_Exp = {
+export type TimestamptzComparisonExp = {
   _eq?: InputMaybe<Scalars["timestamptz"]["input"]>;
   _gt?: InputMaybe<Scalars["timestamptz"]["input"]>;
   _gte?: InputMaybe<Scalars["timestamptz"]["input"]>;
@@ -909,7 +909,7 @@ export type Timestamptz_Comparison_Exp = {
 };
 
 /** Boolean expression to compare columns of type "uuid". All fields are combined with logical 'AND'. */
-export type Uuid_Comparison_Exp = {
+export type UuidComparisonExp = {
   _eq?: InputMaybe<Scalars["uuid"]["input"]>;
   _gt?: InputMaybe<Scalars["uuid"]["input"]>;
   _gte?: InputMaybe<Scalars["uuid"]["input"]>;
@@ -929,10 +929,10 @@ export type PostsQuery = {
   __typename?: "query_root";
   posts: Array<{
     __typename?: "posts";
-    id: any;
+    id: string;
     title: string;
     excerpt: string;
-    published_at?: any | null;
+    published_at?: Date | null;
     coverImage?: { __typename?: "assets"; url: string } | null;
   }>;
 };
@@ -941,7 +941,7 @@ export type PostIdsQueryVariables = Exact<{
   now: Scalars["timestamptz"]["input"];
 }>;
 
-export type PostIdsQuery = { __typename?: "query_root"; posts: Array<{ __typename?: "posts"; id: any }> };
+export type PostIdsQuery = { __typename?: "query_root"; posts: Array<{ __typename?: "posts"; id: string }> };
 
 export type PostMetadataQueryVariables = Exact<{
   id: Scalars["uuid"]["input"];
@@ -962,7 +962,7 @@ export type PostQuery = {
     __typename?: "posts";
     title: string;
     excerpt: string;
-    published_at?: any | null;
+    published_at?: Date | null;
     content: string;
     coverImage?: { __typename?: "assets"; url: string } | null;
     post_tags: Array<{ __typename?: "post_tags"; tag: { __typename?: "tags"; tag: string } }>;
