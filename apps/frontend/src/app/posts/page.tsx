@@ -28,13 +28,13 @@ export default async function PostListPage(): Promise<JSX.Element> {
   });
   const posts = data?.posts ?? [];
 
-  const postList = posts.map(({ id, title, excerpt, published_at, coverImage }) => (
+  const postList = posts.map(({ id, title, excerpt, publishedAt, coverImage }) => (
     <PostCard
-      key={String(id)}
+      key={id}
       href={`/posts/${id}`}
       title={title}
       description={excerpt}
-      publishedAt={String(published_at)}
+      publishedAt={publishedAt}
       heroImage={coverImage?.url ?? "/images/hero-default.png"}
       heroText={null}
     />

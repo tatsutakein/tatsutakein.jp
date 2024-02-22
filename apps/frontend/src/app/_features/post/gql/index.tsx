@@ -5,11 +5,11 @@ import { gql } from "@/gql";
  */
 export const getPostsQuery = gql(/* GraphQL */ `
   query Posts($now: timestamptz!) {
-    posts(order_by: { published_at: desc }, where: { published_at: { _lte: $now } }) {
+    posts(orderBy: { publishedAt: DESC }, where: { publishedAt: { _lte: $now } }) {
       id
       title
       excerpt
-      published_at
+      publishedAt
       coverImage {
         url
       }
@@ -22,7 +22,7 @@ export const getPostsQuery = gql(/* GraphQL */ `
  */
 export const getPostIdsQuery = gql(/* GraphQL */ `
   query PostIds($now: timestamptz!) {
-    posts(where: { published_at: { _lte: $now } }) {
+    posts(where: { publishedAt: { _lte: $now } }) {
       id
     }
   }
@@ -33,7 +33,7 @@ export const getPostIdsQuery = gql(/* GraphQL */ `
  */
 export const getPostMetadataQuery = gql(/* GraphQL */ `
   query PostMetadata($id: uuid!) {
-    posts_by_pk(id: $id) {
+    postsByPk(id: $id) {
       title
       excerpt
     }
@@ -45,10 +45,10 @@ export const getPostMetadataQuery = gql(/* GraphQL */ `
  */
 export const getPostQuery = gql(/* GraphQL */ `
   query Post($id: uuid!) {
-    posts_by_pk(id: $id) {
+    postsByPk(id: $id) {
       title
       excerpt
-      published_at
+      publishedAt
       coverImage {
         url
       }

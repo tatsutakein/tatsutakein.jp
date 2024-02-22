@@ -26,7 +26,7 @@ export async function generateStaticParams(): Promise<PageProps["params"][]> {
       ),
   });
   const posts = data?.posts ?? [];
-  return posts.map((post) => ({ id: String(post.id) }));
+  return posts.map((post) => ({ id: post.id }));
 }
 
 // @see https://nextjs.org/docs/app/building-your-application/data-fetching/revalidating
@@ -35,7 +35,7 @@ export const revalidate = 43200;
 
 export default async function PostPage({ params: { id } }: PageProps): Promise<JSX.Element> {
   try {
-    const { posts_by_pk: post } = await queryClient.fetchQuery({
+    const { postsByPk: post } = await queryClient.fetchQuery({
       queryKey: ["post", id],
       queryFn: async () => {
         try {
@@ -47,7 +47,7 @@ export default async function PostPage({ params: { id } }: PageProps): Promise<J
           );
         } catch (error) {
           return {
-            posts_by_pk: null,
+            postsByPk: null,
           };
         }
       },
@@ -65,7 +65,7 @@ export default async function PostPage({ params: { id } }: PageProps): Promise<J
 
 // @see https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function
 export async function generateMetadata({ params: { id } }: PageProps): Promise<Metadata> {
-  const { posts_by_pk: post } = await queryClient.fetchQuery({
+  const { postsByPk: post } = await queryClient.fetchQuery({
     queryKey: ["post-metadata", id],
     queryFn: async () => {
       try {
@@ -77,7 +77,7 @@ export async function generateMetadata({ params: { id } }: PageProps): Promise<M
         );
       } catch (e) {
         return {
-          posts_by_pk: null,
+          postsByPk: null,
         };
       }
     },

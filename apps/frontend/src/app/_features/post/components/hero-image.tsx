@@ -8,13 +8,11 @@ interface Props {
   heroImage?: string;
   heroText?: string | null;
   title: string;
-  publishedAt: string;
+  publishedAt: Date | null | undefined;
   tags: string[];
 }
 
 export const HeroImage = ({ heroImage, heroText, title, publishedAt, tags }: Props): JSX.Element => {
-  const localPublishedAt = formatDateEn(utcToJstTime(new Date(publishedAt)));
-
   return (
     <div className="relative h-52 overflow-hidden md:h-72 lg:h-80">
       {/* Image */}
@@ -51,7 +49,7 @@ export const HeroImage = ({ heroImage, heroText, title, publishedAt, tags }: Pro
           {/* Update Date */}
           <div className="flex items-center gap-2 text-sm md:text-base">
             <CalendarIcon />
-            <time>{localPublishedAt}</time>
+            {publishedAt && <time>{formatDateEn(utcToJstTime(publishedAt))}</time>}
           </div>
 
           {/* Tags */}

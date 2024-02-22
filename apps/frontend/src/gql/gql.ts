@@ -14,13 +14,13 @@ import * as types from "./graphql";
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
-  "\n  query Posts($now: timestamptz!) {\n    posts(order_by: { published_at: desc }, where: { published_at: { _lte: $now } }) {\n      id\n      title\n      excerpt\n      published_at\n      coverImage {\n        url\n      }\n    }\n  }\n":
+  "\n  query Posts($now: timestamptz!) {\n    posts(orderBy: { publishedAt: DESC }, where: { publishedAt: { _lte: $now } }) {\n      id\n      title\n      excerpt\n      publishedAt\n      coverImage {\n        url\n      }\n    }\n  }\n":
     types.PostsDocument,
-  "\n  query PostIds($now: timestamptz!) {\n    posts(where: { published_at: { _lte: $now } }) {\n      id\n    }\n  }\n":
+  "\n  query PostIds($now: timestamptz!) {\n    posts(where: { publishedAt: { _lte: $now } }) {\n      id\n    }\n  }\n":
     types.PostIdsDocument,
-  "\n  query PostMetadata($id: uuid!) {\n    posts_by_pk(id: $id) {\n      title\n      excerpt\n    }\n  }\n":
+  "\n  query PostMetadata($id: uuid!) {\n    postsByPk(id: $id) {\n      title\n      excerpt\n    }\n  }\n":
     types.PostMetadataDocument,
-  "\n  query Post($id: uuid!) {\n    posts_by_pk(id: $id) {\n      title\n      excerpt\n      published_at\n      coverImage {\n        url\n      }\n      content\n      post_tags {\n        tag {\n          tag\n        }\n      }\n    }\n  }\n":
+  "\n  query Post($id: uuid!) {\n    postsByPk(id: $id) {\n      title\n      excerpt\n      publishedAt\n      coverImage {\n        url\n      }\n      content\n      post_tags {\n        tag {\n          tag\n        }\n      }\n    }\n  }\n":
     types.PostDocument,
 };
 
@@ -42,26 +42,26 @@ export function gql(source: string): unknown;
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(
-  source: "\n  query Posts($now: timestamptz!) {\n    posts(order_by: { published_at: desc }, where: { published_at: { _lte: $now } }) {\n      id\n      title\n      excerpt\n      published_at\n      coverImage {\n        url\n      }\n    }\n  }\n",
-): (typeof documents)["\n  query Posts($now: timestamptz!) {\n    posts(order_by: { published_at: desc }, where: { published_at: { _lte: $now } }) {\n      id\n      title\n      excerpt\n      published_at\n      coverImage {\n        url\n      }\n    }\n  }\n"];
+  source: "\n  query Posts($now: timestamptz!) {\n    posts(orderBy: { publishedAt: DESC }, where: { publishedAt: { _lte: $now } }) {\n      id\n      title\n      excerpt\n      publishedAt\n      coverImage {\n        url\n      }\n    }\n  }\n",
+): (typeof documents)["\n  query Posts($now: timestamptz!) {\n    posts(orderBy: { publishedAt: DESC }, where: { publishedAt: { _lte: $now } }) {\n      id\n      title\n      excerpt\n      publishedAt\n      coverImage {\n        url\n      }\n    }\n  }\n"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(
-  source: "\n  query PostIds($now: timestamptz!) {\n    posts(where: { published_at: { _lte: $now } }) {\n      id\n    }\n  }\n",
-): (typeof documents)["\n  query PostIds($now: timestamptz!) {\n    posts(where: { published_at: { _lte: $now } }) {\n      id\n    }\n  }\n"];
+  source: "\n  query PostIds($now: timestamptz!) {\n    posts(where: { publishedAt: { _lte: $now } }) {\n      id\n    }\n  }\n",
+): (typeof documents)["\n  query PostIds($now: timestamptz!) {\n    posts(where: { publishedAt: { _lte: $now } }) {\n      id\n    }\n  }\n"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(
-  source: "\n  query PostMetadata($id: uuid!) {\n    posts_by_pk(id: $id) {\n      title\n      excerpt\n    }\n  }\n",
-): (typeof documents)["\n  query PostMetadata($id: uuid!) {\n    posts_by_pk(id: $id) {\n      title\n      excerpt\n    }\n  }\n"];
+  source: "\n  query PostMetadata($id: uuid!) {\n    postsByPk(id: $id) {\n      title\n      excerpt\n    }\n  }\n",
+): (typeof documents)["\n  query PostMetadata($id: uuid!) {\n    postsByPk(id: $id) {\n      title\n      excerpt\n    }\n  }\n"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(
-  source: "\n  query Post($id: uuid!) {\n    posts_by_pk(id: $id) {\n      title\n      excerpt\n      published_at\n      coverImage {\n        url\n      }\n      content\n      post_tags {\n        tag {\n          tag\n        }\n      }\n    }\n  }\n",
-): (typeof documents)["\n  query Post($id: uuid!) {\n    posts_by_pk(id: $id) {\n      title\n      excerpt\n      published_at\n      coverImage {\n        url\n      }\n      content\n      post_tags {\n        tag {\n          tag\n        }\n      }\n    }\n  }\n"];
+  source: "\n  query Post($id: uuid!) {\n    postsByPk(id: $id) {\n      title\n      excerpt\n      publishedAt\n      coverImage {\n        url\n      }\n      content\n      post_tags {\n        tag {\n          tag\n        }\n      }\n    }\n  }\n",
+): (typeof documents)["\n  query Post($id: uuid!) {\n    postsByPk(id: $id) {\n      title\n      excerpt\n      publishedAt\n      coverImage {\n        url\n      }\n      content\n      post_tags {\n        tag {\n          tag\n        }\n      }\n    }\n  }\n"];
 
 export function gql(source: string) {
   return (documents as any)[source] ?? {};
