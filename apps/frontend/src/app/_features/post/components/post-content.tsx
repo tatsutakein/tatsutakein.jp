@@ -7,7 +7,7 @@ import { CalendarIcon } from "@radix-ui/react-icons";
 import { MarkdownRenderer } from "@tatsutakeinjp/ui/markdown";
 
 interface PostContentProps {
-  post: PostQuery["posts_by_pk"];
+  post: PostQuery["postsByPk"];
 }
 
 export const PostContent: (props: PostContentProps) => JSX.Element = ({ post }) => {
@@ -21,8 +21,8 @@ export const PostContent: (props: PostContentProps) => JSX.Element = ({ post }) 
         heroImage={post.coverImage?.url ?? "/images/hero-default.png"}
         heroText={null}
         title={post.title}
-        publishedAt={String(post.published_at)}
-        tags={[]}
+        publishedAt={post.publishedAt}
+        tags={post.post_tags.map((tag) => tag.tag.tag)}
       />
 
       <article className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-6 md:px-8">
@@ -32,7 +32,7 @@ export const PostContent: (props: PostContentProps) => JSX.Element = ({ post }) 
             <span className="inline-flex items-center text-gray-400 dark:text-gray-500">
               <CalendarIcon className="mr-2 h-4" />
               {}
-              <time>{formatDateEn(utcToJstTime(new Date(String(post.published_at))), "LLL d, yyyy")}</time>
+              {post.publishedAt && <time>{formatDateEn(utcToJstTime(post.publishedAt), "LLL d, yyyy")}</time>}
             </span>
           </div>
 

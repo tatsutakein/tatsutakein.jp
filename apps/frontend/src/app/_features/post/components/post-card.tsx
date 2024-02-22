@@ -8,7 +8,7 @@ interface Props {
   href: string;
   title: string;
   description?: string | undefined | null;
-  publishedAt: string;
+  publishedAt: Date | null | undefined;
   heroImage: string;
   heroText?: string | undefined | null;
 }
@@ -39,7 +39,7 @@ export const PostCard: React.FC<Props> = ({ href, title, description, publishedA
           {description && <div className="mt-1 line-clamp-2 text-gray-500 dark:text-gray-400">{description}</div>}
 
           <div className="mt-3 text-sm text-gray-400 dark:text-gray-500">
-            <time>{formatDateEn(utcToJstTime(new Date(publishedAt)))}</time>
+            {publishedAt && <time>{formatDateEn(utcToJstTime(publishedAt))}</time>}
           </div>
         </div>
       </Link>
