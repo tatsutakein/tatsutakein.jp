@@ -1,0 +1,44 @@
+name: Improvement suggestion
+description: 改善要望を提出する
+title: "[Improve]: "
+labels: [ "enhancement" ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        改善要望をご提出していただき、ありがとうございます。
+
+  - type: textarea
+    id: area-to-improve
+    attributes:
+      label: 改善すべき点
+      description: コードや機能のどの部分を改善することができますか？
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: なぜ改善すべきなのか
+      description: なぜこれを改善する必要があるのか？
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: リスク
+      description: これを改善するリスクはありますか？APIは変更されますか？他の機能は変わるのか？
+
+  - type: textarea
+    id: more-information
+    attributes:
+      label: More information
+      description: この特集について、他に役立つ情報はありますか？ここにお書きください。参考になりそうな情報は、他のサイト/リポジトリへの参照です。
+
+  - type: checkboxes
+    id: other
+    attributes:
+      label: その他
+      options:
+        - label: この Issue に対して PR で貢献したいですか？
