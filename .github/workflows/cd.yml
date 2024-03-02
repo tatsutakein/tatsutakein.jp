@@ -1,4 +1,4 @@
-name: "Development"
+name: 'Continuous Delivery'
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: cd-${{ github.ref }}
   cancel-in-progress: true
 
 env:
@@ -15,6 +15,13 @@ env:
   IS_DISPATCH: ${{ contains(fromJSON('["workflow_dispatch"]'), github.event_name) }}
 
 jobs:
+  release:
+    uses: ./.github/workflows/wc-release.yml
+    with:
+      gh-app-id: ${{ vars.BOT_APP_ID }}
+    secrets:
+      gh-app-private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+
   filter:
     permissions:
       contents: read
