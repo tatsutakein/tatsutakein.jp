@@ -20,7 +20,7 @@ export const PostCard: React.FC<Props> = ({ href, title, description, publishedA
       <Link href={href} className="h-full">
         {/* ヒーロー画像 */}
         <div className="relative flex h-40 shrink-0 items-center justify-center overflow-hidden">
-          <Image className="absolute inset-0 m-auto object-cover" src={heroImage} alt={"#"} fill />
+          <Image className="absolute inset-0 m-auto object-cover" src={heroImage} alt={heroText ?? "#"} fill />
 
           <span
             className={clsx(
