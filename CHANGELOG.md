@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.1](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.0...v1.4.1) (2024-03-05)
+
+
+### Bug Fixes
+
+* **deps:** bun.lockb ([6b93784](https://github.com/tatsutakein/tatsutakein.jp/commit/6b937843c4de75220c7c880901eee22938a2ff1b))
+* **deps:** update dependency @tanstack/react-query to v5.25.0 ([6ef7e20](https://github.com/tatsutakein/tatsutakein.jp/commit/6ef7e202a414f50452f61f66f7802910ef38ab12))
+
 ## [1.4.0](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.3.4...v1.4.0) (2024-03-05)
 
 
