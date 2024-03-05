@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { formatDateEn, utcToJstTime } from "@/utils/date";
 import { countText, hasJa } from "@/utils/text";
@@ -19,7 +20,7 @@ export const PostCard: React.FC<Props> = ({ href, title, description, publishedA
       <Link href={href} className="h-full">
         {/* ヒーロー画像 */}
         <div className="relative flex h-40 shrink-0 items-center justify-center overflow-hidden">
-          <img className="absolute inset-0 m-auto object-cover" src={heroImage} alt="#" loading="lazy" />
+          <Image className="absolute inset-0 m-auto object-cover" src={heroImage} alt={"#"} fill />
 
           <span
             className={clsx(
