@@ -78,7 +78,7 @@ export default function AboutPage(): JSX.Element {
       {/* ツール */}
       <h2 className={clsx("mt-12 text-2xl")}>ツール</h2>
       <div className="mt-4 flex flex-wrap gap-4">
-        {["IntelliJ IDEA", "Slack", "VSCode"].map((tech) => (
+        {["IntelliJ IDEA", "Slack", "VSCode", "mise"].map((tech) => (
           <div key={tech} className="rounded-md border px-4 py-2 text-sm">
             {tech}
           </div>
