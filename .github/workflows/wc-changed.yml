@@ -4,11 +4,11 @@ on:
   workflow_call:
     outputs:
       actions:
-        value: ${{ jobs.changes.outputs.actions }}
+        value: ${{ jobs.changed.outputs.actions }}
       codeql:
-        value: ${{ jobs.changes.outputs.codeql }}
+        value: ${{ jobs.changed.outputs.codeql }}
       frontend:
-        value: ${{ jobs.changes.outputs.frontend }}
+        value: ${{ jobs.changed.outputs.frontend }}
 
 jobs:
   changed:
