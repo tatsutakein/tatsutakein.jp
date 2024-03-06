@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.3](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.2...v1.4.3) (2024-03-06)
+
+
+### Bug Fixes
+
+* **deps:** bun.lockb ([2c85d64](https://github.com/tatsutakein/tatsutakein.jp/commit/2c85d64c5d95884e15e2dec677dc64336b121250))
+
 ## [1.4.2](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.1...v1.4.2) (2024-03-06)
 
 
