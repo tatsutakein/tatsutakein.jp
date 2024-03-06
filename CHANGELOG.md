@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.2](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.1...v1.4.2) (2024-03-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @next/eslint-plugin-next to v14.1.3 ([eb1cd9c](https://github.com/tatsutakein/tatsutakein.jp/commit/eb1cd9c85cc71604871f0d28b2457116d4e87d1e))
+* **deps:** update dependency @trpc/server to v11.0.0-next-beta.311 ([e629dfb](https://github.com/tatsutakein/tatsutakein.jp/commit/e629dfb5bcc94c94c141eedffec277950bf92467))
+* **deps:** update dependency drizzle-orm to v0.29.5 ([2448cc0](https://github.com/tatsutakein/tatsutakein.jp/commit/2448cc065e6245efc6a2e58ed9a475a6f5fef27f))
+* **deps:** update dependency eslint-config-turbo to v1.12.5 ([8500786](https://github.com/tatsutakein/tatsutakein.jp/commit/8500786798d269218d5c108d8f87c130f1d8bac5))
+* **deps:** update dependency next to v14.1.3 ([ddaf463](https://github.com/tatsutakein/tatsutakein.jp/commit/ddaf4633e201855365e9bd37c046ca52e5fde152))
+* **deps:** update dependency prettier-plugin-tailwindcss to v0.5.12 ([00d0125](https://github.com/tatsutakein/tatsutakein.jp/commit/00d012553e5466dc28193f8ac0a7075c4c0254ab))
+
 ## [1.4.1](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.0...v1.4.1) (2024-03-05)
 
 
