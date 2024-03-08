@@ -30,7 +30,7 @@
   "prettier": "@tatsutakeinjp/prettier-config",
   "packageManager": "bun@1.0.28",
   "engines": {
-    "node": "21.7.0"
+    "node": "21.7.1"
   },
   "workspaces": [
     "apps/*",
