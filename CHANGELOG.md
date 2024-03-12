@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.4.4](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.3...v1.4.4) (2024-03-12)
+
+
+### Bug Fixes
+
+* **deps:** bun.lockb ([7e67a34](https://github.com/tatsutakein/tatsutakein.jp/commit/7e67a34e3877850bb413f4a7558ed3e9e6bbe266))
+* **deps:** update dependency @tanstack/react-query to v5.26.3 ([f294d10](https://github.com/tatsutakein/tatsutakein.jp/commit/f294d102540fefd517d00e00a669227288d2a858))
+* **deps:** update dependency @trpc/server to v11.0.0-next-beta.315 ([d88dc70](https://github.com/tatsutakein/tatsutakein.jp/commit/d88dc7079530c76e92251ed5667a35599ad78ee1))
+* **deps:** update dependency @trpc/server to v11.0.0-next-beta.316 ([b262212](https://github.com/tatsutakein/tatsutakein.jp/commit/b262212de7295e38ad08c2342ba3ac578bc95712))
+* **deps:** update dependency @trpc/server to v11.0.0-next-beta.318 ([4f6189d](https://github.com/tatsutakein/tatsutakein.jp/commit/4f6189df1f60369fb9ac74bfe1d8b0f1acd762d5))
+* **deps:** update dependency date-fns-tz to v2.0.1 ([bcca1f7](https://github.com/tatsutakein/tatsutakein.jp/commit/bcca1f7b0d0b781a7fa94ada46d4522eb8e5ff07))
+* **deps:** update dependency drizzle-orm to v0.30.0 ([784da4f](https://github.com/tatsutakein/tatsutakein.jp/commit/784da4f13214f169b900dad2af1b8bcc0cf08f6f))
+* **deps:** update dependency drizzle-orm to v0.30.1 ([e45478f](https://github.com/tatsutakein/tatsutakein.jp/commit/e45478f436328532c629fa28d2a33e286dd07714))
+* **deps:** update typescript-eslint to v7.2.0 ([ad2e30b](https://github.com/tatsutakein/tatsutakein.jp/commit/ad2e30be142de8353c42afdfad0c9423f077cbae))
+
 ## [1.4.3](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.2...v1.4.3) (2024-03-06)
 
 
