@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.4.5](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.4...v1.4.5) (2024-03-13)
+
+
+### Bug Fixes
+
+* **deps:** bun.lockb ([6db58b2](https://github.com/tatsutakein/tatsutakein.jp/commit/6db58b29c6d4b61ca34b7d2cd474028fa2024474))
+* **deps:** update dependency @tanstack/react-query to v5.27.5 ([0df0913](https://github.com/tatsutakein/tatsutakein.jp/commit/0df09130253d3e12071325de754a8364fb522275))
+* **deps:** update dependency markdown-to-jsx to v7.4.2 ([d7fa930](https://github.com/tatsutakein/tatsutakein.jp/commit/d7fa930da2a3cf2a7fe5582d087cf12793b35ce2))
+* **deps:** update dependency markdown-to-jsx to v7.4.3 ([51799f8](https://github.com/tatsutakein/tatsutakein.jp/commit/51799f83fe707c0c007152483f82bd0fae131150))
+* **deps:** update dependency next-themes to v0.3.0 ([ff9ecaf](https://github.com/tatsutakein/tatsutakein.jp/commit/ff9ecaf83ad76a60b69396f6b7726333ebb61820))
+
 ## [1.4.4](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.3...v1.4.4) (2024-03-12)
 
 
