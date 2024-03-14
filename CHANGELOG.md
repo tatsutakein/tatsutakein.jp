@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.6](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.5...v1.4.6) (2024-03-14)
+
+
+### Bug Fixes
+
+* **deps:** bun.lockb ([5133e27](https://github.com/tatsutakein/tatsutakein.jp/commit/5133e27c61bd9517c163debe3402e9880bcedcc7))
+* **deps:** update dependency @ianvs/prettier-plugin-sort-imports to v4.2.0 ([9376200](https://github.com/tatsutakein/tatsutakein.jp/commit/9376200d37af19fc5d164520b82b7bf8abcac9d5))
+* **deps:** update dependency @tanstack/react-query to v5.28.0 ([8d49b23](https://github.com/tatsutakein/tatsutakein.jp/commit/8d49b23d00432a36d36781d233d752b725184716))
+
 ## [1.4.5](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.4...v1.4.5) (2024-03-13)
 
 
