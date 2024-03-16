@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.4.7](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.6...v1.4.7) (2024-03-16)
+
+
+### Bug Fixes
+
+* **deps:** bun.lockb ([bd755c1](https://github.com/tatsutakein/tatsutakein.jp/commit/bd755c1a0b16301d5e469e5244c0e54fafabec5a))
+* **deps:** update dependency @tanstack/react-query to v5.28.2 ([1931025](https://github.com/tatsutakein/tatsutakein.jp/commit/19310254e2c3f660b271c5ff3459e73ac9a5cde0))
+* **deps:** update dependency @tanstack/react-query to v5.28.4 ([0203abc](https://github.com/tatsutakein/tatsutakein.jp/commit/0203abc159fc632331b33da76301bdadab50ff45))
+* **deps:** update dependency drizzle-orm to v0.30.2 ([ff7392b](https://github.com/tatsutakein/tatsutakein.jp/commit/ff7392b53a3117c7c2fc826958f19e906000a011))
+* **deps:** update dependency eslint-plugin-react to v7.34.1 ([613ab82](https://github.com/tatsutakein/tatsutakein.jp/commit/613ab82a0e1c4ed6a26fa83f0ac49baa0ebc6c09))
+
 ## [1.4.6](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.5...v1.4.6) (2024-03-14)
 
 
