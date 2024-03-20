@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.4.8](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.7...v1.4.8) (2024-03-20)
+
+
+### Bug Fixes
+
+* **deps:** bun.lockb ([2b00389](https://github.com/tatsutakein/tatsutakein.jp/commit/2b00389a4c7b438af0178b4992189b28971e3c27))
+* **deps:** bun.lockb ([1780b19](https://github.com/tatsutakein/tatsutakein.jp/commit/1780b1968e0e76a624bb0bab88e769abc73e5282))
+* **deps:** update dependency @ianvs/prettier-plugin-sort-imports to v4.2.1 ([bfb7431](https://github.com/tatsutakein/tatsutakein.jp/commit/bfb7431ff69a96fcde0d6c9c0136b5a8e2736399))
+* **deps:** update dependency @next/eslint-plugin-next to v14.1.4 ([d2011d5](https://github.com/tatsutakein/tatsutakein.jp/commit/d2011d53d34346a6b907b0b1f8ac76e20705f83e))
+* **deps:** update dependency drizzle-orm to v0.30.3 ([7406327](https://github.com/tatsutakein/tatsutakein.jp/commit/740632710f052190dd5afec02d3f4b229eb95903))
+* **deps:** update dependency drizzle-orm to v0.30.4 ([1fac4e8](https://github.com/tatsutakein/tatsutakein.jp/commit/1fac4e8aa51a1a89b44d230868a343e4c81c19ab))
+* **deps:** update dependency next to v14.1.4 ([930af5f](https://github.com/tatsutakein/tatsutakein.jp/commit/930af5fe9a8ba70ca246c50a5ac575f6e4a944e8))
+* **deps:** update dependency postcss to v8.4.36 ([8a38f04](https://github.com/tatsutakein/tatsutakein.jp/commit/8a38f040c5c122c90776ceb564e19e0fb3d2da49))
+* **deps:** update dependency postcss to v8.4.37 ([a5ecd71](https://github.com/tatsutakein/tatsutakein.jp/commit/a5ecd71aab8a0ee5d58de91d41112ac3deaa4b69))
+* **deps:** update dependency react-hook-form to v7.51.1 ([63ca235](https://github.com/tatsutakein/tatsutakein.jp/commit/63ca235c066e673b0b83acc0966673bfb3a811b9))
+* **deps:** update dependency sonner to v1.4.32 ([791d62b](https://github.com/tatsutakein/tatsutakein.jp/commit/791d62b92fcf95abdc800be97cc1878d6882650f))
+* **deps:** update dependency tailwind-merge to v2.2.2 ([5be89cf](https://github.com/tatsutakein/tatsutakein.jp/commit/5be89cf728c8c57236f259d19400bb7cd670be7e))
+* **deps:** update typescript-eslint to v7.3.1 ([ecaef89](https://github.com/tatsutakein/tatsutakein.jp/commit/ecaef89551041603f5bdcb68fbe4bf141aff3a00))
+
 ## [1.4.7](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.6...v1.4.7) (2024-03-16)
 
 
