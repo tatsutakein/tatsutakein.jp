@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.4.9](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.8...v1.4.9) (2024-03-24)
+
+
+### Bug Fixes
+
+* **deps:** bun.lockb ([e7c8050](https://github.com/tatsutakein/tatsutakein.jp/commit/e7c805074fd8fd8424f4f946f94211eb618a858a))
+* **deps:** update dependency @tanstack/react-query to v5.28.6 ([654b0f2](https://github.com/tatsutakein/tatsutakein.jp/commit/654b0f2caf2442a90b1365e79d402bb6573d8807))
+* **deps:** update dependency autoprefixer to v10.4.19 ([10c209a](https://github.com/tatsutakein/tatsutakein.jp/commit/10c209aaa0b0b03b74824db7084a3af79e91deb6))
+* **deps:** update dependency eslint-config-turbo to v1.13.0 ([ec2fe16](https://github.com/tatsutakein/tatsutakein.jp/commit/ec2fe16eae037f6487e7f1a461ff3b8243a1b851))
+* **deps:** update dependency markdown-to-jsx to v7.4.4 ([d45d5ff](https://github.com/tatsutakein/tatsutakein.jp/commit/d45d5ff54b9040167d1392c317281c50f9cada62))
+* **deps:** update dependency markdown-to-jsx to v7.4.5 ([4c5e051](https://github.com/tatsutakein/tatsutakein.jp/commit/4c5e051f25a48fbb99c1a532654bcc0e272cbcc9))
+* **deps:** update dependency postcss to v8.4.38 ([44f8128](https://github.com/tatsutakein/tatsutakein.jp/commit/44f81285f5fbf0455bb530422cf06c5ce7e1e6c1))
+* **deps:** update dependency sharp to v0.33.3 ([f587049](https://github.com/tatsutakein/tatsutakein.jp/commit/f5870494b8fc9decbb56bf05486d9ff62890bd3f))
+* **deps:** update dependency sonner to v1.4.41 ([2acfdd3](https://github.com/tatsutakein/tatsutakein.jp/commit/2acfdd3254347f87c12f307312184740ff58f264))
+
 ## [1.4.8](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.7...v1.4.8) (2024-03-20)
 
 
