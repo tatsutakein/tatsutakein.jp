@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.10](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.9...v1.4.10) (2024-03-26)
+
+
+### Bug Fixes
+
+* **deps:** bun.lockb ([f0b324a](https://github.com/tatsutakein/tatsutakein.jp/commit/f0b324a311f8c97e6f38acc1e6bfa7c46834ebc7))
+* **deps:** update dependency @auth/drizzle-adapter to v0.8.1 ([a3484e2](https://github.com/tatsutakein/tatsutakein.jp/commit/a3484e2f5e43f23e0f107227ff9155f1ad02e949))
+* **deps:** update dependency @tanstack/react-query to v5.28.8 ([43b1735](https://github.com/tatsutakein/tatsutakein.jp/commit/43b1735463600f25e7c82dd6baf877491cafaa5f))
+* **deps:** update dependency geist to v1.3.0 ([3760161](https://github.com/tatsutakein/tatsutakein.jp/commit/3760161bcfc24973b813594f30159e49f6ec0453))
+* **deps:** update dependency next-auth to v5.0.0-beta.16 ([351daba](https://github.com/tatsutakein/tatsutakein.jp/commit/351dabafc0e2cb4bdad07dae704997b6d58d2714))
+* **deps:** update typescript-eslint to v7.4.0 ([7f22d8f](https://github.com/tatsutakein/tatsutakein.jp/commit/7f22d8f900b1b9cf961a1f8d404a030da7f16cc9))
+
 ## [1.4.9](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.8...v1.4.9) (2024-03-24)
 
 
