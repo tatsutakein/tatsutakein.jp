@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.4.11](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.10...v1.4.11) (2024-03-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tanstack/react-query to v5.28.9 ([ab75594](https://github.com/tatsutakein/tatsutakein.jp/commit/ab75594de6c03290ba12c6fc7a69aa544d2afd2b))
+* **deps:** update dependency drizzle-orm to v0.30.5 ([d36abe1](https://github.com/tatsutakein/tatsutakein.jp/commit/d36abe1f7c3bdfd56b2b3b082d7f7057b340dda8))
+* **deps:** update dependency prettier-plugin-tailwindcss to v0.5.13 ([71098cb](https://github.com/tatsutakein/tatsutakein.jp/commit/71098cb6c4576e65644ab3e1139668a7b95f8b0d))
+* **deps:** update dependency react-hook-form to v7.51.2 ([8925da8](https://github.com/tatsutakein/tatsutakein.jp/commit/8925da853fdc7b16a03e59f1226af1b9bf91e3b5))
+* **deps:** update dependency tailwindcss to v3.4.3 ([932fb55](https://github.com/tatsutakein/tatsutakein.jp/commit/932fb55c76ed32228986f07c2ae230233079e3d6))
+
 ## [1.4.10](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.9...v1.4.10) (2024-03-26)
 
 
