@@ -18,8 +18,8 @@
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.6.1",
-    "@commitlint/config-conventional": "18.6.3",
+    "@commitlint/cli": "19.2.1",
+    "@commitlint/config-conventional": "19.1.0",
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@turbo/gen": "1.13.0",
     "husky": "9.0.11",
