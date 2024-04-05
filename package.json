@@ -25,7 +25,7 @@
     "husky": "9.0.11",
     "prettier": "3.2.5",
     "turbo": "1.13.2",
-    "typescript": "5.4.3"
+    "typescript": "5.4.4"
   },
   "prettier": "@tatsutakeinjp/prettier-config",
   "packageManager": "bun@1.0.28",
