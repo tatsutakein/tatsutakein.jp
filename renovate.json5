@@ -68,6 +68,13 @@
       "matchPackagePrefixes": [
         "@turbo/",
       ],
+    },
+    {
+      "groupName": "date-fns",
+      "matchPackageNames": [
+        "date-fns",
+        "date-fns-tz",
+      ],
     }
   ]
 }
