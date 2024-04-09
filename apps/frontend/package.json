@@ -47,7 +47,7 @@
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@tatsutakeinjp/tailwind-config": "workspace:*",
     "@tatsutakeinjp/tsconfig": "workspace:*",
-    "@types/node": "20.12.6",
+    "@types/node": "20.12.7",
     "@types/react": "18.2.75",
     "@types/react-dom": "18.2.24",
     "dotenv-cli": "7.4.1",
