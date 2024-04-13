@@ -66,7 +66,7 @@ jobs:
 
       # https://github.com/marketplace/actions/mise-action
       - name: mise action
-        uses: jdx/mise-action@3e282fcd55c8de21f232397e9fb876cd33e612f1 # v2.0.3
+        uses: jdx/mise-action@0c39a522dfbced3ed83924152c45804a71ce216f # v2.0.4
 
       # https://github.com/marketplace/actions/vercel-action
       - name: Deploy to Vercel
