@@ -14,7 +14,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "zod": "3.23.4"
+    "zod": "3.23.5"
   },
   "devDependencies": {
     "@tatsutakeinjp/eslint-config": "workspace:*",
