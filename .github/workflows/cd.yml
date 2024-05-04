@@ -79,7 +79,7 @@ jobs:
           vercel-version: "32.6.0"
 
       - name: Lighthouse
-        uses: foo-software/lighthouse-check-action@v10.0.0
+        uses: foo-software/lighthouse-check-action@v12.0.1
         with:
           gitHubAccessToken: ${{ secrets.GITHUB_TOKEN }}
           urls: ${{ steps.vercel.outputs.preview-url }}
