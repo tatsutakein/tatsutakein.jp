@@ -17,7 +17,7 @@
     "@tatsutakeinjp/auth": "workspace:*",
     "@tatsutakeinjp/db": "workspace:*",
     "@tatsutakeinjp/validators": "workspace:*",
-    "@trpc/server": "11.0.0-rc.370",
+    "@trpc/server": "11.0.0-rc.373",
     "superjson": "2.2.1",
     "zod": "3.23.8"
   },
