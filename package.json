@@ -28,12 +28,12 @@
     "typescript": "5.4.5"
   },
   "prettier": "@tatsutakeinjp/prettier-config",
-  "packageManager": "bun@1.0.28",
+  "packageManager": "bun@1.1.12",
   "engines": {
     "node": "21.7.3"
   },
   "workspaces": [
-    "apps/*",
+    "apps/frontend",
     "packages/*",
     "tooling/*"
   ],
