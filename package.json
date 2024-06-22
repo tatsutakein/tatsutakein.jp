@@ -28,7 +28,7 @@
     "typescript": "5.5.2"
   },
   "prettier": "@tatsutakeinjp/prettier-config",
-  "packageManager": "bun@1.1.12",
+  "packageManager": "bun@1.1.15",
   "engines": {
     "node": "21.7.3"
   },
