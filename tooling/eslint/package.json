@@ -28,7 +28,7 @@
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@tatsutakeinjp/tsconfig": "workspace:*",
     "@types/eslint": "8.56.10",
-    "eslint": "9.5.0",
+    "eslint": "9.6.0",
     "prettier": "3.3.2",
     "typescript": "5.5.2"
   },
