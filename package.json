@@ -21,10 +21,10 @@
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
     "@tatsutakeinjp/prettier-config": "workspace:*",
-    "@turbo/gen": "1.13.4",
+    "@turbo/gen": "2.0.6",
     "husky": "9.0.11",
     "prettier": "3.3.2",
-    "turbo": "1.13.4",
+    "turbo": "2.0.6",
     "typescript": "5.5.3"
   },
   "prettier": "@tatsutakeinjp/prettier-config",
