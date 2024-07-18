@@ -22,7 +22,7 @@
     "@commitlint/config-conventional": "19.2.2",
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@turbo/gen": "1.13.4",
-    "husky": "9.0.11",
+    "husky": "9.1.0",
     "prettier": "3.3.3",
     "turbo": "1.13.4",
     "typescript": "5.5.3"
