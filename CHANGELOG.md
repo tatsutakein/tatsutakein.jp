@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.4.15](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.14...v1.4.15) (2024-08-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @auth/drizzle-adapter to v1.4.2 ([7581c9b](https://github.com/tatsutakein/tatsutakein.jp/commit/7581c9b5c42049365b976687e9fcaf7413013d07))
+* **deps:** update dependency @tanstack/react-query to v5.51.15 ([ea636d5](https://github.com/tatsutakein/tatsutakein.jp/commit/ea636d52b3b4724ec43b77df32012f52efb4674d))
+* **deps:** update dependency @tanstack/react-query to v5.51.16 ([f8d33ac](https://github.com/tatsutakein/tatsutakein.jp/commit/f8d33ac66e3c1af0d411b81ace7c71406bedf08e))
+* **deps:** update dependency @tanstack/react-query to v5.51.18 ([7e82922](https://github.com/tatsutakein/tatsutakein.jp/commit/7e829220467aed00e09a90927c96d9df075c6d22))
+* **deps:** update dependency @tanstack/react-query to v5.51.21 ([61353c1](https://github.com/tatsutakein/tatsutakein.jp/commit/61353c1e9018c03f5849070ec69532a8b446a974))
+* **deps:** update dependency @tanstack/react-query to v5.51.23 ([4f3920b](https://github.com/tatsutakein/tatsutakein.jp/commit/4f3920bc453e47c0eaa348b7bed5e5081bfbe6c5))
+* **deps:** update dependency @trpc/server to v11.0.0-rc.475 ([41f838a](https://github.com/tatsutakein/tatsutakein.jp/commit/41f838a5f9ca02c969a80770385138a8f13cdc33))
+* **deps:** update dependency @trpc/server to v11.0.0-rc.477 ([49ffc60](https://github.com/tatsutakein/tatsutakein.jp/commit/49ffc60b8835a33e7777404b57c9a01b10bbda56))
+* **deps:** update dependency autoprefixer to v10.4.20 ([5dea3a7](https://github.com/tatsutakein/tatsutakein.jp/commit/5dea3a77ea06ecf6d964a0566feb50eb9bf21721))
+* **deps:** update dependency drizzle-orm to v0.32.1 ([f09f037](https://github.com/tatsutakein/tatsutakein.jp/commit/f09f037efefc08778e8230e69cbc5f317005d3a2))
+* **deps:** update dependency drizzle-orm to v0.32.2 ([f90eda7](https://github.com/tatsutakein/tatsutakein.jp/commit/f90eda7a7a98b9a9017ca018a565b91333be1bb5))
+* **deps:** update dependency drizzle-orm to v0.33.0 ([44f58c3](https://github.com/tatsutakein/tatsutakein.jp/commit/44f58c3a21f6086728a92dee296303bf54a96ac9))
+* **deps:** update dependency eslint-config-turbo to v2.0.10 ([649934b](https://github.com/tatsutakein/tatsutakein.jp/commit/649934bf144709468af70148c513c54b1f9b6de3))
+* **deps:** update dependency eslint-config-turbo to v2.0.11 ([edf2956](https://github.com/tatsutakein/tatsutakein.jp/commit/edf29568f9ca4ad367c30dd41b2d6308dc9a487d))
+* **deps:** update dependency eslint-config-turbo to v2.0.12 ([6b0ec6c](https://github.com/tatsutakein/tatsutakein.jp/commit/6b0ec6cff0dad310c7db6318116ba1ed89a03d74))
+* **deps:** update dependency next-auth to v5.0.0-beta.20 ([e63e5f2](https://github.com/tatsutakein/tatsutakein.jp/commit/e63e5f29e7febd92f9567727d676489a85fdab88))
+* **deps:** update dependency postcss to v8.4.40 ([a561b5f](https://github.com/tatsutakein/tatsutakein.jp/commit/a561b5f60b62684bf201248ea5d42e3ac4225e95))
+* **deps:** update dependency postcss to v8.4.41 ([d4190f0](https://github.com/tatsutakein/tatsutakein.jp/commit/d4190f0405be6610598cdbc500938f12180aaf87))
+* **deps:** update dependency react-hook-form to v7.52.2 ([fdec1cc](https://github.com/tatsutakein/tatsutakein.jp/commit/fdec1cc1fb788b49b506551f29bc5dfc0e3ae999))
+* **deps:** update dependency tailwindcss to v3.4.7 ([edf2a0c](https://github.com/tatsutakein/tatsutakein.jp/commit/edf2a0cc26144dcd3829352d73bf270746a7e724))
+* **deps:** update dependency tailwindcss to v3.4.8 ([52d0f9a](https://github.com/tatsutakein/tatsutakein.jp/commit/52d0f9ac0fd3ce8c34cc5ca59e4448852195288e))
+* **deps:** update dependency tailwindcss to v3.4.9 ([4830ae9](https://github.com/tatsutakein/tatsutakein.jp/commit/4830ae9e8499523812713a81810d99bd90793c53))
+* **deps:** update typescript-eslint to v7.18.0 ([69c2c4c](https://github.com/tatsutakein/tatsutakein.jp/commit/69c2c4c20e9f874ffa019a08468d01d005748b01))
+
 ## [1.4.14](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.13...v1.4.14) (2024-07-23)
 
 
