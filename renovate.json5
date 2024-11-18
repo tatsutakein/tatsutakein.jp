@@ -1,80 +1,151 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    "config:recommended",
+    ":semanticCommits",
+    ":automergePatch",
     ":automergeMinor",
     ":prHourlyLimitNone",
     ":timezone(Asia/Tokyo)",
   ],
+  "schedule": [
+    "* 7 * * *"
+  ],
   "dependencyDashboard": false,
+  "rangeStrategy": "pin",
+  "pruneBranchAfterAutomerge": true,
   "labels": [
     "dependencies"
   ],
-  "rangeStrategy": "pin",
   "packageRules": [
+    // Framework & Core dependencies
     {
-      "matchManagers": [
-        "github-actions",
-      ],
-      "labels": [
-        "dependencies",
-        "ignore for release",
-      ]
-    },
-    {
-      "groupName": "next",
-      "matchPackagePrefixes": [
+      "groupName": "Next.js Framework",
+      "matchPackageNames": [
         "next",
+        "sharp",
+        "@next/**"
       ],
+      "prPriority": 5
     },
     {
-      "groupName": "storybook",
-      "matchPackageNames": [
-        "storybook",
-      ],
-      "matchPackagePrefixes": [
-        "@storybook/",
-      ],
-    },
-    {
-      "groupName": "eslint",
-      "matchPackageNames": [
-        "eslint",
-      ],
-      "matchPackagePrefixes": [
-        "eslint-",
-      ],
-    },
-    {
-      "groupName": "typescript-eslint",
-      "matchPackagePrefixes": [
-        "@typescript-eslint/",
-      ],
-    },
-    {
-      "groupName": "react",
+      "groupName": "React Core",
       "matchPackageNames": [
         "react",
         "react-dom",
         "@types/react",
-        "@types/react-dom",
+        "@types/react-dom"
       ],
+      "prPriority": 5
     },
     {
-      "groupName": "turbo",
+      "groupName": "Turborepo",
       "matchPackageNames": [
         "turbo",
+        "@turbo/**"
       ],
-      "matchPackagePrefixes": [
-        "@turbo/",
-      ],
+      "prPriority": 4
+    },
+    // UI & Component Libraries
+    {
+      "groupName": "UI Components",
+      "matchPackageNames": [
+        "@radix-ui/**",
+        "@hookform/**",
+        "class-variance-authority",
+        "tailwind-merge",
+        "tailwindcss-animate",
+        "sonner"
+      ]
+    },
+    // Development Tools
+    {
+      "groupName": "TypeScript",
+      "matchPackageNames": [
+        "typescript",
+        "@types/node",
+        "ts-node"
+      ]
     },
     {
-      "groupName": "date-fns",
+      "groupName": "ESLint",
+      "matchPackageNames": [
+        "eslint",
+        "@typescript-eslint/**",
+        "eslint-*"
+      ]
+    },
+    {
+      "groupName": "Prettier & Formatting",
+      "matchPackageNames": [
+        "prettier",
+        "sugar-high"
+      ]
+    },
+    // Testing & GraphQL
+    {
+      "groupName": "GraphQL Tools",
+      "matchPackageNames": [
+        "graphql",
+        "graphql-request",
+        "@graphql-codegen/**"
+      ]
+    },
+    {
+      "groupName": "Tanstack Query",
+      "matchPackageNames": [
+        "@tanstack/**"
+      ]
+    },
+    // Database & Auth
+    {
+      "groupName": "Database Tools",
+      "matchPackageNames": [
+        "@planetscale/database",
+        "drizzle-orm",
+        "drizzle-kit"
+      ]
+    },
+    {
+      "groupName": "Authentication",
+      "matchPackageNames": [
+        "next-auth",
+        "@auth/**"
+      ]
+    },
+    // Utils & Date handling
+    {
+      "groupName": "Date Libraries",
       "matchPackageNames": [
         "date-fns",
-        "date-fns-tz",
+        "date-fns-tz"
+      ]
+    },
+    {
+      "groupName": "Utilities",
+      "matchPackageNames": [
+        "zod",
+        "superjson",
+        "@t3-oss/env-nextjs",
+        "dotenv-cli"
+      ]
+    },
+    // GitHub Actions
+    {
+      "groupName": "GitHub Actions",
+      "matchManagers": [
+        "github-actions"
       ],
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "addLabels": [
+        "ignore for release"
+      ]
     }
   ]
 }
