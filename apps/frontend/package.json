@@ -16,13 +16,13 @@
     "codegen:watch": "graphql-codegen-esm --config codegen.ts --watch"
   },
   "dependencies": {
+    "@t3-oss/env-nextjs": "0.11.1",
+    "@tanstack/react-query": "5.53.1",
     "@tatsutakeinjp/api": "workspace:*",
     "@tatsutakeinjp/auth": "workspace:*",
     "@tatsutakeinjp/db": "workspace:*",
     "@tatsutakeinjp/ui": "workspace:*",
     "@tatsutakeinjp/validators": "workspace:*",
-    "@t3-oss/env-nextjs": "0.11.1",
-    "@tanstack/react-query": "5.53.1",
     "date-fns": "2.30.0",
     "date-fns-tz": "2.0.1",
     "geist": "1.3.1",
