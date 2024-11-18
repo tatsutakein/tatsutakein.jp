@@ -7,7 +7,7 @@ on:
 jobs:
   assignAuthor:
     name: Assign author to PR
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       # https://github.com/marketplace/actions/assign-author
       - name: Assign Author

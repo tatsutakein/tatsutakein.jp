@@ -30,7 +30,7 @@ permissions:
 jobs:
   release:
     name: Create new release
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     outputs:
       release-created: ${{ steps.release.outputs.release_created }}
       major-tag: ${{ steps.release.outputs.major }}
