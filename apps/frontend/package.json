@@ -42,7 +42,7 @@
     "@graphql-codegen/client-preset": "4.5.0",
     "@graphql-codegen/introspection": "4.0.3",
     "@graphql-typed-document-node/core": "3.2.0",
-    "@parcel/watcher": "2.4.1",
+    "@parcel/watcher": "2.5.0",
     "@tatsutakeinjp/eslint-config": "workspace:*",
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@tatsutakeinjp/tailwind-config": "workspace:*",
