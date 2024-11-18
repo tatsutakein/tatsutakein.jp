@@ -17,7 +17,7 @@ jobs:
     uses: ./.github/workflows/wc-codeql.yml
 
   daily-status-check:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     needs:
       - check-frontend
       - codeql

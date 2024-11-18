@@ -29,7 +29,7 @@ jobs:
     if: needs.changed.outputs.codeql == 'true'
 
   status-check:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     needs:
       - check-actions
       - check-frontend
