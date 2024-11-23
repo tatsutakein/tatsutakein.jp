@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.4.16](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.15...v1.4.16) (2024-11-23)
+
+
+### Bug Fixes
+
+* **deps:** bun.lockb ([3656595](https://github.com/tatsutakein/tatsutakein.jp/commit/365659541012c3a2301a0565be5382b9b03ceb8d))
+* **deps:** bun.lockb ([02b92c0](https://github.com/tatsutakein/tatsutakein.jp/commit/02b92c01236df9bbac6ff159e0c45cef8fc5ca79))
+* **deps:** bun.lockb ([8532821](https://github.com/tatsutakein/tatsutakein.jp/commit/85328218f0b096e1f02127311d2cb7664b121cd9))
+* **deps:** update dependency @auth/drizzle-adapter to v1.7.4 ([#1113](https://github.com/tatsutakein/tatsutakein.jp/issues/1113)) ([a6304b2](https://github.com/tatsutakein/tatsutakein.jp/commit/a6304b215f72864863c5e80762f5884c1eb351c5))
+* **deps:** update dependency @ianvs/prettier-plugin-sort-imports to v4.4.0 ([#1114](https://github.com/tatsutakein/tatsutakein.jp/issues/1114)) ([115600a](https://github.com/tatsutakein/tatsutakein.jp/commit/115600accf60dcd19aa3bee3e972da670bfbbacb))
+* **deps:** update dependency @tanstack/react-query to v5.60.6 ([#1131](https://github.com/tatsutakein/tatsutakein.jp/issues/1131)) ([57216da](https://github.com/tatsutakein/tatsutakein.jp/commit/57216da28205724a90e1d96379c3f72d155ed754))
+* **deps:** update dependency @trpc/server to v11.0.0-rc.643 ([#1141](https://github.com/tatsutakein/tatsutakein.jp/issues/1141)) ([4028b72](https://github.com/tatsutakein/tatsutakein.jp/commit/4028b7264fd9ee4db0eda48e235a1e1fbcc7a7d2))
+* **deps:** update dependency drizzle-orm to v0.36.3 ([#1134](https://github.com/tatsutakein/tatsutakein.jp/issues/1134)) ([699c75e](https://github.com/tatsutakein/tatsutakein.jp/commit/699c75e1d886ab826b85de9aa15da8384c00938a))
+* **deps:** update dependency drizzle-orm to v0.36.4 ([#1142](https://github.com/tatsutakein/tatsutakein.jp/issues/1142)) ([ca0dbda](https://github.com/tatsutakein/tatsutakein.jp/commit/ca0dbda6e80aaa529441521097d97911d2c17707))
+* **deps:** update dependency eslint-config-turbo to v2.3.1 ([#1143](https://github.com/tatsutakein/tatsutakein.jp/issues/1143)) ([3b2bb06](https://github.com/tatsutakein/tatsutakein.jp/commit/3b2bb06d9f2cbbe67046becd9cb1f4eb3510d11b))
+* **deps:** update dependency prettier-plugin-tailwindcss to v0.6.9 ([#1132](https://github.com/tatsutakein/tatsutakein.jp/issues/1132)) ([b413fd9](https://github.com/tatsutakein/tatsutakein.jp/commit/b413fd94a789ab9c30fcf1f44f3b1382436f29b1))
+* **deps:** update dependency sonner to v1.7.0 ([#1135](https://github.com/tatsutakein/tatsutakein.jp/issues/1135)) ([aa31090](https://github.com/tatsutakein/tatsutakein.jp/commit/aa31090176f7afdd3c982a01c076c51f23317198))
+* **deps:** update eslint ([fd012d6](https://github.com/tatsutakein/tatsutakein.jp/commit/fd012d6bc3754f49bcbdeaa5aa29d8584fd60719))
+* **deps:** update next.js framework to v15 ([ff2131c](https://github.com/tatsutakein/tatsutakein.jp/commit/ff2131cd9949f046975eafa2f571190c4eaca0f3))
+
 ## [1.4.15](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.14...v1.4.15) (2024-11-18)
 
 
