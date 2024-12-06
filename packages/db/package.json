@@ -18,14 +18,14 @@
   },
   "dependencies": {
     "@planetscale/database": "1.19.0",
-    "drizzle-orm": "0.36.4"
+    "drizzle-orm": "0.37.0"
   },
   "devDependencies": {
     "@tatsutakeinjp/eslint-config": "workspace:*",
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@tatsutakeinjp/tsconfig": "workspace:*",
     "dotenv-cli": "7.4.4",
-    "drizzle-kit": "0.28.1",
+    "drizzle-kit": "0.29.1",
     "eslint": "9.16.0",
     "prettier": "3.4.2",
     "typescript": "5.7.2"
