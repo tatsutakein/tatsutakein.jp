@@ -36,7 +36,7 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
-    "@fortawesome/free-brands-svg-icons": "6.7.1",
+    "@fortawesome/free-brands-svg-icons": "6.7.2",
     "@fortawesome/react-fontawesome": "0.2.2",
     "@graphql-codegen/cli": "5.0.3",
     "@graphql-codegen/client-preset": "4.5.1",
