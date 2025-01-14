@@ -43,16 +43,16 @@
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@tatsutakeinjp/tailwind-config": "workspace:*",
     "@tatsutakeinjp/tsconfig": "workspace:*",
-    "@types/react": "18.3.18",
+    "@types/react": "19.0.7",
     "eslint": "9.16.0",
     "prettier": "3.4.2",
-    "react": "18.3.1",
+    "react": "19.0.0",
     "tailwindcss": "3.4.17",
     "typescript": "5.7.3",
     "zod": "3.24.1"
   },
   "peerDependencies": {
-    "react": "18.3.1",
+    "react": "19.0.0",
     "zod": "3.24.1"
   },
   "eslintConfig": {
