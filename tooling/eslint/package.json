@@ -18,10 +18,10 @@
     "@next/eslint-plugin-next": "15.1.7",
     "@typescript-eslint/eslint-plugin": "8.17.0",
     "@typescript-eslint/parser": "8.17.0",
-    "eslint-config-turbo": "2.3.3",
+    "eslint-config-turbo": "2.3.7",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-react": "7.37.3",
+    "eslint-plugin-react": "7.37.4",
     "eslint-plugin-react-hooks": "5.0.0"
   },
   "devDependencies": {
