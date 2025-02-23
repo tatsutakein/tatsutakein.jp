@@ -16,7 +16,7 @@
     "codegen:watch": "graphql-codegen-esm --config codegen.ts --watch"
   },
   "dependencies": {
-    "@t3-oss/env-nextjs": "0.11.1",
+    "@t3-oss/env-nextjs": "0.12.0",
     "@tanstack/react-query": "5.62.16",
     "@tatsutakeinjp/api": "workspace:*",
     "@tatsutakeinjp/auth": "workspace:*",
