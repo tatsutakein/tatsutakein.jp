@@ -20,7 +20,7 @@
     "@tatsutakeinjp/eslint-config": "workspace:*",
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@tatsutakeinjp/tsconfig": "workspace:*",
-    "eslint": "9.16.0",
+    "eslint": "9.21.0",
     "prettier": "3.4.2",
     "typescript": "5.7.3"
   },
