@@ -38,8 +38,8 @@
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "6.7.2",
     "@fortawesome/react-fontawesome": "0.2.2",
-    "@graphql-codegen/cli": "5.0.4",
-    "@graphql-codegen/client-preset": "4.6.2",
+    "@graphql-codegen/cli": "5.0.5",
+    "@graphql-codegen/client-preset": "4.6.4",
     "@graphql-codegen/introspection": "4.0.3",
     "@graphql-typed-document-node/core": "3.2.0",
     "@parcel/watcher": "2.5.1",
