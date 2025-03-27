@@ -43,7 +43,7 @@
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@tatsutakeinjp/tailwind-config": "workspace:*",
     "@tatsutakeinjp/tsconfig": "workspace:*",
-    "@types/react": "18.3.19",
+    "@types/react": "18.3.20",
     "eslint": "9.21.0",
     "prettier": "3.5.2",
     "react": "18.3.1",
