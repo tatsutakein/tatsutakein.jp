@@ -51,7 +51,7 @@
     "@types/react": "18.3.20",
     "@types/react-dom": "18.3.6",
     "dotenv-cli": "7.4.4",
-    "eslint": "9.21.0",
+    "eslint": "9.24.0",
     "framer-motion": "11.18.2",
     "jiti": "2.4.2",
     "prettier": "3.5.3",
