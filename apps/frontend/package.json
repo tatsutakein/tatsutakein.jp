@@ -33,7 +33,7 @@
     "react-dom": "18.3.1",
     "sharp": "0.34.1",
     "superjson": "2.2.2",
-    "zod": "3.24.2"
+    "zod": "3.24.3"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "6.7.2",
