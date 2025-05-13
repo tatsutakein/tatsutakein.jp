@@ -50,7 +50,7 @@
     "@types/node": "22.15.17",
     "@types/react": "18.3.21",
     "@types/react-dom": "18.3.7",
-    "dotenv-cli": "7.4.4",
+    "dotenv-cli": "8.0.0",
     "eslint": "9.25.1",
     "framer-motion": "11.18.2",
     "jiti": "2.4.2",
