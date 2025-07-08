@@ -27,7 +27,7 @@
     "dotenv-cli": "7.4.4",
     "drizzle-kit": "0.31.4",
     "eslint": "9.25.1",
-    "prettier": "3.5.3",
+    "prettier": "3.6.2",
     "typescript": "5.8.3"
   },
   "eslintConfig": {
