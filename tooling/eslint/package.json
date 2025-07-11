@@ -16,10 +16,10 @@
   },
   "dependencies": {
     "@next/eslint-plugin-next": "15.3.5",
-    "@typescript-eslint/eslint-plugin": "8.30.1",
-    "@typescript-eslint/parser": "8.30.1",
+    "@typescript-eslint/eslint-plugin": "8.36.0",
+    "@typescript-eslint/parser": "8.36.0",
     "eslint-config-turbo": "2.5.4",
-    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "5.2.0"
@@ -28,7 +28,7 @@
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@tatsutakeinjp/tsconfig": "workspace:*",
     "@types/eslint": "9.6.1",
-    "eslint": "9.25.1",
+    "eslint": "9.30.1",
     "prettier": "3.6.2",
     "typescript": "5.8.3"
   },
