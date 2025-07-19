@@ -18,7 +18,7 @@
     "@auth/drizzle-adapter": "1.10.0",
     "@t3-oss/env-nextjs": "0.13.8",
     "@tatsutakeinjp/db": "workspace:*",
-    "next": "15.4.1",
+    "next": "15.4.2",
     "next-auth": "5.0.0-beta.29",
     "react": "18.3.1",
     "react-dom": "18.3.1",
