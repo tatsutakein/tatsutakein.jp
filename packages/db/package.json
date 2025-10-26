@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@planetscale/database": "1.19.0",
-    "drizzle-orm": "0.44.5"
+    "drizzle-orm": "0.44.7"
   },
   "devDependencies": {
     "@tatsutakeinjp/eslint-config": "workspace:*",
