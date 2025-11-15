@@ -25,7 +25,7 @@
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@tatsutakeinjp/tsconfig": "workspace:*",
     "dotenv-cli": "7.4.4",
-    "drizzle-kit": "0.31.6",
+    "drizzle-kit": "0.31.7",
     "eslint": "9.32.0",
     "prettier": "3.6.2",
     "typescript": "5.8.3"
