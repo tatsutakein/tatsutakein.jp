@@ -33,7 +33,7 @@
     "react-dom": "18.3.1",
     "sharp": "0.34.5",
     "superjson": "2.2.5",
-    "zod": "3.25.76"
+    "zod": "4.1.13"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "6.7.2",
@@ -50,7 +50,7 @@
     "@types/node": "22.16.5",
     "@types/react": "18.3.27",
     "@types/react-dom": "18.3.7",
-    "dotenv-cli": "7.4.4",
+    "dotenv-cli": "11.0.0",
     "eslint": "9.32.0",
     "framer-motion": "11.18.2",
     "jiti": "2.6.1",
