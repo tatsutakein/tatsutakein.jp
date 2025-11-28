@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import type { JSX } from "react";
 import Link from "next/link";
 import { PagePath } from "@/lib/router";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";

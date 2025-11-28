@@ -1,4 +1,4 @@
-import type { Config } from "drizzle-kit";
+import { defineConfig } from "drizzle-kit";
 
 const uri = [
   "mysql://",
@@ -12,9 +12,9 @@ const uri = [
   '?ssl={"rejectUnauthorized":true}',
 ].join("");
 
-export default {
+export default defineConfig({
   schema: "./src/schema",
-  driver: "mysql2",
-  dbCredentials: { uri },
+  dialect: "mysql",
+  dbCredentials: { url: uri },
   tablesFilter: ["t3turbo_*"],
-} satisfies Config;
+});

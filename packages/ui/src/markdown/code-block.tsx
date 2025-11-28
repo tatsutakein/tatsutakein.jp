@@ -7,13 +7,7 @@ import { highlight } from "sugar-high";
 
 import { Button } from "../button";
 
-export const CodeBlock = ({ children }: { children: ReactNode }) => {
-  const code = children?.toString() || "";
-  // NOTE: If the code is a single line, we don't need to use the highlight function.
-  if (!/\n/.test(code)) {
-    return <code>{code}</code>;
-  }
-
+const HighlightedCodeBlock = ({ code }: { code: string }) => {
   const codeRef = useRef<HTMLElement>(null);
   const [copied, setCopied] = useState(false);
 
@@ -98,4 +92,15 @@ export const CodeBlock = ({ children }: { children: ReactNode }) => {
       </div>
     </>
   );
+};
+
+export const CodeBlock = ({ children }: { children: ReactNode }) => {
+  const code = typeof children === "string" ? children : "";
+
+  // NOTE: If the code is a single line, we don't need to use the highlight function.
+  if (!code.includes("\n")) {
+    return <code>{code}</code>;
+  }
+
+  return <HighlightedCodeBlock code={code} />;
 };

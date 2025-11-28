@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import Link from "next/link";
 import { PagePath } from "@/lib/router";
 import { formatDateEn, utcToJstTime } from "@/utils/date";

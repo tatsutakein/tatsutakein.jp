@@ -1,7 +1,7 @@
-export type Product = {
+export interface Product {
   href: string;
   title: string;
   description: string;
   src: string;
   techs: string[];
-};
+}

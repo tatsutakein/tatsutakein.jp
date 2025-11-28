@@ -12,8 +12,15 @@ import * as types from "./graphql";
  * 3. It does not support dead code elimination, so it will add unused operations.
  *
  * Therefore it is highly recommended to use the babel or swc plugin for production.
+ * Learn more about it here: https://the-guild.dev/graphql/codegen/plugins/presets/preset-client#reducing-bundle-size
  */
-const documents = {
+type Documents = {
+  "\n  query Posts($now: timestamptz!) {\n    posts(orderBy: { publishedAt: DESC }, where: { publishedAt: { _lte: $now } }) {\n      id\n      title\n      excerpt\n      publishedAt\n      coverImage {\n        url\n      }\n    }\n  }\n": typeof types.PostsDocument;
+  "\n  query PostIds($now: timestamptz!) {\n    posts(where: { publishedAt: { _lte: $now } }) {\n      id\n    }\n  }\n": typeof types.PostIdsDocument;
+  "\n  query PostMetadata($id: uuid!) {\n    postsByPk(id: $id) {\n      title\n      excerpt\n    }\n  }\n": typeof types.PostMetadataDocument;
+  "\n  query Post($id: uuid!) {\n    postsByPk(id: $id) {\n      title\n      excerpt\n      publishedAt\n      coverImage {\n        url\n      }\n      content\n      post_tags {\n        tag {\n          tag\n        }\n      }\n    }\n  }\n": typeof types.PostDocument;
+};
+const documents: Documents = {
   "\n  query Posts($now: timestamptz!) {\n    posts(orderBy: { publishedAt: DESC }, where: { publishedAt: { _lte: $now } }) {\n      id\n      title\n      excerpt\n      publishedAt\n      coverImage {\n        url\n      }\n    }\n  }\n":
     types.PostsDocument,
   "\n  query PostIds($now: timestamptz!) {\n    posts(where: { publishedAt: { _lte: $now } }) {\n      id\n    }\n  }\n":

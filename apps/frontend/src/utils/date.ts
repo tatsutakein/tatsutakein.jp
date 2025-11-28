@@ -1,5 +1,5 @@
 import { format as _format } from "date-fns";
-import { utcToZonedTime } from "date-fns-tz";
+import { toZonedTime } from "date-fns-tz";
 import { enUS, ja } from "date-fns/locale";
 
 export { isToday, isAfter, isBefore, isYesterday, parse, parseISO, formatISO, startOfDay } from "date-fns";
@@ -23,5 +23,5 @@ export const formatTime = (date: Date): string => {
 };
 
 export const utcToJstTime = (utcDate: Date): Date => {
-  return utcToZonedTime(utcDate, "Asia/Tokyo");
+  return toZonedTime(utcDate, "Asia/Tokyo");
 };

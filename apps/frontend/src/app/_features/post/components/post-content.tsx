@@ -1,4 +1,5 @@
 import type { PostQuery } from "@/gql/graphql";
+import type { JSX } from "react";
 import { PostSection } from "@/app/_features/post/components";
 import { HeroImage } from "@/app/_features/post/components/hero-image";
 import { formatDateEn, utcToJstTime } from "@/utils/date";

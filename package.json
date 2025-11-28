@@ -18,17 +18,17 @@
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.8.1",
-    "@commitlint/config-conventional": "19.8.1",
+    "@commitlint/cli": "20.1.0",
+    "@commitlint/config-conventional": "20.0.0",
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@turbo/gen": "2.6.1",
     "husky": "9.1.7",
-    "prettier": "3.6.2",
+    "prettier": "3.7.1",
     "turbo": "2.6.1",
-    "typescript": "5.8.3"
+    "typescript": "5.9.3"
   },
   "prettier": "@tatsutakeinjp/prettier-config",
-  "packageManager": "bun@1.1.15",
+  "packageManager": "bun@1.3.3",
   "engines": {
     "node": "22.17.1"
   },
