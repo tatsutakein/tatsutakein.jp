@@ -20,18 +20,18 @@ jobs:
     steps:
       # https://github.com/marketplace/actions/checkout
       - name: Checkout
-        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
 
       # https://github.com/marketplace/actions/mise-action
       - name: mise action
-        uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+        uses: jdx/mise-action@146a28175021df8ca24f8ee1828cc2a60f980bd5 # v3.5.1
 
       - name: Install deps
         run: bun install
 
       # https://github.com/marketplace/actions/vercel-action
       - name: Deploy to Vercel
-        uses: amondnet/vercel-action@16e87c0a08142b0d0d33b76aeaf20823c381b9b9 # v25.2.0
+        uses: amondnet/vercel-action@888da851026e0573da056b061931bcb765a915c4 # v41.1.4
         id: vercel
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
@@ -41,7 +41,7 @@ jobs:
           vercel-version: "32.6.0"
 
       - name: Lighthouse
-        uses: foo-software/lighthouse-check-action@v12.0.1
+        uses: foo-software/lighthouse-check-action@a80267da2e0244b8a2e457a8575fc47590615852 # v12.0.1
         with:
           gitHubAccessToken: ${{ secrets.GITHUB_TOKEN }}
           urls: ${{ steps.vercel.outputs.preview-url }}
