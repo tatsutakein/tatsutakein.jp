@@ -9,12 +9,12 @@ import { PagePath } from "@/lib/router";
 import request from "graphql-request";
 
 interface PageProps {
-  params: { id: string };
-  searchParams: Record<string, string | string[] | undefined>;
+  params: Promise<{ id: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
 // @see https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#generating-static-params
-export async function generateStaticParams(): Promise<PageProps["params"][]> {
+export async function generateStaticParams(): Promise<{ id: string }[]> {
   const data = await queryClient.fetchQuery({
     queryKey: ["post-ids"],
     queryFn: async () =>
@@ -33,38 +33,36 @@ export async function generateStaticParams(): Promise<PageProps["params"][]> {
 // 60 * 60 * 24 * 0.5 days
 export const revalidate = 43200;
 
-export default async function PostPage({ params: { id } }: PageProps): Promise<JSX.Element> {
-  try {
-    const { postsByPk: post } = await queryClient.fetchQuery({
-      queryKey: ["post", id],
-      queryFn: async () => {
-        try {
-          return await request(
-            "https://tatsutakeinjp.hasura.app/v1/graphql",
-            getPostQuery,
-            // variables are type-checked too!
-            { id: id },
-          );
-        } catch (error) {
-          return {
-            postsByPk: null,
-          };
-        }
-      },
-    });
+export default async function PostPage({ params }: PageProps): Promise<JSX.Element> {
+  const { id } = await params;
+  const { postsByPk: post } = await queryClient.fetchQuery({
+    queryKey: ["post", id],
+    queryFn: async () => {
+      try {
+        return await request(
+          "https://tatsutakeinjp.hasura.app/v1/graphql",
+          getPostQuery,
+          // variables are type-checked too!
+          { id: id },
+        );
+      } catch {
+        return {
+          postsByPk: null,
+        };
+      }
+    },
+  });
 
-    if (!post) {
-      notFound();
-    }
-
-    return <PostContent post={post} />;
-  } catch (e) {
+  if (!post) {
     notFound();
   }
+
+  return <PostContent post={post} />;
 }
 
 // @see https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function
-export async function generateMetadata({ params: { id } }: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
   const { postsByPk: post } = await queryClient.fetchQuery({
     queryKey: ["post-metadata", id],
     queryFn: async () => {
@@ -75,7 +73,7 @@ export async function generateMetadata({ params: { id } }: PageProps): Promise<M
           // variables are type-checked too!
           { id: id },
         );
-      } catch (e) {
+      } catch {
         return {
           postsByPk: null,
         };
