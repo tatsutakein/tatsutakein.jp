@@ -1,8 +1,14 @@
+import type { AnchorHTMLAttributes, ReactNode } from "react";
 import NextLink from "next/link";
 
 import { isExternalLink } from "./utils/link";
 
-export const Link = ({ href = "#", ...rest }) => {
+interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  href?: string;
+  children?: ReactNode;
+}
+
+export const Link = ({ href = "#", children, ...rest }: LinkProps) => {
   const isExternal = isExternalLink(href);
   if (isExternal) {
     return (
@@ -12,9 +18,15 @@ export const Link = ({ href = "#", ...rest }) => {
         rel="noopener noreferrer"
         className="link break-words after:mx-2 after:content-['_↗']"
         {...rest}
-      />
+      >
+        {children}
+      </a>
     );
   }
 
-  return <NextLink href={href} className="link" {...rest} />;
+  return (
+    <NextLink href={href} className="link" {...rest}>
+      {children}
+    </NextLink>
+  );
 };

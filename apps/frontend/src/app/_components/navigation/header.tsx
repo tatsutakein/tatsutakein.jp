@@ -1,4 +1,4 @@
-import React from "react";
+import type { JSX } from "react";
 import Link from "next/link";
 import { MobileHeaderMenu } from "@/app/_components/navigation/mobile-header-menu";
 import { PagePath } from "@/lib/router";
