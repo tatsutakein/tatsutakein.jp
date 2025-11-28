@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.18](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.17...v1.4.18) (2025-11-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency markdown-to-jsx to v9.2.0 ([#1491](https://github.com/tatsutakein/tatsutakein.jp/issues/1491)) ([88ae2bc](https://github.com/tatsutakein/tatsutakein.jp/commit/88ae2bcbb89801942a31333d2a119769721fa0ca))
+* **deps:** update dependency prettier to v3.7.2 ([#1488](https://github.com/tatsutakein/tatsutakein.jp/issues/1488)) ([680f3ed](https://github.com/tatsutakein/tatsutakein.jp/commit/680f3edec216ecc5de1e5a695325375cd28a5731))
+* **deps:** update dependency react-hook-form to v7.67.0 ([#1492](https://github.com/tatsutakein/tatsutakein.jp/issues/1492)) ([1619a64](https://github.com/tatsutakein/tatsutakein.jp/commit/1619a641a3305a423a7d1aa40dfdd2cff878c28e))
+
 ## [1.4.17](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.16...v1.4.17) (2025-11-28)
 
 
