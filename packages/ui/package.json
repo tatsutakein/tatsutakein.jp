@@ -25,17 +25,17 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@hookform/resolvers": "3.10.0",
+    "@hookform/resolvers": "5.2.2",
     "@radix-ui/react-dropdown-menu": "2.1.16",
     "@radix-ui/react-icons": "1.3.2",
-    "@radix-ui/react-label": "2.1.7",
-    "@radix-ui/react-slot": "1.2.3",
+    "@radix-ui/react-label": "2.1.8",
+    "@radix-ui/react-slot": "1.2.4",
     "class-variance-authority": "0.7.1",
-    "markdown-to-jsx": "7.7.17",
+    "markdown-to-jsx": "9.1.2",
     "next-themes": "0.4.6",
-    "react-hook-form": "7.61.1",
-    "sonner": "1.7.4",
-    "tailwind-merge": "2.6.0",
+    "react-hook-form": "7.66.1",
+    "sonner": "2.0.7",
+    "tailwind-merge": "3.4.0",
     "tailwindcss-animate": "1.0.7"
   },
   "devDependencies": {
@@ -43,23 +43,17 @@
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@tatsutakeinjp/tailwind-config": "workspace:*",
     "@tatsutakeinjp/tsconfig": "workspace:*",
-    "@types/react": "18.3.27",
-    "eslint": "9.32.0",
-    "prettier": "3.6.2",
-    "react": "18.3.1",
-    "tailwindcss": "3.4.18",
-    "typescript": "5.8.3",
-    "zod": "3.25.76"
+    "@types/react": "19.2.7",
+    "eslint": "9.39.1",
+    "prettier": "3.7.1",
+    "react": "19.2.0",
+    "tailwindcss": "4.1.17",
+    "typescript": "5.9.3",
+    "zod": "4.1.13"
   },
   "peerDependencies": {
-    "react": "18.3.1",
-    "zod": "3.25.76"
-  },
-  "eslintConfig": {
-    "extends": [
-      "@tatsutakeinjp/eslint-config/base",
-      "@tatsutakeinjp/eslint-config/react"
-    ]
+    "react": "^19.0.0",
+    "zod": "^4.0.0"
   },
   "prettier": "@tatsutakeinjp/prettier-config"
 }

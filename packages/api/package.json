@@ -17,23 +17,17 @@
     "@tatsutakeinjp/auth": "workspace:*",
     "@tatsutakeinjp/db": "workspace:*",
     "@tatsutakeinjp/validators": "workspace:*",
-    "@trpc/server": "11.4.4",
-    "superjson": "2.2.5",
-    "zod": "3.25.76"
+    "@trpc/server": "11.7.2",
+    "superjson": "2.2.6",
+    "zod": "4.1.13"
   },
   "devDependencies": {
     "@tatsutakeinjp/eslint-config": "workspace:*",
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@tatsutakeinjp/tsconfig": "workspace:*",
-    "eslint": "9.32.0",
-    "prettier": "3.6.2",
-    "typescript": "5.8.3"
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@tatsutakeinjp/eslint-config/base"
-    ]
+    "eslint": "9.39.1",
+    "prettier": "3.7.1",
+    "typescript": "5.9.3"
   },
   "prettier": "@tatsutakeinjp/prettier-config"
 }
