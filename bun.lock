@@ -200,9 +200,6 @@
         "typescript": "5.9.3",
       },
     },
-    "tooling/github": {
-      "name": "@tatsutakeinjp/github",
-    },
     "tooling/prettier": {
       "name": "@tatsutakeinjp/prettier-config",
       "version": "0.1.0",
@@ -780,8 +777,6 @@
     "@tatsutakeinjp/eslint-config": ["@tatsutakeinjp/eslint-config@workspace:tooling/eslint"],
 
     "@tatsutakeinjp/frontend": ["@tatsutakeinjp/frontend@workspace:apps/frontend"],
-
-    "@tatsutakeinjp/github": ["@tatsutakeinjp/github@workspace:tooling/github"],
 
     "@tatsutakeinjp/prettier-config": ["@tatsutakeinjp/prettier-config@workspace:tooling/prettier"],
 
