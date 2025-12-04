@@ -20,8 +20,8 @@
     "@tatsutakeinjp/db": "workspace:*",
     "next": "16.0.7",
     "next-auth": "5.0.0-beta.30",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
     "zod": "4.1.13"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@tatsutakeinjp/tsconfig": "workspace:*",
     "eslint": "9.39.1",
-    "prettier": "3.7.3",
+    "prettier": "3.7.4",
     "typescript": "5.9.3"
   },
   "prettier": "@tatsutakeinjp/prettier-config"
