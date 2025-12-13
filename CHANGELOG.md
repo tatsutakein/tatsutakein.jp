@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.4.19](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.18...v1.4.19) (2025-12-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @next/eslint-plugin-next to v16.0.10 ([#1515](https://github.com/tatsutakein/tatsutakein.jp/issues/1515)) ([91bc1ee](https://github.com/tatsutakein/tatsutakein.jp/commit/91bc1eea281cf8d1de2245dfc3a429ead7a0b8fc))
+* **deps:** update dependency @tanstack/react-query to v5.90.12 ([#1513](https://github.com/tatsutakein/tatsutakein.jp/issues/1513)) ([ef57a36](https://github.com/tatsutakein/tatsutakein.jp/commit/ef57a36a52f2e648a68317487f26afa72d906ac3))
+* **deps:** update dependency eslint-plugin-turbo to v2.6.3 ([#1517](https://github.com/tatsutakein/tatsutakein.jp/issues/1517)) ([4e9ea91](https://github.com/tatsutakein/tatsutakein.jp/commit/4e9ea91dbf0b1b00fee5c1f690f31e58c2539b50))
+* **deps:** update dependency markdown-to-jsx to v9.3.5 ([#1518](https://github.com/tatsutakein/tatsutakein.jp/issues/1518)) ([ebb0a1c](https://github.com/tatsutakein/tatsutakein.jp/commit/ebb0a1cd0453083082099d93eef2e674397d698f))
+* **deps:** update dependency next to v16.0.10 [security] ([#1525](https://github.com/tatsutakein/tatsutakein.jp/issues/1525)) ([2b6b1c1](https://github.com/tatsutakein/tatsutakein.jp/commit/2b6b1c1e0fc6c27f939a6f3fd99542689e9d385f))
+* **deps:** update dependency next to v16.0.9 [security] ([#1523](https://github.com/tatsutakein/tatsutakein.jp/issues/1523)) ([ff23f7c](https://github.com/tatsutakein/tatsutakein.jp/commit/ff23f7ca8b3dcc36aa627b8506daef29d7d43270))
+* **deps:** update next.js framework to v16.0.8 ([#1505](https://github.com/tatsutakein/tatsutakein.jp/issues/1505)) ([6bd18a4](https://github.com/tatsutakein/tatsutakein.jp/commit/6bd18a42aaaaa468840d3bffda59d9e5a469d2a0))
+* **deps:** update react core to v19.2.3 ([#1516](https://github.com/tatsutakein/tatsutakein.jp/issues/1516)) ([b54b8bd](https://github.com/tatsutakein/tatsutakein.jp/commit/b54b8bd642681ac3e55738543d337c6343059290))
+* **deps:** update tailwindcss monorepo to v4.1.18 ([#1519](https://github.com/tatsutakein/tatsutakein.jp/issues/1519)) ([c4bf766](https://github.com/tatsutakein/tatsutakein.jp/commit/c4bf7667b15cf7a45f510612624df0dfc68f44b6))
+
 ## [1.4.18](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.17...v1.4.18) (2025-12-04)
 
 
