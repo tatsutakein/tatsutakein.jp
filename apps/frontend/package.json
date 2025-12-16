@@ -27,7 +27,7 @@
     "date-fns-tz": "3.2.0",
     "geist": "1.5.1",
     "graphql": "16.12.0",
-    "graphql-request": "7.3.5",
+    "graphql-request": "7.4.0",
     "next": "16.0.10",
     "react": "19.2.3",
     "react-dom": "19.2.3",
