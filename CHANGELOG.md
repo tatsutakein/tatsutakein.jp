@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.4.19](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.18...v1.4.19) (2025-12-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @eslint/js to v9.39.2 ([#1530](https://github.com/tatsutakein/tatsutakein.jp/issues/1530)) ([1376140](https://github.com/tatsutakein/tatsutakein.jp/commit/13761408f0a13e148aa2a26943db33c54957b31a))
+* **deps:** update dependency @next/eslint-plugin-next to v16.0.10 ([#1515](https://github.com/tatsutakein/tatsutakein.jp/issues/1515)) ([91bc1ee](https://github.com/tatsutakein/tatsutakein.jp/commit/91bc1eea281cf8d1de2245dfc3a429ead7a0b8fc))
+* **deps:** update dependency @t3-oss/env-nextjs to v0.13.10 ([#1542](https://github.com/tatsutakein/tatsutakein.jp/issues/1542)) ([d767b80](https://github.com/tatsutakein/tatsutakein.jp/commit/d767b806b4185dc6d287974d92068332d7fd95b2))
+* **deps:** update dependency @tanstack/react-query to v5.90.12 ([#1513](https://github.com/tatsutakein/tatsutakein.jp/issues/1513)) ([ef57a36](https://github.com/tatsutakein/tatsutakein.jp/commit/ef57a36a52f2e648a68317487f26afa72d906ac3))
+* **deps:** update dependency @trpc/server to v11.8.0 ([#1532](https://github.com/tatsutakein/tatsutakein.jp/issues/1532)) ([a39133e](https://github.com/tatsutakein/tatsutakein.jp/commit/a39133e077632ad607c8914f9808f18c5a0b3070))
+* **deps:** update dependency @trpc/server to v11.8.1 ([#1543](https://github.com/tatsutakein/tatsutakein.jp/issues/1543)) ([5a9c29b](https://github.com/tatsutakein/tatsutakein.jp/commit/5a9c29b66843dbdcde5649e96f6bbfebb81116db))
+* **deps:** update dependency autoprefixer to v10.4.23 ([#1531](https://github.com/tatsutakein/tatsutakein.jp/issues/1531)) ([65aea61](https://github.com/tatsutakein/tatsutakein.jp/commit/65aea61bddb625fb6918301012221c0b9f5fc71f))
+* **deps:** update dependency drizzle-orm to v0.45.1 ([#1533](https://github.com/tatsutakein/tatsutakein.jp/issues/1533)) ([c46810f](https://github.com/tatsutakein/tatsutakein.jp/commit/c46810f765efe3bfae6b4a4f4ef5d29b2f099fb2))
+* **deps:** update dependency eslint-plugin-turbo to v2.6.3 ([#1517](https://github.com/tatsutakein/tatsutakein.jp/issues/1517)) ([4e9ea91](https://github.com/tatsutakein/tatsutakein.jp/commit/4e9ea91dbf0b1b00fee5c1f690f31e58c2539b50))
+* **deps:** update dependency eslint-plugin-turbo to v2.7.1 ([#1544](https://github.com/tatsutakein/tatsutakein.jp/issues/1544)) ([fb2c68e](https://github.com/tatsutakein/tatsutakein.jp/commit/fb2c68efc057e55a755379698d8b0eb8b565a9ca))
+* **deps:** update dependency graphql-request to v7.4.0 ([#1534](https://github.com/tatsutakein/tatsutakein.jp/issues/1534)) ([840e9d8](https://github.com/tatsutakein/tatsutakein.jp/commit/840e9d81140802a68c76a76bd19a30cce70ce8cc))
+* **deps:** update dependency markdown-to-jsx to v9.3.5 ([#1518](https://github.com/tatsutakein/tatsutakein.jp/issues/1518)) ([ebb0a1c](https://github.com/tatsutakein/tatsutakein.jp/commit/ebb0a1cd0453083082099d93eef2e674397d698f))
+* **deps:** update dependency markdown-to-jsx to v9.5.0 ([#1545](https://github.com/tatsutakein/tatsutakein.jp/issues/1545)) ([7c5835b](https://github.com/tatsutakein/tatsutakein.jp/commit/7c5835b1ff6cb13b5ae33a433938a81d38fa7e28))
+* **deps:** update dependency next to v16.0.10 [security] ([#1525](https://github.com/tatsutakein/tatsutakein.jp/issues/1525)) ([2b6b1c1](https://github.com/tatsutakein/tatsutakein.jp/commit/2b6b1c1e0fc6c27f939a6f3fd99542689e9d385f))
+* **deps:** update dependency next to v16.0.9 [security] ([#1523](https://github.com/tatsutakein/tatsutakein.jp/issues/1523)) ([ff23f7c](https://github.com/tatsutakein/tatsutakein.jp/commit/ff23f7ca8b3dcc36aa627b8506daef29d7d43270))
+* **deps:** update dependency typescript-eslint to v8.50.0 ([#1535](https://github.com/tatsutakein/tatsutakein.jp/issues/1535)) ([4ac378b](https://github.com/tatsutakein/tatsutakein.jp/commit/4ac378bd125d967e7f08e75bd9f78c598bda8ef7))
+* **deps:** update next.js framework to v16.0.8 ([#1505](https://github.com/tatsutakein/tatsutakein.jp/issues/1505)) ([6bd18a4](https://github.com/tatsutakein/tatsutakein.jp/commit/6bd18a42aaaaa468840d3bffda59d9e5a469d2a0))
+* **deps:** update next.js framework to v16.1.0 ([#1536](https://github.com/tatsutakein/tatsutakein.jp/issues/1536)) ([2c1eeac](https://github.com/tatsutakein/tatsutakein.jp/commit/2c1eeac850eb030ad050116540f32eaef0dbf9ec))
+* **deps:** update react core to v19.2.3 ([#1516](https://github.com/tatsutakein/tatsutakein.jp/issues/1516)) ([b54b8bd](https://github.com/tatsutakein/tatsutakein.jp/commit/b54b8bd642681ac3e55738543d337c6343059290))
+* **deps:** update tailwindcss monorepo to v4.1.18 ([#1519](https://github.com/tatsutakein/tatsutakein.jp/issues/1519)) ([c4bf766](https://github.com/tatsutakein/tatsutakein.jp/commit/c4bf7667b15cf7a45f510612624df0dfc68f44b6))
+
 ## [1.4.18](https://github.com/tatsutakein/tatsutakein.jp/compare/v1.4.17...v1.4.18) (2025-12-04)
 
 
