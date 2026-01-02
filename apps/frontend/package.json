@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "0.13.10",
-    "@tanstack/react-query": "5.90.14",
+    "@tanstack/react-query": "5.90.16",
     "@tatsutakeinjp/api": "workspace:*",
     "@tatsutakeinjp/auth": "workspace:*",
     "@tatsutakeinjp/db": "workspace:*",
