@@ -55,7 +55,7 @@
     "@types/react-dom": "19.2.3",
     "dotenv-cli": "11.0.0",
     "eslint": "9.39.2",
-    "framer-motion": "12.24.7",
+    "framer-motion": "12.24.12",
     "jiti": "2.6.1",
     "prettier": "3.7.4",
     "sugar-high": "0.9.5",
