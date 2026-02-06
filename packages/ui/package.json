@@ -49,11 +49,11 @@
     "react": "19.2.4",
     "tailwindcss": "4.1.18",
     "typescript": "5.9.3",
-    "zod": "4.3.5"
+    "zod": "4.3.6"
   },
   "peerDependencies": {
     "react": "19.2.4",
-    "zod": "4.3.5"
+    "zod": "4.3.6"
   },
   "prettier": "@tatsutakeinjp/prettier-config"
 }
