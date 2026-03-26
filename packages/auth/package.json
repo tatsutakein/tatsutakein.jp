@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@auth/drizzle-adapter": "1.11.1",
-    "@t3-oss/env-nextjs": "0.13.10",
+    "@t3-oss/env-nextjs": "0.13.11",
     "@tatsutakeinjp/db": "workspace:*",
     "next": "16.2.1",
     "next-auth": "5.0.0-beta.30",
