@@ -17,7 +17,7 @@
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
-    "@planetscale/database": "1.19.0",
+    "@planetscale/database": "1.20.1",
     "drizzle-orm": "0.45.2"
   },
   "devDependencies": {
