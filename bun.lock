@@ -74,7 +74,7 @@
         "@tatsutakeinjp/auth": "workspace:*",
         "@tatsutakeinjp/db": "workspace:*",
         "@tatsutakeinjp/validators": "workspace:*",
-        "@trpc/server": "11.8.1",
+        "@trpc/server": "11.16.0",
         "superjson": "2.2.6",
         "zod": "4.3.6",
       },
@@ -792,7 +792,7 @@
 
     "@tatsutakeinjp/validators": ["@tatsutakeinjp/validators@workspace:packages/validators"],
 
-    "@trpc/server": ["@trpc/server@11.8.1", "", { "peerDependencies": { "typescript": ">=5.7.2" } }, "sha512-P4rzZRpEL7zDFgjxK65IdyH0e41FMFfTkQkuq0BA5tKcr7E6v9/v38DEklCpoDN6sPiB1Sigy/PUEzHENhswDA=="],
+    "@trpc/server": ["@trpc/server@11.16.0", "", { "peerDependencies": { "typescript": ">=5.7.2" }, "bin": { "intent": "bin/intent.js" } }, "sha512-XgGuUMddrUTd04+za/WE5GFuZ1/YU9XQG0t3VL5WOIu2JspkOlq6k4RYEiqS6HSJt+S0RXaPdIoE2anIP/BBRQ=="],
 
     "@tsconfig/node10": ["@tsconfig/node10@1.0.12", "", {}, "sha512-UCYBaeFvM11aU2y3YPZ//O5Rhj+xKyzy7mvcIoAjASbigy8mHMryP5cK7dgjlz2hWxh1g5pLw084E0a/wlUSFQ=="],
 
