@@ -24,7 +24,7 @@
     "@turbo/gen": "2.9.6",
     "prettier": "3.7.4",
     "turbo": "2.9.6",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "prettier": "@tatsutakeinjp/prettier-config",
   "packageManager": "bun@1.3.3",

@@ -50,7 +50,7 @@
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@tatsutakeinjp/tailwind-config": "workspace:*",
     "@tatsutakeinjp/tsconfig": "workspace:*",
-    "@types/node": "24.12.2",
+    "@types/node": "25.6.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "dotenv-cli": "11.0.0",
@@ -62,7 +62,7 @@
     "tailwindcss": "4.1.18",
     "tailwindcss-animate": "1.0.7",
     "ts-node": "10.9.2",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "prettier": "@tatsutakeinjp/prettier-config"
 }
