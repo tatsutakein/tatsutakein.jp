@@ -17,7 +17,7 @@
   "dependencies": {
     "@tailwindcss/container-queries": "0.1.1",
     "autoprefixer": "10.5.0",
-    "postcss": "8.5.9",
+    "postcss": "8.5.10",
     "tailwindcss": "4.1.18",
     "tailwindcss-animate": "1.0.7"
   },
