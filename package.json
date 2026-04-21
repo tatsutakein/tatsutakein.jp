@@ -22,7 +22,7 @@
     "@commitlint/config-conventional": "20.5.0",
     "@tatsutakeinjp/prettier-config": "workspace:*",
     "@turbo/gen": "2.9.6",
-    "prettier": "3.7.4",
+    "prettier": "3.8.3",
     "turbo": "2.9.6",
     "typescript": "5.9.3"
   },
