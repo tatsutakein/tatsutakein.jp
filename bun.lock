@@ -10,7 +10,7 @@
         "@tatsutakeinjp/prettier-config": "workspace:*",
         "@turbo/gen": "2.9.6",
         "prettier": "3.7.4",
-        "turbo": "2.9.6",
+        "turbo": "2.9.14",
         "typescript": "5.9.3",
       },
     },
@@ -802,19 +802,19 @@
 
     "@tsconfig/node16": ["@tsconfig/node16@1.0.4", "", {}, "sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA=="],
 
-    "@turbo/darwin-64": ["@turbo/darwin-64@2.9.6", "", { "os": "darwin", "cpu": "x64" }, "sha512-X/56SnVXIQZBLKwniGTwEQTGmtE5brSACnKMBWpY3YafuxVYefrC2acamfjgxP7BG5w3I+6jf0UrLoSzgPcSJg=="],
+    "@turbo/darwin-64": ["@turbo/darwin-64@2.9.14", "", { "os": "darwin", "cpu": "x64" }, "sha512-t7QiPflaEyBE4oayeZtSmu4mEfjgIrcNlNNl1z1dmIVPqEdtA7+CfTf8d7KXsOGPh6aNgWjKxyvQg9uGfDQF+A=="],
 
-    "@turbo/darwin-arm64": ["@turbo/darwin-arm64@2.9.6", "", { "os": "darwin", "cpu": "arm64" }, "sha512-aalBeSl4agT/QtYGDyf/XLajedWzUC9Vg/pm/YO6QQ93vkQ91Vz5uK1ta5RbVRDozQSz4njxUNqRNmOXDzW+qw=="],
+    "@turbo/darwin-arm64": ["@turbo/darwin-arm64@2.9.14", "", { "os": "darwin", "cpu": "arm64" }, "sha512-d23147mC9BsCPA9mJ0h/ubcpbRgcJBXbcG3+Vq7YLhjz3IXuvQsJ1UXH8f4MD76ZjJ4m/E4aRdJV+MW88CDfbw=="],
 
     "@turbo/gen": ["@turbo/gen@2.9.6", "", { "dependencies": { "@inquirer/prompts": "^7.10.1", "esbuild": "^0.25.0" }, "bin": { "gen": "dist/cli.js" } }, "sha512-94E/WMvxidupdafLgh6zmlgeWXx1NAkw0d5Q508xDkrPzUNZEPdweK90Gbs3gNDgNFQ7XntZQqvrsCGggeid5A=="],
 
-    "@turbo/linux-64": ["@turbo/linux-64@2.9.6", "", { "os": "linux", "cpu": "x64" }, "sha512-YKi05jnNHaD7vevgYwahpzGwbsNNTwzU2c7VZdmdFm7+cGDP4oREUWSsainiMfRqjRuolQxBwRn8wf1jmu+YZA=="],
+    "@turbo/linux-64": ["@turbo/linux-64@2.9.14", "", { "os": "linux", "cpu": "x64" }, "sha512-P3ZKB5tuUDdDQWuAsACGUR1qv9W7BNWxdxqVJ0kZNuNNPRaVYTPPikLcp79+GiEcW3npsR+KyP38lnQiBc5aSA=="],
 
-    "@turbo/linux-arm64": ["@turbo/linux-arm64@2.9.6", "", { "os": "linux", "cpu": "arm64" }, "sha512-02o/ZS69cOYEDczXvOB2xmyrtzjQ2hVFtWZK1iqxXUfzMmTjZK4UumrfNnjckSg+gqeBfnPRHa0NstA173Ik3g=="],
+    "@turbo/linux-arm64": ["@turbo/linux-arm64@2.9.14", "", { "os": "linux", "cpu": "arm64" }, "sha512-ZRTlzcUMrrPv9ZuDzRF9n60Ym13bKeG9jDB8WjxyLhWNzV+AJQN+zdpIk3NJYf2zQsGUm1mNar2P0elRzLw25g=="],
 
-    "@turbo/windows-64": ["@turbo/windows-64@2.9.6", "", { "os": "win32", "cpu": "x64" }, "sha512-wVdQjvnBI15wB6JrA+43CtUtagjIMmX6XYO758oZHAsCNSxqRlJtdyujih0D8OCnwCRWiGWGI63zAxR0hO6s9g=="],
+    "@turbo/windows-64": ["@turbo/windows-64@2.9.14", "", { "os": "win32", "cpu": "x64" }, "sha512-exanwN6sIduZwykYeiTQj8kCmOhazP5WOz3bvXMcYtjhL6Z3iRWLewKrXCBq0bqwSP3iBMb/AerRCnHI4lx46A=="],
 
-    "@turbo/windows-arm64": ["@turbo/windows-arm64@2.9.6", "", { "os": "win32", "cpu": "arm64" }, "sha512-1XUUyWW0W6FTSqGEhU8RHVqb2wP1SPkr7hIvBlMEwH9jr+sJQK5kqeosLJ/QaUv4ecSAd1ZhIrLoW7qslAzT4A=="],
+    "@turbo/windows-arm64": ["@turbo/windows-arm64@2.9.14", "", { "os": "win32", "cpu": "arm64" }, "sha512-fVdCsnmYoKICsycbWuuGp6Jvi51/3G/UluFWuAUCvR8PIW5IJkAk5BM9UF8PSm0Q2IphWHFZjYEgjHsh3B9y/g=="],
 
     "@types/eslint": ["@types/eslint@9.6.1", "", { "dependencies": { "@types/estree": "*", "@types/json-schema": "*" } }, "sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag=="],
 
@@ -1724,7 +1724,7 @@
 
     "tsx": ["tsx@4.21.0", "", { "dependencies": { "esbuild": "~0.27.0", "get-tsconfig": "^4.7.5" }, "optionalDependencies": { "fsevents": "~2.3.3" }, "bin": { "tsx": "dist/cli.mjs" } }, "sha512-5C1sg4USs1lfG0GFb2RLXsdpXqBSEhAaA/0kPL01wxzpMqLILNxIxIOKiILz+cdg/pLnOUxFYOR5yhHU666wbw=="],
 
-    "turbo": ["turbo@2.9.6", "", { "optionalDependencies": { "@turbo/darwin-64": "2.9.6", "@turbo/darwin-arm64": "2.9.6", "@turbo/linux-64": "2.9.6", "@turbo/linux-arm64": "2.9.6", "@turbo/windows-64": "2.9.6", "@turbo/windows-arm64": "2.9.6" }, "bin": { "turbo": "bin/turbo" } }, "sha512-+v2QJey7ZUeUiuigkU+uFfklvNUyPI2VO2vBpMYJA+a1hKFLFiKtUYlRHdb3P9CrAvMzi0upbjI4WT+zKtqkBg=="],
+    "turbo": ["turbo@2.9.14", "", { "optionalDependencies": { "@turbo/darwin-64": "2.9.14", "@turbo/darwin-arm64": "2.9.14", "@turbo/linux-64": "2.9.14", "@turbo/linux-arm64": "2.9.14", "@turbo/windows-64": "2.9.14", "@turbo/windows-arm64": "2.9.14" }, "bin": { "turbo": "bin/turbo" } }, "sha512-BQqXRr4UoWI3UPFrtznCLykYHxwxWh53iCB57x092jPMjIlW1wnm3N895g5irpiXmnxUhREBB0n6+y8BHhs4nw=="],
 
     "type-check": ["type-check@0.4.0", "", { "dependencies": { "prelude-ls": "^1.2.1" } }, "sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew=="],
 
