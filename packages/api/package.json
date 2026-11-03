@@ -19,7 +19,7 @@
     "@tatsutakeinjp/validators": "workspace:*",
     "@trpc/server": "11.16.0",
     "superjson": "2.2.6",
-    "zod": "4.3.6"
+    "zod": "4.6.6"
   },
   "devDependencies": {
     "@tatsutakeinjp/eslint-config": "workspace:*",
